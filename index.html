@@ -46,9 +46,9 @@
         </div>
     </header>
 
-    <main class="w-full max-w-7xl mx-auto flex-1 p-4 md:p-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <main class="w-full max-w-7xl mx-auto flex-1 p-4 md:p-8 grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8">
         
-        <aside class="lg:col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 max-h-[calc(100vh-120px)] overflow-y-auto flex flex-col gap-1 shadow-sm">
+        <aside class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[250px] lg:h-[calc(100vh-120px)] overflow-y-auto flex flex-col gap-1 shadow-sm">
             <label class="text-[9px] font-bold text-zinc-400 uppercase tracking-widest px-2 mb-2">Operational Suites</label>
             
             <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">01. JSON Formatter</button>
@@ -108,18 +108,18 @@
             <button onclick="showTool('privacy-page')" class="menu-btn w-full text-left p-2 rounded-xl text-[10px] font-bold uppercase text-zinc-400 hover:bg-zinc-50">🔒 Privacy Policy</button>
         </aside>
 
-        <section class="lg:col-span-3 bg-white border border-zinc-200 rounded-2xl p-6 md:p-8 shadow-sm h-fit min-h-[510px]">
+        <section class="col-span-1 lg:col-span-3 bg-white border border-zinc-200 rounded-2xl p-4 md:p-8 shadow-sm h-fit min-h-[450px]">
             
-            <div id="default-placeholder" class="flex flex-col items-center justify-center text-center py-20 gap-3">
+            <div id="default-placeholder" class="flex flex-col items-center justify-center text-center py-16 md:py-20 gap-3">
                 <div class="text-zinc-300 font-mono tracking-widest text-4xl">50+</div>
                 <div class="text-sm font-semibold text-zinc-900">Tanzai Labs Execution Engine</div>
-                <p class="text-xs text-zinc-400 max-w-sm">Select any operational structural utility layout from the left infrastructure dashboard to render runtime payload.</p>
+                <p class="text-xs text-zinc-400 max-w-sm px-4">Select any operational structural utility layout from the dashboard suite to render runtime payload.</p>
             </div>
 
-            <div id="legacy-panel" class="tool-workspace hidden flex flex-col gap-4 text-center py-16">
+            <div id="legacy-panel" class="tool-workspace hidden flex flex-col gap-4 text-center py-12">
                 <div class="text-zinc-400 text-3xl font-mono">01-25</div>
                 <h4 class="text-sm font-bold text-zinc-800">Legacy Component Context Mounted</h4>
-                <p class="text-xs text-zinc-400 max-w-xs mx-auto">This structural sandbox data channel is fully operational. To reconnect older layouts, insert structural matching element nodes inside this interface container block.</p>
+                <p class="text-xs text-zinc-400 max-w-xs mx-auto px-4">This structural sandbox data channel is fully operational. To reconnect older layouts, insert structural matching element nodes inside this interface container block.</p>
             </div>
 
             <div id="pdf-text-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -256,10 +256,6 @@
                     <button onclick="copyPrompt()" class="mt-3 text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest">Copy Prompt</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v3.1</div>
-                </div>
             </div>
 
             <div id="seo-analyzer-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -270,8 +266,8 @@
                 <div class="w-full">
                     <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Webpage URL</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="url" id="seoUrlInput" placeholder="https://example.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <button onclick="analyzeSEO()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Analyze</button>
+                        <input type="url" id="seoUrlInput" placeholder="https://example.com" class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <button onclick="analyzeSEO()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Analyze</button>
                     </div>
                 </div>
                 <div id="seoResultArea" class="hidden flex flex-col gap-4">
@@ -281,10 +277,6 @@
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v3.2</div>
-                </div>
             </div>
 
             <div id="resume-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -307,10 +299,6 @@
                 </div>
                 <button onclick="generateResume()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Generate Resume PDF</button>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v3.3</div>
-                </div>
             </div>
 
             <div id="yt-thumbnail-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -321,8 +309,8 @@
                 <div class="w-full">
                     <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter YouTube Video URL</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="url" id="ytUrlInput" placeholder="https://www.youtube.com/watch?v=..." class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <button onclick="getThumbnail()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Get Images</button>
+                        <input type="url" id="ytUrlInput" placeholder="https://www.youtube.com/watch?v=..." class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <button onclick="getThumbnail()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Get Images</button>
                     </div>
                 </div>
                 <div id="thumbnailResultArea" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -338,10 +326,6 @@
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v3.4</div>
-                </div>
             </div>
 
             <div id="webp-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -358,10 +342,6 @@
                     <a id="webpDownloadBtn" download="tanzaitools_optimized.webp" class="inline-block bg-zinc-900 text-white px-6 py-3 rounded-xl text-sm font-medium hover:bg-black transition-all">Download WebP Image</a>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v3.5</div>
-                </div>
             </div>
 
             <div id="bulk-url-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -378,10 +358,6 @@
                     <p class="text-[10px] text-zinc-400 text-center italic">⚠️ Note: Please allow "Pop-ups and redirects" in browser permissions rules.</p>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v3.6</div>
-                </div>
             </div>
 
             <div id="password-audit-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -409,10 +385,6 @@
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v3.7</div>
-                </div>
             </div>
 
             <div id="ascii-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -430,10 +402,6 @@
                     <button onclick="copyAscii()" class="mt-3 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider w-full transition-all">Copy Art</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v3.8</div>
-                </div>
             </div>
 
             <div id="font-gen-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -450,10 +418,6 @@
                     <div id="fontResultsList" class="space-y-2"></div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v3.9</div>
-                </div>
             </div>
 
             <div id="favicon-fetcher-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -464,8 +428,8 @@
                 <div class="w-full">
                     <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Website URL</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="url" id="faviconUrlInput" placeholder="https://google.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <button onclick="fetchFavicon()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Fetch Icon</button>
+                        <input type="url" id="faviconUrlInput" placeholder="https://google.com" class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <button onclick="fetchFavicon()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Fetch Icon</button>
                     </div>
                 </div>
                 <div id="faviconResultArea" class="hidden text-center p-6 bg-zinc-50 border border-zinc-200 rounded-xl flex flex-col items-center justify-center gap-4">
@@ -475,10 +439,6 @@
                     <a id="faviconDownloadBtn" download="favicon.ico" target="_blank" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider">Download Favicon</a>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v4.0</div>
-                </div>
             </div>
 
             <div id="email-extractor-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -497,10 +457,6 @@
                     <button onclick="copyExtractedEmails()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy List</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v4.1</div>
-                </div>
             </div>
 
             <div id="json-csv-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -519,10 +475,6 @@
                     <button onclick="downloadCSV()" class="mt-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 py-3 rounded-xl text-xs font-bold uppercase tracking-wider w-full">Download CSV File</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v4.2</div>
-                </div>
             </div>
 
             <div id="word-counter-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -535,24 +487,20 @@
                     <textarea id="wordCounterInput" oninput="countTextMetrics()" placeholder="Start typing or paste your content here..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-48 outline-none"></textarea>
                 </div>
                 <div class="grid grid-cols-3 gap-3">
-                    <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
+                    <div class="p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
                         <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-400">Words</span>
                         <div id="metricWords" class="text-xl font-bold text-zinc-900 mt-1">0</div>
                     </div>
-                    <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
+                    <div class="p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
                         <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-400">Characters</span>
                         <div id="metricChars" class="text-xl font-bold text-zinc-900 mt-1">0</div>
                     </div>
-                    <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
+                    <div class="p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
                         <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-400">Reading Time</span>
                         <div id="metricTime" class="text-xl font-bold text-zinc-900 mt-1">0m</div>
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v4.3</div>
-                </div>
             </div>
 
             <div id="case-converter-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -565,10 +513,10 @@
                     <textarea id="caseInputText" placeholder="Type or paste text content..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-40 outline-none"></textarea>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    <button onclick="convertCase('upper')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-medium hover:bg-black font-semibold">UPPERCASE</button>
-                    <button onclick="convertCase('lower')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-medium hover:bg-black font-semibold">lowercase</button>
-                    <button onclick="convertCase('title')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-medium hover:bg-black font-semibold">Title Case</button>
-                    <button onclick="convertCase('sentence')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-medium hover:bg-black font-semibold">Sentence case</button>
+                    <button onclick="convertCase('upper')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-medium hover:bg-black font-semibold">UPPERCASE</button>
+                    <button onclick="convertCase('lower')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-medium hover:bg-black font-semibold">lowercase</button>
+                    <button onclick="convertCase('title')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-medium hover:bg-black font-semibold">Title Case</button>
+                    <button onclick="convertCase('sentence')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-medium hover:bg-black font-semibold">Sentence case</button>
                 </div>
                 <div id="caseResultArea" class="hidden flex flex-col gap-2">
                     <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Converted Result</label>
@@ -576,10 +524,6 @@
                     <button onclick="copyCaseText()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy Result</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v4.4</div>
-                </div>
             </div>
 
             <div id="html-entity-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -601,10 +545,6 @@
                     <button onclick="copyEntityText()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy Result</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v4.5</div>
-                </div>
             </div>
 
             <div id="gradient-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -635,10 +575,6 @@
                     <button onclick="copyGradient()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy CSS</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v4.6</div>
-                </div>
             </div>
 
             <div id="twitter-preview-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -649,8 +585,8 @@
                 <div class="w-full">
                     <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Page URL</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="url" id="twUrlInput" placeholder="https://tanzaitools.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <button onclick="previewTwitterCard()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Preview</button>
+                        <input type="url" id="twUrlInput" placeholder="https://tanzaitools.com" class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <button onclick="previewTwitterCard()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Preview</button>
                     </div>
                 </div>
                 <div id="twCardArea" class="hidden flex flex-col gap-2">
@@ -668,10 +604,6 @@
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v4.7</div>
-                </div>
             </div>
 
             <div id="robots-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -698,10 +630,6 @@
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v4.8</div>
-                </div>
             </div>
 
             <div id="yt-tag-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -712,8 +640,8 @@
                 <div class="w-full">
                     <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter YouTube Video URL</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="url" id="ytTagUrlInput" placeholder="https://www.youtube.com/watch?v=..." class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <button onclick="extractYtTags()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Extract Tags</button>
+                        <input type="url" id="ytTagUrlInput" placeholder="https://www.youtube.com/watch?v=..." class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <button onclick="extractYtTags()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Extract Tags</button>
                     </div>
                 </div>
                 <div id="ytTagResultArea" class="hidden flex flex-col gap-2">
@@ -722,10 +650,6 @@
                     <button onclick="copyAllYtTags()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy All Tags</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v4.9</div>
-                </div>
             </div>
 
             <div id="dns-lookup-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -736,8 +660,8 @@
                 <div class="w-full">
                     <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Domain Name</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="text" id="dnsDomainInput" placeholder="tanzaitools.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none font-mono">
-                        <button onclick="lookupDNS()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Lookup</button>
+                        <input type="text" id="dnsDomainInput" placeholder="tanzaitools.com" class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none font-mono">
+                        <button onclick="lookupDNS()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Lookup</button>
                     </div>
                 </div>
                 <div id="dnsResultArea" class="hidden flex flex-col gap-4">
@@ -747,10 +671,6 @@
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v5.0</div>
-                </div>
             </div>
 
             <div id="about-page" class="tool-workspace hidden flex flex-col gap-5">
@@ -759,9 +679,8 @@
                     <p class="text-sm text-zinc-400">Mission parameters and technical operations metadata profile.</p>
                 </div>
                 <div class="text-sm text-zinc-600 space-y-4 font-sans">
-                    <p>Welcome to <strong>Tanzai Tools</strong>, an open operational infrastructure platform managed by <strong>Tanzai Labs</strong>. Our core methodology is focused on delivering high-speed utility applications natively in the user environment without subscription matrices or forced account generation.</p>
+                    <p>Welcome to <strong>Tanzai Tools</strong>, an open operational infrastructure platform managed by <strong>Tanzai Labs</strong>. Our core methodology is focused on delivering high-speed utility applications natively in the user environment without subscription matrices.</p>
                     <p>Every tool compiled in this suite is engineered to be lightweight, responsive, secure, and processes payload files 100% locally inside the client runtime script environment.</p>
-                    <p class="pt-4 border-t border-zinc-100 text-xs italic text-zinc-400">Engineered with performance metrics in mind. Operating globally under Tanzai Tech Lab specifications.</p>
                 </div>
             </div>
 
@@ -774,7 +693,6 @@
                     <p>Tanzai Tools structures data processes strictly within client web contexts. No input payload blocks are stored, cached, or replicated on remote architectures.</p>
                     <p>We work in tandem with standard network tracking mechanisms such as log files and third-party advertising partners like Google AdSense to sustain operations infrastructure.</p>
                     <p>Google uses DART cookies to serve automated inventory configurations based on user interactions across the digital landscape.</p>
-                    <p>By interacting with our platform dashboards, you hereby acknowledge and consent to our compliance structures and privacy parameters.</p>
                 </div>
             </div>
 
@@ -810,8 +728,16 @@
                     `;
                     try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(err) {}
                 });
+
+                // Smooth scroll to tool viewport on small screen mobile devices
+                if(window.innerWidth < 1024) {
+                    targetWorkspace.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             } else if(toolId === 'legacy-panel') {
                 document.getElementById('legacy-panel').classList.remove('hidden');
+                if(window.innerWidth < 1024) {
+                    document.getElementById('legacy-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
 
             const currentTrigger = window.event?.currentTarget;
@@ -846,39 +772,6 @@
                 if (i > 0) doc.addPage(); doc.addImage(data, 'JPEG', 10, 10, 190, 0);
             }
             doc.save("converted_archive.pdf");
-        }
-
-        /* Tool 31 Logic Processing Script */
-        function generateAIPrompt() {
-            const idea = document.getElementById('baseIdea').value; const style = document.getElementById('artStyle').value;
-            const light = document.getElementById('lightingStyle').value; const area = document.getElementById('promptOutputArea');
-            if(!idea) return alert("Please enter a basic idea!");
-            document.getElementById('aiPromptResult').innerText = `${idea}, ${style} style, ${light} lighting, highly detailed, 8k resolution, masterpiece --v 6.0`;
-            area.classList.remove('hidden');
-        }
-        function copyPrompt() { navigator.clipboard.writeText(document.getElementById('aiPromptResult').innerText); alert("Prompt copied!"); }
-
-        /* Tool 32 Logic Processing Script */
-        async function analyzeSEO() {
-            const url = document.getElementById('seoUrlInput').value; const content = document.getElementById('seoReportContent');
-            if(!url) return alert("Please enter a valid URL!");
-            document.getElementById('seoResultArea').classList.remove('hidden'); content.innerHTML = "<p class='animate-pulse text-xs font-mono'>Fetching structure metrics...</p>";
-            try {
-                const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`); const data = await res.json();
-                const parser = new DOMParser(); const doc = parser.parseFromString(data.contents, 'text/html');
-                const title = doc.title || "No Title Found";
-                content.innerHTML = `<div class="flex justify-between border-b pb-2"><span class="text-zinc-500">Page Title Target:</span><span class="font-bold">${title}</span></div><div class="flex justify-between pt-1"><span class="text-zinc-500">H1 Elements:</span><span class="font-bold">${doc.querySelectorAll('h1').length} Found</span></div>`;
-            } catch(e) { content.innerHTML = "<p class='text-red-500 text-xs'>Failed to extract targets from endpoint proxy.</p>"; }
-        }
-
-        /* Tool 33 Logic Processing Script */
-        function generateResume() {
-            const { jsPDF } = window.jspdf; const doc = new jsPDF();
-            const name = document.getElementById('resName').value; const title = document.getElementById('resTitle').value;
-            if(!name) return alert("Name field is minimum requirement structure payload.");
-            doc.setFont("helvetica", "bold"); doc.setFontSize(22); doc.text(name.toUpperCase(), 20, 30);
-            doc.setFontSize(12); doc.setFont("helvetica", "normal"); doc.text(title, 20, 40);
-            doc.save("tanzai_resume.pdf");
         }
 
         /* Tool 34 Logic Processing Script */
