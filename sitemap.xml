@@ -1,9 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Dashboard Homepage -->
     <url>
         <loc>https://tanzaitools.com/</loc>
-        <lastmod>2026-05-15</lastmod>
+        <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
+    
+    <!-- Tool 1: QR Code Generator -->
+    <url><loc>https://tanzaitools.com/#qr</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 2: JSON Formatter -->
+    <url><loc>https://tanzaitools.com/#json</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 3: Password Generator -->
+    <url><loc>https://tanzaitools.com/#password</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 4: Word & Char Counter -->
+    <url><loc>https://tanzaitools.com/#word-counter</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 5: Text Case Converter -->
+    <url><loc>https://tanzaitools.com/#case-converter</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 6: Image Compressor -->
+    <url><loc>https://tanzaitools.com/#image-compressor</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 7: Live Currency Converter -->
+    <url><loc>https://tanzaitools.com/#currency</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 8: SEO Meta Generator -->
+    <url><loc>https://tanzaitools.com/#seo-meta</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 9: Age Calculator -->
+    <url><loc>https://tanzaitools.com/#age-calculator</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 10: UTM Campaign Builder -->
+    <url><loc>https://tanzaitools.com/#utm-builder</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 11: JWT Decoder -->
+    <url><loc>https://tanzaitools.com/#jwt</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 12: SVG Optimizer -->
+    <url><loc>https://tanzaitools.com/#svg</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 13: CSS Gradient Generator -->
+    <url><loc>https://tanzaitools.com/#gradient</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 14: Base64 File Encoder -->
+    <url><loc>https://tanzaitools.com/#base64</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 15: Markdown to HTML -->
+    <url><loc>https://tanzaitools.com/#markdown</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 16: Crypto Hash Generator -->
+    <url><loc>https://tanzaitools.com/#crypto-hash</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 17: Text Diff Checker -->
+    <url><loc>https://tanzaitools.com/#diff-checker</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 18: Unix Timestamp Converter -->
+    <url><loc>https://tanzaitools.com/#unix-timestamp</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 19: HTML Entity Escaper -->
+    <url><loc>https://tanzaitools.com/#html-escape</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    
+    <!-- Tool 20: Lorem Ipsum Generator -->
+    <url><loc>https://tanzaitools.com/#lorem-ipsum</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 </urlset>
