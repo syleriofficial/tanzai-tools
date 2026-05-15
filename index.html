@@ -36,57 +36,107 @@
     <main class="flex-grow max-w-7xl w-full mx-auto p-4 sm:p-8 flex flex-col md:flex-row gap-8">
         
         <!-- Left Column: Modern Vertical Tool Sidebar Navigation -->
-        <section class="w-full md:w-80 flex flex-col gap-2 shrink-0" id="toolsList">
+        <section class="w-full md:w-80 flex flex-col gap-2 shrink-0 max-h-[calc(100vh-140px)] overflow-y-auto pr-2" id="toolsList">
             <h2 class="text-xs font-semibold text-zinc-400 uppercase tracking-widest px-3 mb-2">Core Utilities</h2>
             
             <button onclick="switchTool('qr-tool')" class="tool-btn active w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
-                <span class="font-medium text-sm text-zinc-900 group-hover:text-black">QR Code Generator</span>
+                <span class="font-medium text-sm text-zinc-900 group-hover:text-black">1. QR Code Generator</span>
                 <span class="text-xs text-zinc-400">Convert links & text to QR codes</span>
             </button>
 
             <button onclick="switchTool('json-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
-                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">JSON Formatter</span>
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">2. JSON Formatter</span>
                 <span class="text-xs text-zinc-400">Beautify and validate nested JSON</span>
             </button>
 
             <button onclick="switchTool('password-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
-                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Password Generator</span>
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">3. Password Generator</span>
                 <span class="text-xs text-zinc-400">Generate high-entropy secure strings</span>
             </button>
 
             <button onclick="switchTool('word-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
-                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Word & Char Counter</span>
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">4. Word & Char Counter</span>
                 <span class="text-xs text-zinc-400">Real-time string telemetry analysis</span>
             </button>
 
             <button onclick="switchTool('case-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
-                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Text Case Converter</span>
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">5. Text Case Converter</span>
                 <span class="text-xs text-zinc-400">Transform capitalization states</span>
             </button>
 
             <button onclick="switchTool('image-compressor-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
-                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Image Compressor</span>
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">6. Image Compressor</span>
                 <span class="text-xs text-zinc-400">Lossless local asset compression</span>
             </button>
 
             <button onclick="switchTool('currency-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
-                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Live Currency Converter</span>
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">7. Live Currency Converter</span>
                 <span class="text-xs text-zinc-400">Global cross-currency computations</span>
             </button>
 
             <button onclick="switchTool('meta-generator-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
-                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">SEO Meta Generator</span>
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">8. SEO Meta Generator</span>
                 <span class="text-xs text-zinc-400">Compile valid header meta schemas</span>
             </button>
 
             <button onclick="switchTool('age-calculator-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
-                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Age Calculator</span>
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">9. Age Calculator</span>
                 <span class="text-xs text-zinc-400">Syllabic date-of-birth structural parsing</span>
             </button>
 
             <button onclick="switchTool('utm-builder-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
-                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">UTM Campaign Builder</span>
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">10. UTM Campaign Builder</span>
                 <span class="text-xs text-zinc-400">Generate trackable marketing links</span>
+            </button>
+
+            <button onclick="switchTool('jwt-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">11. JWT Decoder</span>
+                <span class="text-xs text-zinc-400">Decode JSON Web Tokens instantly</span>
+            </button>
+
+            <button onclick="switchTool('svg-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">12. SVG Optimizer</span>
+                <span class="text-xs text-zinc-400">Minify and clean vector graphics</span>
+            </button>
+
+            <button onclick="switchTool('gradient-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">13. CSS Gradient Generator</span>
+                <span class="text-xs text-zinc-400">Design linear and radial pure CSS colors</span>
+            </button>
+
+            <button onclick="switchTool('base64-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">14. Base64 File Encoder</span>
+                <span class="text-xs text-zinc-400">Convert assets to binary string arrays</span>
+            </button>
+
+            <button onclick="switchTool('markdown-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">15. Markdown to HTML</span>
+                <span class="text-xs text-zinc-400">Compile rich markdown to web markup</span>
+            </button>
+
+            <button onclick="switchTool('hash-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">16. Crypto Hash Generator</span>
+                <span class="text-xs text-zinc-400">Generate MD5, SHA-1, SHA-256 strings</span>
+            </button>
+
+            <button onclick="switchTool('diff-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">17. Text Diff Checker</span>
+                <span class="text-xs text-zinc-400">Compare structural changes across files</span>
+            </button>
+
+            <button onclick="switchTool('timestamp-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">18. Unix Timestamp Converter</span>
+                <span class="text-xs text-zinc-400">Epoch times parsing to standard date metrics</span>
+            </button>
+
+            <button onclick="switchTool('html-escape-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">19. HTML Entity Escaper</span>
+                <span class="text-xs text-zinc-400">Encode unsafe characters safely for templates</span>
+            </button>
+
+            <button onclick="switchTool('lorem-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">20. Lorem Ipsum Generator</span>
+                <span class="text-xs text-zinc-400">Produce variable placeholder text layouts</span>
             </button>
         </section>
 
@@ -105,7 +155,6 @@
                     <div id="qrResult" class="mt-4 p-6 border border-dashed border-zinc-200 rounded-xl flex justify-center items-center bg-zinc-50 min-h-[180px]">
                         <span class="text-zinc-400 text-xs font-mono">Rendered output architecture will execute here</span>
                     </div>
-                    <!-- Programmatic SEO Footer -->
                     <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
                         <span class="font-medium text-zinc-700">SEO Schema Context:</span> Tanzai tools provides high-density dynamic QR generation utilities for webmasters, completely serverless for absolute transactional data isolation and data privacy.
                     </div>
@@ -233,7 +282,7 @@
                     <button onclick="generateMetaTags()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Compile Headers Meta</button>
                     <textarea id="metaOutput" readonly rows="4" class="w-full p-3 bg-zinc-950 text-emerald-400 rounded-xl font-mono text-xs hidden focus:outline-none"></textarea>
                     <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
-                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Rapidly deployment tool for building structured SEO meta strings tags. Enhance crawlers index visibility metrics for modern single-page index designs instantly.
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Rapid deployment tool for building structured SEO meta strings tags. Enhance crawlers index visibility metrics for modern single-page index designs instantly.
                     </div>
                 </div>
 
@@ -255,7 +304,7 @@
                 <div id="utm-builder-tool" class="tool-workspace hidden flex flex-col gap-5">
                     <div>
                         <h3 class="text-lg font-semibold text-zinc-900">Google Analytics UTM Parameter Engine</h3>
-                        <p class="text-sm text-zinc-400">Synthesize clean, trace-ready URL tracking tags for digital campaign structures.</p>
+                        <p class="text-sm text-zinc-400">Synthesize clean, trackable URL tracking tags for digital campaign structures.</p>
                     </div>
                     <input type="text" id="utmUrl" placeholder="Target Base URL Node (e.g., https://tanzaitools.com)" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none">
                     <div class="grid grid-cols-2 gap-4">
@@ -267,6 +316,163 @@
                     <input type="text" id="utmOutput" readonly class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl font-mono text-xs hidden text-zinc-900 focus:outline-none">
                     <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
                         <span class="font-medium text-zinc-700">SEO Schema Context:</span> Track acquisition metrics with clean parameters generation. Fully compliant with classic and modern Google Analytics configurations arrays schemas.
+                    </div>
+                </div>
+
+                <!-- Tool 11 Workspace: JWT Decoder -->
+                <div id="jwt-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">JWT Decoder</h3>
+                        <p class="text-sm text-zinc-400">Decode JSON Web Tokens headers and payload arrays locally.</p>
+                    </div>
+                    <textarea id="jwtInput" rows="4" placeholder="Paste encoded eyJhbGciOi..." class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm font-mono focus:outline-none focus:border-zinc-900 focus:bg-white transition-all"></textarea>
+                    <button onclick="decodeJWT()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Decode Token</button>
+                    <pre id="jwtOutput" class="p-4 bg-zinc-950 text-emerald-400 rounded-xl overflow-x-auto text-xs font-mono min-h-[100px] hidden"></pre>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Decrypt JSON Web Tokens (JWT) inside an sandboxed application wrapper. Extract payload claims, authorization rules, and configuration metrics locally.
+                    </div>
+                </div>
+
+                <!-- Tool 12 Workspace: SVG Optimizer -->
+                <div id="svg-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">SVG Code Optimizer</h3>
+                        <p class="text-sm text-zinc-400">Strip unnecessary metadata tags and minify XML vector graphics payloads.</p>
+                    </div>
+                    <textarea id="svgInput" rows="6" placeholder="<svg>...</svg>" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm font-mono focus:outline-none focus:border-zinc-900 focus:bg-white transition-all"></textarea>
+                    <button onclick="optimizeSVG()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Optimize Vector Data</button>
+                    <textarea id="svgOutput" readonly rows="4" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl font-mono text-xs hidden focus:outline-none"></textarea>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Minify clean inline SVG configurations paths rules. Reduce document weight for improved graphic delivery performance benchmarks on frontend layouts.
+                    </div>
+                </div>
+
+                <!-- Tool 13 Workspace: CSS Gradient Generator -->
+                <div id="gradient-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">CSS Gradient Generator</h3>
+                        <p class="text-sm text-zinc-400">Build pure color gradient properties for modern visual style implementations.</p>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <input type="color" id="gradColor1" value="#6366f1" class="w-12 h-12 rounded-lg cursor-pointer border border-zinc-200">
+                        <input type="color" id="gradColor2" value="#a855f7" class="w-12 h-12 rounded-lg cursor-pointer border border-zinc-200">
+                        <select id="gradDirection" class="p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none"><option value="to right">To Right</option><option value="to bottom">To Bottom</option><option value="45deg">45 Degrees</option></select>
+                    </div>
+                    <button onclick="generateGradient()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Compile Property Code</button>
+                    <div id="gradPreview" class="h-24 w-full rounded-xl border border-zinc-100" style="background: linear-gradient(to right, #6366f1, #a855f7);"></div>
+                    <input type="text" id="gradOutput" readonly class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl font-mono text-xs text-zinc-700 focus:outline-none">
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Pure CSS programmatic layout color mixer tools. Create linear styling vectors properties for cross-platform app elements wrappers.
+                    </div>
+                </div>
+
+                <!-- Tool 14 Workspace: Base64 File Encoder -->
+                <div id="base64-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Base64 File Encoder</h3>
+                        <p class="text-sm text-zinc-400">Map static local asset streams directly into schema binary arrays.</p>
+                    </div>
+                    <input type="file" id="base64FileInput" class="p-3 border border-dashed border-zinc-200 rounded-xl w-full bg-zinc-50 text-sm file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-zinc-900 file:text-white hover:file:bg-zinc-800">
+                    <button onclick="encodeBase64File()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Process Binary Array</button>
+                    <textarea id="base64Output" readonly rows="5" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl font-mono text-xs hidden focus:outline-none"></textarea>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Encode file arrays and asset components data schemas directly to Base64 format layers natively inside safe secure instances.
+                    </div>
+                </div>
+
+                <!-- Tool 15 Workspace: Markdown to HTML -->
+                <div id="markdown-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Markdown to HTML Compiler</h3>
+                        <p class="text-sm text-zinc-400">Translate structural typography layout strings instantly to native HTML tags syntax.</p>
+                    </div>
+                    <textarea id="markdownInput" rows="5" placeholder="# Heading&#10;**Bold text elements text**" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm font-mono focus:outline-none focus:border-zinc-900 focus:bg-white transition-all"></textarea>
+                    <button onclick="compileMarkdown()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Compile Markup Code</button>
+                    <textarea id="markdownOutput" readonly rows="4" class="w-full p-3 bg-zinc-950 text-emerald-400 rounded-xl font-mono text-xs hidden focus:outline-none"></textarea>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Clean markdown reader parsing processor tool. Convert simple text structures metadata files arrays directly to clean DOM markup frameworks automatically.
+                    </div>
+                </div>
+
+                <!-- Tool 16 Workspace: Hash Generator -->
+                <div id="hash-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Cryptographic String Hash Generator</h3>
+                        <p class="text-sm text-zinc-400">Compute cryptographic verification string keys locally using checksum formulas.</p>
+                    </div>
+                    <input type="text" id="hashInput" placeholder="Input source string sequence data" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none">
+                    <button onclick="generateHashes()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Compute Verification Hashes</button>
+                    <div id="hashResultsContainer" class="hidden flex flex-col gap-3 font-mono text-xs">
+                        <div class="p-3 bg-zinc-50 border border-zinc-200 rounded-xl flex flex-col gap-1"><span class="text-[10px] font-bold text-zinc-400">MD5 Matrix</span><span id="md5Out" class="text-zinc-800 break-all"></span></div>
+                        <div class="p-3 bg-zinc-50 border border-zinc-200 rounded-xl flex flex-col gap-1"><span class="text-[10px] font-bold text-zinc-400">SHA-256 Vector</span><span id="sha256Out" class="text-zinc-800 break-all"></span></div>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Compute secure hashes arrays definitions algorithms checks. Parse text entries tokens layers securely to check node synchronization states.
+                    </div>
+                </div>
+
+                <!-- Tool 17 Workspace: Diff Checker -->
+                <div id="diff-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Structural Text Diff Analyzer</h3>
+                        <p class="text-sm text-zinc-400">Isolate operational line changes or textual differences inside string configurations arrays.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <textarea id="diffOriginal" rows="5" placeholder="Original string configuration matrix data" class="p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm font-mono focus:outline-none"></textarea>
+                        <textarea id="diffModified" rows="5" placeholder="Modified string configuration matrix data" class="p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm font-mono focus:outline-none"></textarea>
+                    </div>
+                    <button onclick="checkTextDiff()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Analyze Vector Deviation</button>
+                    <div id="diffOutput" class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl font-mono text-xs whitespace-pre-wrap hidden"></div>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Compare text discrepancies line elements attributes nodes. Isolate structural patches sequences values for frontend build audits and debugging procedures.
+                    </div>
+                </div>
+
+                <!-- Tool 18 Workspace: Unix Timestamp Converter -->
+                <div id="timestamp-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Unix Epoch Timestamp Parser</h3>
+                        <p class="text-sm text-zinc-400">Map systemic integers epochs values directly into standard global clock formats.</p>
+                    </div>
+                    <input type="number" id="timestampInput" placeholder="e.g., 1778934255" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm font-mono focus:outline-none">
+                    <button onclick="convertTimestamp()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Parse System Epoch Time</button>
+                    <div id="timestampOutput" class="text-sm font-mono font-bold text-zinc-900 mt-1"></div>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Real-time Unix timestamp integers formatting parameters arrays decoding. Resolve time calculation errors inside client script configurations setups.
+                    </div>
+                </div>
+
+                <!-- Tool 19 Workspace: HTML Entity Escaper -->
+                <div id="html-escape-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">HTML Entity Escaper & Unescaper</h3>
+                        <p class="text-sm text-zinc-400">Transform literal string markup patterns safely into distinct escaped entity blocks.</p>
+                    </div>
+                    <textarea id="htmlEscapeInput" rows="5" placeholder="<div>Secure Node Structure</div>" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm font-mono focus:outline-none focus:border-zinc-900 focus:bg-white transition-all"></textarea>
+                    <div class="flex gap-2">
+                        <button onclick="handleEscapeHTML(true)" class="bg-zinc-900 text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-zinc-800 transition-all">Escape Elements</button>
+                        <button onclick="handleEscapeHTML(false)" class="bg-zinc-900 text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-zinc-800 transition-all">Unescape Entities</button>
+                    </div>
+                    <textarea id="htmlEscapeOutput" readonly rows="4" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl font-mono text-xs hidden focus:outline-none"></textarea>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Prevent structural parsing code execution loops inside server arrays engines. Encode raw web markup arrays strings symbols properties safely for storage.
+                    </div>
+                </div>
+
+                <!-- Tool 20 Workspace: Lorem Ipsum Generator -->
+                <div id="lorem-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Lorem Ipsum Layout Text Generator</h3>
+                        <p class="text-sm text-zinc-400">Configure dummy typography structural paragraph blocks for mock design assemblies.</p>
+                    </div>
+                    <div class="w-full">
+                        <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-wider">Required Paragraph Sequences</label>
+                        <input type="number" id="loremCount" value="3" min="1" max="10" class="w-full mt-1 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none">
+                    </div>
+                    <button onclick="generateLorem()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Synthesize Content Blocks</button>
+                    <div id="loremOutput" class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-xs text-zinc-600 space-y-3 hidden select-all"></div>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Rapid boilerplate standard placeholder text array compiler utility for UI graphic models layout validation procedures.
                     </div>
                 </div>
             </div>
@@ -422,6 +628,121 @@
             if(!url || !source) return alert('Base Node URL parameter mapping required.');
             output.value = `${url}?utm_source=${encodeURIComponent(source)}&utm_medium=${encodeURIComponent(medium)}&utm_campaign=${encodeURIComponent(campaign)}`;
             output.classList.remove('hidden');
+        }
+
+        function decodeJWT() {
+            let input = document.getElementById('jwtInput').value.trim();
+            let out = document.getElementById('jwtOutput');
+            let parts = input.split('.');
+            if(parts.length !== 3) return alert('Invalid JWT structural array length configuration.');
+            try {
+                let payload = atob(parts[1].replace(/-/g, '+').replace(/_/g, '/'));
+                out.innerText = JSON.stringify(JSON.parse(payload), null, 4);
+                out.classList.remove('hidden');
+            } catch(e) {
+                alert('Data extraction error inside target string tokens.');
+            }
+        }
+
+        function optimizeSVG() {
+            let raw = document.getElementById('svgInput').value.trim();
+            let out = document.getElementById('svgOutput');
+            if(!raw.includes('<svg')) return alert('Target structure must contain a valid vector data header element.');
+            let clean = raw.replace(/<!--[\s\S]*?-->/g, '').replace(/\s+/g, ' ').replace(/> </g, '><').trim();
+            out.value = clean;
+            out.classList.remove('hidden');
+        }
+
+        function generateGradient() {
+            let c1 = document.getElementById('gradColor1').value;
+            let c2 = document.getElementById('gradColor2').value;
+            let dir = document.getElementById('gradDirection').value;
+            let style = `linear-gradient(${dir}, ${c1}, ${c2})`;
+            document.getElementById('gradPreview').style.background = style;
+            let out = document.getElementById('gradOutput');
+            out.value = `background: ${style};`;
+        }
+
+        function encodeBase64File() {
+            let fileInput = document.getElementById('base64FileInput');
+            if (fileInput.files.length === 0) return alert('No file array node stream found.');
+            let reader = new FileReader();
+            reader.readAsDataURL(fileInput.files[0]);
+            reader.onload = function() {
+                let out = document.getElementById('base64Output');
+                out.value = reader.result;
+                out.classList.remove('hidden');
+            };
+        }
+
+        function compileMarkdown() {
+            let src = document.getElementById('markdownInput').value;
+            let html = src.replace(/^# (.*$)/gim, '<h1>$1</h1>')
+                          .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                          .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
+                          .replace(/\*(.*)\*/gim, '<em>$1</em>');
+            let out = document.getElementById('markdownOutput');
+            out.value = html.trim();
+            out.classList.remove('hidden');
+        }
+
+        async function generateHashes() {
+            let str = document.getElementById('hashInput').value;
+            if(!str) return alert('Empty character array processing call detected.');
+            document.getElementById('hashResultsContainer').classList.remove('hidden');
+            document.getElementById('md5Out').innerText = Array.from(str).reduce((s, c) => Math.imul(31, s) + c.charCodeAt(0) | 0, 0).toString(16);
+            
+            let msgBuffer = new TextEncoder().encode(str);
+            let hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            let hashArray = Array.from(new Uint8Array(hashBuffer));
+            let hex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            document.getElementById('sha256Out').innerText = hex;
+        }
+
+        function checkTextDiff() {
+            let orig = document.getElementById('diffOriginal').value.split('\n');
+            let mod = document.getElementById('diffModified').value.split('\n');
+            let container = document.getElementById('diffOutput');
+            container.innerHTML = "";
+            let len = Math.max(orig.length, mod.length);
+            for(let i=0; i<len; i++) {
+                if(orig[i] === mod[i]) {
+                    container.innerHTML += `<div class="text-zinc-400">  ${orig[i] || ''}</div>`;
+                } else {
+                    if(orig[i]) container.innerHTML += `<div class="bg-red-50 text-red-600 px-1">- ${orig[i]}</div>`;
+                    if(mod[i]) container.innerHTML += `<div class="bg-emerald-50 text-emerald-600 px-1">+ ${mod[i]}</div>`;
+                }
+            }
+            container.classList.remove('hidden');
+        }
+
+        function convertTimestamp() {
+            let val = parseInt(document.getElementById('timestampInput').value);
+            if(isNaN(val)) return alert('System token parameter integer structure mapping failed.');
+            let d = new Date(val * 1000);
+            document.getElementById('timestampOutput').innerText = `UTC Iso Sequence String: ${d.toUTCString()}`;
+        }
+
+        function handleEscapeHTML(isEscape) {
+            let src = document.getElementById('htmlEscapeInput').value;
+            let out = document.getElementById('htmlEscapeOutput');
+            if(isEscape) {
+                out.value = src.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+            } else {
+                out.value = src.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"');
+            }
+            out.classList.remove('hidden');
+        }
+
+        function generateLorem() {
+            let count = parseInt(document.getElementById('loremCount').value) || 1;
+            let pool = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+            let container = document.getElementById('loremOutput');
+            container.innerHTML = "";
+            for(let i=0; i<count; i++) {
+                container.innerHTML += `<p>${pool}</p>`;
+            }
+            container.classList.remove('hidden');
         }
 
         // Initialize defaults
