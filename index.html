@@ -35,7 +35,7 @@
 </head>
 <body class="bg-zinc-50 text-zinc-900 min-h-screen flex flex-col antialiased text-base">
 
-    <header class="w-full bg-white border-b border-zinc-200 sticky top-0 z-50 px-4 md:px-8 py-5 flex justify-between items-center max-w-7xl mx-auto">
+    <header id="mainAppHeader" class="w-full bg-white border-b border-zinc-200 sticky top-0 z-50 px-4 md:px-8 py-5 flex justify-between items-center max-w-7xl mx-auto">
         <div class="flex flex-col">
             <h1 class="text-2xl font-bold tracking-tight text-zinc-900">Tanzai Tools</h1>
             <span class="text-xs font-bold uppercase tracking-widest text-zinc-400 mt-0.5">Mega Utility Infrastructure (50+ Live)</span>
@@ -72,31 +72,31 @@
                 
                 <button onclick="showTool('legacy-panel')" data-name="legacy placeholders components operational suite" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-400 hover:bg-zinc-100 border border-transparent transition-all duration-200">08-25. Legacy Core Panels</button>
 
-                <button onclick="showTool('pdf-text-tool')" data-name="pdf to text converter extract plain words content document parsing script" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">26. PDF to Text Converter</button>
-                <button onclick="showTool('img-pdf-tool')" data-name="images to pdf tool merge jpg png photos document builder" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">27. Images to PDF Tool</button>
-                <button onclick="showTool('pdf-lock-tool')" data-name="pdf password protector secure files lock encrypt privacy protection" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">28. PDF Password Protector</button>
-                <button onclick="showTool('word-pdf-tool')" data-name="word to pdf logic doc docx formatting dynamic converters office text" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">29. Word to PDF Logic</button>
-                <button onclick="showTool('pdf-merge-tool')" data-name="enterprise pdf merger combine files bind split stack storage" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">30. Enterprise PDF Merger</button>
-                <button onclick="showTool('ai-prompt-tool')" data-name="ai image prompt engine midjourney dall-e stable diffusion prompt crafting" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">31. AI Image Prompt Engine</button>
-                <button onclick="showTool('seo-analyzer-tool')" data-name="website seo auditor rank tracking check link tags optimization on-page h1 meta" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">32. Website SEO Auditor</button>
-                <button onclick="showTool('resume-tool')" data-name="quick cv resume builder maker templates ats-friendly hiring employment bio" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">33. Quick CV/Resume Builder</button>
-                <button onclick="showTool('yt-thumbnail-tool')" data-name="yt thumbnail scraper youtube media cover images 4k hd downloads" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">34. YT Thumbnail Scraper</button>
-                <button onclick="showTool('webp-tool')" data-name="image to webp optimizer converter speed core web vitals png jpg scale" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">35. Image to WebP Optimizer</button>
-                <button onclick="showTool('bulk-url-tool')" data-name="bulk system url opener tabs browser links multi automatic execution routing" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">36. Bulk System URL Opener</button>
-                <button onclick="showTool('password-audit-tool')" data-name="password entropy audit security test score safety check checker strength characters" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">37. Password Entropy Audit</button>
-                <button onclick="showTool('ascii-tool')" data-name="ascii stylized art gen text transform terminal layout design letters typography" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">38. ASCII Stylized Art Gen</button>
-                <button onclick="showTool('font-gen-tool')" data-name="social typography engine instagram bio text design bold cursive fancy fonts unicode text converter" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">39. Social Typography Engine</button>
-                <button onclick="showTool('favicon-fetcher-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">40. High-Res Favicon Fetcher</button>
-                <button onclick="showTool('email-extractor-tool')" data-name="bulk regex email scraper extract validation filters" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">41. Bulk Email Extractor</button>
-                <button onclick="showTool('json-csv-tool')" data-name="flattened json to csv data sheet converter excel" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">42. JSON to CSV</button>
-                <button onclick="showTool('word-counter-tool')" data-name="metrics text word counter characters analysis limits" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">43. Word Counter</button>
-                <button onclick="showTool('case-converter-tool')" data-name="dynamic case converter upper lower text modifications" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">44. Case Converter</button>
-                <button onclick="showTool('html-entity-tool')" data-name="html safe entity escaper decode safe codes markup" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">45. HTML Entities</button>
-                <button onclick="showTool('gradient-tool')" data-name="linear css gradient lab visual background coloring palettes" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">46. CSS Gradient</button>
-                <button onclick="showTool('twitter-preview-tool')" data-name="twitter x metadata mockup preview seo optimization cards" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">47. Twitter Preview</button>
-                <button onclick="showTool('robots-tool')" data-name="crawler robots.txt engine seo indexing allow directions bot" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">48. Robots.txt Gen</button>
-                <button onclick="showTool('yt-tag-tool')" data-name="youtube tag extractor search rankings optimization keywords video tags" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">49. YT Tag Extractor</button>
-                <button onclick="showTool('dns-lookup-tool')" data-name="dns records ip audit servers propagation dynamic records lookup mx ns nameservers" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">50. DNS & IP Audit</button>
+                <button onclick="showTool('pdf-text-tool')" data-name="pdf to text converter extract plain words content document parsing script" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">26. PDF to Text Converter</button>
+                <button onclick="showTool('img-pdf-tool')" data-name="images to pdf tool merge jpg png photos document builder" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">27. Images to PDF Tool</button>
+                <button onclick="showTool('pdf-lock-tool')" data-name="pdf password protector secure files lock encrypt privacy protection" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">28. PDF Password Protector</button>
+                <button onclick="showTool('word-pdf-tool')" data-name="word to pdf logic doc docx formatting dynamic converters office text" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">29. Word to PDF Logic</button>
+                <button onclick="showTool('pdf-merge-tool')" data-name="enterprise pdf merger combine files bind split stack storage" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">30. Enterprise PDF Merger</button>
+                <button onclick="showTool('ai-prompt-tool')" data-name="ai image prompt engine midjourney dall-e stable diffusion prompt crafting" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">31. AI Image Prompt Engine</button>
+                <button onclick="showTool('seo-analyzer-tool')" data-name="website seo auditor rank tracking check link tags optimization on-page h1 meta" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">32. Website SEO Auditor</button>
+                <button onclick="showTool('resume-tool')" data-name="quick cv resume builder maker templates ats-friendly hiring employment bio" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">33. Quick CV/Resume Builder</button>
+                <button onclick="showTool('yt-thumbnail-tool')" data-name="yt thumbnail scraper youtube media cover images 4k hd downloads" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">34. YT Thumbnail Scraper</button>
+                <button onclick="showTool('webp-tool')" data-name="image to webp optimizer converter speed core web vitals png jpg scale" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">35. Image to WebP Optimizer</button>
+                <button onclick="showTool('bulk-url-tool')" data-name="bulk system url opener tabs browser links multi automatic execution routing" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">36. Bulk System URL Opener</button>
+                <button onclick="showTool('password-audit-tool')" data-name="password entropy audit security test score safety check checker strength characters" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">37. Password Entropy Audit</button>
+                <button onclick="showTool('ascii-tool')" data-name="ascii stylized art gen text transform terminal layout design letters typography" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">38. ASCII Stylized Art Gen</button>
+                <button onclick="showTool('font-gen-tool')" data-name="social typography engine instagram bio text design bold cursive fancy fonts unicode text converter" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">39. Social Typography Engine</button>
+                <button onclick="showTool('favicon-fetcher-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">40. High-Res Favicon Fetcher</button>
+                <button onclick="showTool('email-extractor-tool')" data-name="bulk regex email scraper extract validation filters" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">41. Bulk Email Extractor</button>
+                <button onclick="showTool('json-csv-tool')" data-name="flattened json to csv data sheet converter excel" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">42. JSON to CSV</button>
+                <button onclick="showTool('word-counter-tool')" data-name="metrics text word counter characters analysis limits" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">43. Word Counter</button>
+                <button onclick="showTool('case-converter-tool')" data-name="dynamic case converter upper lower text modifications" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">44. Case Converter</button>
+                <button onclick="showTool('html-entity-tool')" data-name="html safe entity escaper decode safe codes markup" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">45. HTML Entities</button>
+                <button onclick="showTool('gradient-tool')" data-name="linear css gradient lab visual background coloring palettes" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">46. CSS Gradient</button>
+                <button onclick="showTool('twitter-preview-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">47. Twitter Preview</button>
+                <button onclick="showTool('robots-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">48. Robots.txt Gen</button>
+                <button onclick="showTool('yt-tag-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">49. YT Tag Extractor</button>
+                <button onclick="showTool('dns-lookup-tool')" data-name="dns records ip audit servers propagation dynamic records lookup mx ns nameservers" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">50. DNS & IP Audit</button>
             </div>
 
             <div class="absolute bottom-0 left-0 right-0 p-4 pt-3 border-t border-zinc-100 flex flex-col gap-1 bg-white z-20">
@@ -110,7 +110,7 @@
             <div id="default-placeholder" class="flex flex-col items-center justify-center text-center py-24 gap-4">
                 <div class="text-zinc-300 font-mono tracking-widest text-5xl font-bold">50+</div>
                 <div class="text-base font-bold text-zinc-900">Tanzai Labs Execution Engine</div>
-                <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational structural utility layout from the dashboard suite or use search bar to render active application.</p>
+                <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational utility layout from the suite or use search bar to render active application.</p>
             </div>
 
             <div id="legacy-panel" class="tool-workspace hidden flex flex-col gap-4 text-center py-20">
@@ -164,6 +164,7 @@
                     <p class="text-sm text-zinc-400">Instantly render responsive matrix tracking grids for text content or links data.</p>
                 </div>
                 <input type="text" id="qrInputData" placeholder="https://tanzaitools.com" class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl outline-none">
+                <img src="" id="qrImageElement" class="hidden max-w-xs mx-auto rounded-xl border border-zinc-200 p-2 bg-white">
                 <button onclick="buildQRCode()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Generate QR Code</button>
                 <div id="qrCanvasBox" class="flex justify-center p-4 bg-white border border-zinc-100 rounded-2xl max-w-xs mx-auto hidden"></div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -356,7 +357,7 @@
                 <div id="thumbnailResultArea" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                     <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl flex flex-col gap-2">
                         <img id="imgMax" class="w-full rounded-lg border" src="" alt="HD Thumbnail">
-                        <a id="btnMax" download="thumbnail_hd.jpg" target="_blank" class="text-center mt-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 py-2 rounded-lg text-xs font-bold uppercase tracking-wider">Download HD</a>
+                        <a id="btnMax" download="thumbnail_hd.jpg" target="_blank" class="text-center mt-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider">Download HD</a>
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -418,7 +419,7 @@
                     <p class="text-sm text-zinc-400">Generate stylish fancy cursive typography profiles formats text variations.</p>
                 </div>
                 <input type="text" id="fontInput" oninput="generateFonts()" placeholder="Type here..." class="w-full p-4 bg-zinc-50 border rounded-xl text-base outline-none">
-                <div id="fontResultArea" class="hidden flex flex-col gap-3" id="fontResultsList"></div>
+                <div id="fontResultArea" class="hidden flex flex-col gap-3"></div>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
@@ -460,7 +461,7 @@
                 <button onclick="convertJSONtoCSV()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Convert Data Format</button>
                 <div id="csvResultArea" class="hidden flex flex-col gap-2">
                     <textarea id="csvOutput" readonly class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm"></textarea>
-                    <button onclick="downloadCSV()" class="mt-2 bg-zinc-100 p-3.5 rounded-xl text-xs font-bold text-zinc-800">Download CSV</button>
+                    <button onclick="downloadCSV()" class="bg-zinc-100 p-3.5 rounded-xl text-xs font-bold text-zinc-800">Download CSV</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
@@ -613,14 +614,11 @@
                     try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(err) {}
                 });
 
-                if(window.innerWidth < 1024) {
-                    targetWorkspace.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                // Perfect Viewport Fixed top anchor alignment matrix (Scrolls directly to Tanzai Tools title header node element)
+                document.getElementById('mainAppHeader').scrollIntoView({ behavior: 'smooth', block: 'start' });
             } else if(toolId === 'legacy-panel') {
                 document.getElementById('legacy-panel').classList.remove('hidden');
-                if(window.innerWidth < 1024) {
-                    document.getElementById('legacy-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                document.getElementById('mainAppHeader').scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
 
             const currentTrigger = window.event?.currentTarget;
@@ -875,7 +873,6 @@
             if(mode === 'title') bufferView.value = source.toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
             if(mode === 'sentence') bufferView.value = source.toLowerCase().replace(/(^\s*|[.!?]\s+)([a-z])/g, (m, p1, p2) => p1 + p2.toUpperCase());
         }
-        function copyCaseText() { document.getElementById('caseOutputText').select(); document.execCommand('copy'); alert("Copied text content buffer."); }
 
         /* Tool 45 Logic Processing Script */
         function processEntities(type) {
@@ -884,7 +881,6 @@
             const sandboxNode = document.createElement('div');
             if(type === 'encode') { sandboxNode.textContent = val; outputBuffer.value = sandboxNode.innerHTML; } else { sandboxNode.innerHTML = val; outputBuffer.value = sandboxNode.textContent; }
         }
-        function copyEntityText() { document.getElementById('entityOutput').select(); document.execCommand('copy'); alert("Copied entities."); }
 
         /* Tool 46 Logic Processing Script */
         function updateGradient() {
@@ -892,7 +888,6 @@
             const CSSRule = `linear-gradient(90deg, ${hex1}, ${hex2})`;
             document.getElementById('gradientPreview').style.background = CSSRule; document.getElementById('gradientCode').value = `background: ${CSSRule};`;
         }
-        function copyGradient() { document.getElementById('gradientCode').select(); document.execCommand('copy'); alert("CSS properties configuration block cloned."); }
 
         /* Tool 47 Logic Processing Script */
         async function previewTwitterCard() {
