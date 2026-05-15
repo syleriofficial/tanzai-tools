@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzai Tools — Premium, Clean & Light-Speed Developer Utilities</title>
+    <meta name="description" content="A curated suite of ultra-fast, 100% client-side developer and webmaster tools built for maximum efficiency and total privacy.">
+    <!-- Tailwind CSS for sleek utility styling -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .tool-btn.active {
+            background-color: #f4f4f5;
+            border-color: #18181b;
+            color: #09090b;
+        }
+    </style>
+</head>
+<body class="bg-[#fafafa] text-zinc-900 min-h-screen flex flex-col antialiased">
+
+    <!-- Premium Google-Minimal Top Navbar -->
+    <header class="border-b border-zinc-200 bg-white/80 backdrop-blur-md py-4 px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="h-6 w-2 bg-zinc-900 rounded-full"></span>
+                <h1 class="text-xl font-bold tracking-tight text-zinc-900">tanzaitools<span class="text-zinc-400 font-normal">.com</span></h1>
+            </div>
+            <!-- Instant Interactive Search Filter -->
+            <div class="relative w-full sm:w-80">
+                <input type="text" id="toolSearch" oninput="filterTools()" placeholder="Search tools instantly (e.g., QR, JSON)..." class="w-full px-4 py-2 bg-zinc-50 border border-zinc-200 rounded-lg text-sm transition-all focus:outline-none focus:border-zinc-900 focus:bg-white focus:ring-1 focus:ring-zinc-900">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 sm:p-8 flex flex-col md:flex-row gap-8">
+        
+        <!-- Left Column: Modern Vertical Tool Sidebar Navigation -->
+        <section class="w-full md:w-80 flex flex-col gap-2 shrink-0" id="toolsList">
+            <h2 class="text-xs font-semibold text-zinc-400 uppercase tracking-widest px-3 mb-2">Core Utilities</h2>
+            
+            <button onclick="switchTool('qr-tool')" class="tool-btn active w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-900 group-hover:text-black">QR Code Generator</span>
+                <span class="text-xs text-zinc-400">Convert links & text to QR codes</span>
+            </button>
+
+            <button onclick="switchTool('json-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">JSON Formatter</span>
+                <span class="text-xs text-zinc-400">Beautify and validate nested JSON</span>
+            </button>
+
+            <button onclick="switchTool('password-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Password Generator</span>
+                <span class="text-xs text-zinc-400">Generate high-entropy secure strings</span>
+            </button>
+
+            <button onclick="switchTool('word-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Word & Char Counter</span>
+                <span class="text-xs text-zinc-400">Real-time string telemetry analysis</span>
+            </button>
+
+            <button onclick="switchTool('case-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Text Case Converter</span>
+                <span class="text-xs text-zinc-400">Transform capitalization states</span>
+            </button>
+
+            <button onclick="switchTool('image-compressor-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Image Compressor</span>
+                <span class="text-xs text-zinc-400">Lossless local asset compression</span>
+            </button>
+
+            <button onclick="switchTool('currency-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Live Currency Converter</span>
+                <span class="text-xs text-zinc-400">Global cross-currency computations</span>
+            </button>
+
+            <button onclick="switchTool('meta-generator-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">SEO Meta Generator</span>
+                <span class="text-xs text-zinc-400">Compile valid header meta schemas</span>
+            </button>
+
+            <button onclick="switchTool('age-calculator-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">Age Calculator</span>
+                <span class="text-xs text-zinc-400">Syllabic date-of-birth structural parsing</span>
+            </button>
+
+            <button onclick="switchTool('utm-builder-tool')" class="tool-btn w-full text-left p-3.5 bg-white border border-zinc-100 hover:border-zinc-300 rounded-xl transition-all flex flex-col gap-0.5 group">
+                <span class="font-medium text-sm text-zinc-600 group-hover:text-black">UTM Campaign Builder</span>
+                <span class="text-xs text-zinc-400">Generate trackable marketing links</span>
+            </button>
+        </section>
+
+        <!-- Right Column: Micro-SaaS Premium Workspace UI -->
+        <section class="flex-grow bg-white border border-zinc-200 rounded-2xl p-6 sm:p-8 shadow-sm min-h-[500px] flex flex-col justify-between">
+            
+            <div id="workspaceContent">
+                <!-- Tool 1 Workspace: QR Code -->
+                <div id="qr-tool" class="tool-workspace flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">QR Code Generator</h3>
+                        <p class="text-sm text-zinc-400">Generate high-fidelity, track-free QR assets instantly.</p>
+                    </div>
+                    <input type="text" id="qrInput" placeholder="https://tanzaitools.com" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none focus:border-zinc-900 focus:bg-white transition-all">
+                    <button onclick="generateQR()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Generate QR Asset</button>
+                    <div id="qrResult" class="mt-4 p-6 border border-dashed border-zinc-200 rounded-xl flex justify-center items-center bg-zinc-50 min-h-[180px]">
+                        <span class="text-zinc-400 text-xs font-mono">Rendered output architecture will execute here</span>
+                    </div>
+                    <!-- Programmatic SEO Footer -->
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Tanzai tools provides high-density dynamic QR generation utilities for webmasters, completely serverless for absolute transactional data isolation and data privacy.
+                    </div>
+                </div>
+
+                <!-- Tool 2 Workspace: JSON Formatter -->
+                <div id="json-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">JSON Formatter & Beautifier</h3>
+                        <p class="text-sm text-zinc-400">Parse, format, structure and validate JSON schemas in real-time.</p>
+                    </div>
+                    <textarea id="jsonRaw" rows="8" placeholder='{"status":"active","engine":"tanzai_labs"}' class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm font-mono focus:outline-none focus:border-zinc-900 focus:bg-white transition-all"></textarea>
+                    <button onclick="formatJSON()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Format Structure</button>
+                    <pre id="jsonOutput" class="p-4 bg-zinc-950 text-emerald-400 rounded-xl overflow-x-auto text-xs font-mono min-h-[120px] hidden"></pre>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Free online JSON format parser. Clean minified Javascript object notations instantly using an isolated environment optimized for speed-critical developers.
+                    </div>
+                </div>
+
+                <!-- Tool 3 Workspace: Password Generator -->
+                <div id="password-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">High-Entropy Password Generator</h3>
+                        <p class="text-sm text-zinc-400">Build cryptographically secure strings right in your client sandbox.</p>
+                    </div>
+                    <input type="text" id="passOutput" readonly class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl font-mono text-base text-center font-bold tracking-widest text-zinc-800 focus:outline-none">
+                    <button onclick="generatePassword()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Generate Secure Key</button>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Generate ultra-strong passwords via randomized localized clients. Defend database nodes and corporate profiles using highly obfuscated character sequences.
+                    </div>
+                </div>
+
+                <!-- Tool 4 Workspace: Word Counter -->
+                <div id="word-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Word & Character Telemetry Analyzer</h3>
+                        <p class="text-sm text-zinc-400">Live, local metric data monitoring for technical and marketing writers.</p>
+                    </div>
+                    <textarea id="counterInput" oninput="countText()" rows="6" placeholder="Paste structural text or document strings here..." class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none focus:border-zinc-900 focus:bg-white transition-all"></textarea>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-4 bg-zinc-50 border border-zinc-100 rounded-xl">
+                            <div id="wordCount" class="text-2xl font-bold text-zinc-900">0</div>
+                            <div class="text-[10px] text-zinc-400 uppercase font-semibold tracking-wider mt-1">Total Words</div>
+                        </div>
+                        <div class="p-4 bg-zinc-50 border border-zinc-100 rounded-xl">
+                            <div id="charCount" class="text-2xl font-bold text-zinc-900">0</div>
+                            <div class="text-[10px] text-zinc-400 uppercase font-semibold tracking-wider mt-1">Characters</div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Use our clean real-time word limits scanner optimized to map out SEO parameters, social media descriptions constraints, and technical essays layout structures.
+                    </div>
+                </div>
+
+                <!-- Tool 5 Workspace: Case Converter -->
+                <div id="case-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Text Case Transformer</h3>
+                        <p class="text-sm text-zinc-400">Instantly switch between explicit structural character states.</p>
+                    </div>
+                    <textarea id="caseInput" rows="5" placeholder="Input target copy here..." class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none focus:border-zinc-900 focus:bg-white transition-all"></textarea>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="convertCase('upper')" class="bg-zinc-900 text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-zinc-800 transition-all">UPPERCASE</button>
+                        <button onclick="convertCase('lower')" class="bg-zinc-900 text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-zinc-800 transition-all">lowercase</button>
+                        <button onclick="convertCase('title')" class="bg-zinc-900 text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-zinc-800 transition-all">Title Case</button>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Free data formatting string utility to quickly shift structural strings into upper, sentence, or programmatic casing arrays automatically.
+                    </div>
+                </div>
+
+                <!-- Tool 6 Workspace: Image Compressor -->
+                <div id="image-compressor-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Bulk Image Compressor</h3>
+                        <p class="text-sm text-zinc-400">Execute lightning-fast compression on graphic visual arrays natively.</p>
+                    </div>
+                    <input type="file" id="imageInput" accept="image/*" class="p-3 border border-dashed border-zinc-200 rounded-xl w-full bg-zinc-50 text-sm file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-zinc-900 file:text-white hover:file:bg-zinc-800">
+                    <button onclick="compressImage()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Compress Raster Node</button>
+                    <div id="compressResult" class="hidden p-4 bg-zinc-50 border border-zinc-200 rounded-xl flex flex-col gap-1">
+                        <p class="text-xs text-zinc-800 font-medium">Compression matrix complete.</p>
+                        <a id="downloadLink" class="text-zinc-900 font-bold underline text-xs tracking-tight" download="compressed-tanzaitools.jpg">Download Asset Array</a>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Maximize Core Web Vitals targets. Reduce payload sizes of JPEG, PNG, or web structural assets with zero cloud server upload processing bottlenecks.
+                    </div>
+                </div>
+
+                <!-- Tool 7 Workspace: Currency Converter -->
+                <div id="currency-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Live Currency Converter</h3>
+                        <p class="text-sm text-zinc-400">Real-time localized international pricing currency matrix mapping.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-wider">Amount Value</label>
+                            <input type="number" id="currencyAmount" value="1" class="w-full mt-1 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-wider">Source Token</label>
+                            <select id="fromCurrency" class="w-full mt-1 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm bg-white focus:outline-none"><option value="USD">USD ($)</option><option value="INR">INR (₹)</option><option value="EUR">EUR (€)</option></select>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-wider">Target Token</label>
+                        <select id="toCurrency" class="w-full mt-1 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm bg-white focus:outline-none"><option value="INR">INR (₹)</option><option value="USD">USD ($)</option><option value="EUR">EUR (€)</option></select>
+                    </div>
+                    <button onclick="convertCurrency()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Execute Exchange Conversion</button>
+                    <div id="currencyResult" class="text-xl font-bold text-zinc-900 tracking-tight mt-2"></div>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Calculate foreign currency pricing matrices instantly. Ideal for global digital merchants, fintech cross-border transactions, and remittance calculation tasks.
+                    </div>
+                </div>
+
+                <!-- Tool 8 Workspace: Meta Tag Generator -->
+                <div id="meta-generator-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Advanced SEO Meta Tags Compiler</h3>
+                        <p class="text-sm text-zinc-400">Configure machine-readable data modules for high search ranking optimization.</p>
+                    </div>
+                    <input type="text" id="metaTitle" placeholder="Document Title Asset (Ideal limit: ~60 chars)" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none">
+                    <textarea id="metaDesc" rows="2" placeholder="Document Narrative Meta Description (Ideal limit: ~160 chars)" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none"></textarea>
+                    <input type="text" id="metaKeys" placeholder="Target Search Keyphrase Tokens (Comma-delimited format)" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none">
+                    <button onclick="generateMetaTags()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Compile Headers Meta</button>
+                    <textarea id="metaOutput" readonly rows="4" class="w-full p-3 bg-zinc-950 text-emerald-400 rounded-xl font-mono text-xs hidden focus:outline-none"></textarea>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Rapidly deployment tool for building structured SEO meta strings tags. Enhance crawlers index visibility metrics for modern single-page index designs instantly.
+                    </div>
+                </div>
+
+                <!-- Tool 9 Workspace: Age Calculator -->
+                <div id="age-calculator-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Chronological Age Array Parser</h3>
+                        <p class="text-sm text-zinc-400">Calculate precision age temporal strings down to distinct daily parameters.</p>
+                    </div>
+                    <input type="date" id="dobInput" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm bg-white focus:outline-none">
+                    <button onclick="calculateAge()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Parse Temporal Age</button>
+                    <div id="ageResult" class="text-sm font-mono font-bold text-zinc-900 mt-2"></div>
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Find exact age timelines arrays instantly. Optimized utility used globally for strict official admissions forms calculations, competitive profile mapping, and records management workflows.
+                    </div>
+                </div>
+
+                <!-- Tool 10 Workspace: UTM Builder -->
+                <div id="utm-builder-tool" class="tool-workspace hidden flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-900">Google Analytics UTM Parameter Engine</h3>
+                        <p class="text-sm text-zinc-400">Synthesize clean, trace-ready URL tracking tags for digital campaign structures.</p>
+                    </div>
+                    <input type="text" id="utmUrl" placeholder="Target Base URL Node (e.g., https://tanzaitools.com)" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" id="utmSource" placeholder="Campaign Source Token" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none">
+                        <input type="text" id="utmMedium" placeholder="Campaign Medium Vector" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none">
+                    </div>
+                    <input type="text" id="utmCampaign" placeholder="Unique Campaign Identity Title" class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:outline-none">
+                    <button onclick="generateUTM()" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all self-start">Synthesize Tracking Link</button>
+                    <input type="text" id="utmOutput" readonly class="w-full p-3 bg-zinc-50 border border-zinc-200 rounded-xl font-mono text-xs hidden text-zinc-900 focus:outline-none">
+                    <div class="mt-8 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
+                        <span class="font-medium text-zinc-700">SEO Schema Context:</span> Track acquisition metrics with clean parameters generation. Fully compliant with classic and modern Google Analytics configurations arrays schemas.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Global Platform Minimalist Footer -->
+    <footer class="border-t border-zinc-200 bg-white text-center py-5 text-[11px] text-zinc-400 tracking-tight mt-auto">
+        &copy; 2026 Tanzai Labs Tech Group. All tool systems compile locally on individual secure client-side instances for premium efficiency.
+    </footer>
+
+    <!-- Light-speed Core Logic (Pure Native Javascript Architecture) -->
+    <script>
+        function switchTool(toolId) {
+            document.querySelectorAll('.tool-workspace').forEach(el => el.classList.add('hidden'));
+            document.getElementById(toolId).classList.remove('hidden');
+            
+            document.querySelectorAll('.tool-btn').forEach(btn => {
+                btn.classList.remove('active');
+                let mainTxt = btn.querySelector('.font-medium');
+                if (mainTxt) {
+                    mainTxt.classList.remove('text-zinc-900');
+                    mainTxt.classList.add('text-zinc-600');
+                }
+            });
+            
+            let activeBtn = event.currentTarget;
+            activeBtn.classList.add('active');
+            let activeTxt = activeBtn.querySelector('.font-medium');
+            if (activeTxt) {
+                activeTxt.classList.remove('text-zinc-600');
+                activeTxt.classList.add('text-zinc-900');
+            }
+        }
+
+        function filterTools() {
+            let filter = document.getElementById('toolSearch').value.toLowerCase();
+            let buttons = document.querySelectorAll('.tool-btn');
+            buttons.forEach(btn => {
+                let text = btn.innerText.toLowerCase();
+                btn.style.display = text.includes(filter) ? "flex" : "none";
+            });
+        }
+
+        function generateQR() {
+            let val = document.getElementById('qrInput').value || 'https://tanzaitools.com';
+            let resDiv = document.getElementById('qrResult');
+            resDiv.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(val)}" alt="QR Asset Output" class="shadow-sm rounded-xl">`;
+        }
+
+        function formatJSON() {
+            let raw = document.getElementById('jsonRaw').value;
+            let output = document.getElementById('jsonOutput');
+            try {
+                let parsed = JSON.parse(raw);
+                output.innerText = JSON.stringify(parsed, null, 4);
+                output.classList.remove('hidden');
+            } catch(e) {
+                alert('Invalid structural JSON format matrix detected.');
+            }
+        }
+
+        function generatePassword() {
+            let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+            let pass = "";
+            for (let i = 0; i < 16; i++) {
+                pass += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById('passOutput').value = pass;
+        }
+
+        function countText() {
+            let text = document.getElementById('counterInput').value.trim();
+            document.getElementById('charCount').innerText = text.length;
+            document.getElementById('wordCount').innerText = text === "" ? 0 : text.split(/\s+/).length;
+        }
+
+        function convertCase(type) {
+            let input = document.getElementById('caseInput');
+            if(type === 'upper') input.value = input.value.toUpperCase();
+            if(type === 'lower') input.value = input.value.toLowerCase();
+            if(type === 'title') {
+                input.value = input.value.toLowerCase().replace(/\b\w/g, s => s.toUpperCase());
+            }
+        }
+
+        function compressImage() {
+            let fileInput = document.getElementById('imageInput');
+            if (fileInput.files.length === 0) return alert('Select target local file array asset first.');
+            let file = fileInput.files[0];
+            let reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (event) {
+                let img = new Image();
+                img.src = event.target.result;
+                img.onload = function () {
+                    let canvas = document.createElement('canvas');
+                    let ctx = canvas.getContext('2d');
+                    canvas.width = img.width * 0.7;
+                    canvas.height = img.height * 0.7;
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    let compressedData = canvas.toDataURL('image/jpeg', 0.6);
+                    document.getElementById('downloadLink').href = compressedData;
+                    document.getElementById('compressResult').classList.remove('hidden');
+                }
+            }
+        }
+
+        function convertCurrency() {
+            let amt = parseFloat(document.getElementById('currencyAmount').value) || 0;
+            let from = document.getElementById('fromCurrency').value;
+            let to = document.getElementById('toCurrency').value;
+            let resBox = document.getElementById('currencyResult');
+            let rate = 1;
+            if (from === "USD" && to === "INR") rate = 83.50; 
+            if (from === "INR" && to === "USD") rate = 0.012;
+            if (from === "EUR" && to === "INR") rate = 90.20;
+            if (from === "INR" && to === "EUR") rate = 0.011;
+            if (from === "USD" && to === "EUR") rate = 0.92;
+            if (from === "EUR" && to === "USD") rate = 1.08;
+            if (from === to) rate = 1;
+            resBox.innerText = `${(amt * rate).toFixed(2)} ${to}`;
+        }
+
+        function generateMetaTags() {
+            let title = document.getElementById('metaTitle').value;
+            let desc = document.getElementById('metaDesc').value;
+            let keys = document.getElementById('metaKeys').value;
+            let output = document.getElementById('metaOutput');
+            output.value = `<!-- Target SEO Configuration Meta -->\n<title>${title}</title>\n<meta name="description" content="${desc}">\n<meta name="keywords" content="${keys}">`;
+            output.classList.remove('hidden');
+        }
+
+        function calculateAge() {
+            let dobValue = document.getElementById('dobInput').value;
+            if (!dobValue) return alert('Identify age parameters threshold node point.');
+            let dob = new Date(dobValue);
+            let diff = Date.now() - dob.getTime();
+            let ageDate = new Date(diff); 
+            let years = Math.abs(ageDate.getUTCFullYear() - 1970);
+            let months = ageDate.getUTCMonth();
+            let days = ageDate.getUTCDate() - 1;
+            document.getElementById('ageResult').innerText = `Matrix Metrics Age: ${years} Years, ${months} Months, ${days} Days.`;
+        }
+
+        function generateUTM() {
+            let url = document.getElementById('utmUrl').value;
+            let source = document.getElementById('utmSource').value;
+            let medium = document.getElementById('utmMedium').value;
+            let campaign = document.getElementById('utmCampaign').value;
+            let output = document.getElementById('utmOutput');
+            if(!url || !source) return alert('Base Node URL parameter mapping required.');
+            output.value = `${url}?utm_source=${encodeURIComponent(source)}&utm_medium=${encodeURIComponent(medium)}&utm_campaign=${encodeURIComponent(campaign)}`;
+            output.classList.remove('hidden');
+        }
+
+        // Initialize defaults
+        generatePassword();
+    </script>
+</body>
+</html>
