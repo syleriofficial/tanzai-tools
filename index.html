@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanzai Tools - 50+ Free Premium Online Utilities</title>
+    <title>Tanzai Tools - 50+ Premium Free Online Utilities</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/figlet/1.6.0/figlet.min.js"></script>
@@ -18,219 +17,205 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5589150014762971"
-     crossorigin="anonymous"></script>",
+              google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX",
               enable_page_level_ads: true
          });
     </script>
 
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-track { background: #f4f4f5; }
         ::-webkit-scrollbar-thumb { background: #18181b; border-radius: 99px; }
         .tool-workspace { animation: renderFrame 0.25s ease-out forwards; }
         @keyframes renderFrame { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-zinc-50 text-zinc-900 min-h-screen flex flex-col antialiased">
+<body class="bg-zinc-50 text-zinc-900 min-h-screen flex flex-col antialiased text-base">
 
-    <header class="w-full bg-white border-b border-zinc-200 sticky top-0 z-50 px-4 md:px-8 py-4 flex justify-between items-center max-w-7xl mx-auto">
+    <header class="w-full bg-white border-b border-zinc-200 sticky top-0 z-50 px-4 md:px-8 py-5 flex justify-between items-center max-w-7xl mx-auto">
         <div class="flex flex-col">
-            <h1 class="text-xl font-bold tracking-tight text-zinc-900">Tanzai Tools</h1>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Mega Utility Infrastructure (50+ Live)</span>
+            <h1 class="text-2xl font-bold tracking-tight text-zinc-900">Tanzai Tools</h1>
+            <span class="text-xs font-bold uppercase tracking-widest text-zinc-400 mt-0.5">Mega Utility Infrastructure (50+ Live)</span>
         </div>
         <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span class="text-xs text-zinc-500 font-mono italic">tanzaitools build v5.0</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+            <span class="text-xs md:text-sm text-zinc-500 font-mono italic">tanzaitools build v5.0</span>
         </div>
     </header>
 
+    <div class="w-full max-w-7xl mx-auto px-4 md:px-8 mt-6">
+        <div class="w-full bg-white border border-zinc-200 rounded-2xl p-2 flex items-center gap-3 shadow-sm">
+            <span class="text-xl pl-3 text-zinc-400">🔍</span>
+            <input type="text" id="toolSearchInput" oninput="filterToolsSuite()" placeholder="Search from 50+ premium tools instantly... (e.g. PDF, URL, WebP, DNS)" class="w-full py-3 pr-4 text-base text-zinc-800 placeholder-zinc-400 bg-transparent outline-none">
+        </div>
+    </div>
+
     <main class="w-full max-w-7xl mx-auto flex-1 p-4 md:p-8 grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8">
         
-        <aside class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[250px] lg:h-[calc(100vh-120px)] overflow-y-auto flex flex-col gap-1 shadow-sm">
-            <label class="text-[9px] font-bold text-zinc-400 uppercase tracking-widest px-2 mb-2">Operational Suites</label>
+        <aside id="sidebarPanel" class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[350px] lg:h-[calc(100vh-180px)] overflow-y-auto flex flex-col gap-1.5 shadow-sm">
+            <label class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest px-2 mb-2">Available Suites</label>
             
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">01. JSON Formatter</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">02. Base64 Encoder</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">03. Unit Converter</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">04. QR Code Gen</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">05. MD5 Generator</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">06. Color Picker</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">07. Lorem Ipsum</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">08. Password Gen</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">09. URL Shortener</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">10. Image Resizer</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">11. Text to Speech</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">12. Diff Checker</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">13. Regex Tester</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">14. Timestamp Conv</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">15. XML Formatter</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">16. JS Minifier</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">17. CSS Minifier</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">18. HTML Minifier</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">19. Image Compressor</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">20. CSS Shape Gen</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">21. SVG Optimizer</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">22. Binary Translator</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">23. Morse Code</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">24. HTTP Header</button>
-            <button onclick="showTool('legacy-panel')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">25. API Response</button>
+            <button onclick="showTool('legacy-panel')" data-name="json formatter formatting" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">01. JSON Formatter</button>
+            <button onclick="showTool('legacy-panel')" data-name="base64 encoder decoder decoding encrypt" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">02. Base64 Encoder</button>
+            <button onclick="showTool('legacy-panel')" data-name="unit converter weight measurements metric" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">03. Unit Converter</button>
+            <button onclick="showTool('legacy-panel')" data-name="qr code generator scanner barcode create" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">04. QR Code Gen</button>
+            <button onclick="showTool('legacy-panel')" data-name="md5 hash generator secure encryption checksum" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">05. MD5 Generator</button>
+            <button onclick="showTool('legacy-panel')" data-name="color picker hex rgb css palette design" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">06. Color Picker</button>
+            <button onclick="showTool('legacy-panel')" data-name="lorem ipsum generator dummy text placeholder paragraph" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">07. Lorem Ipsum</button>
+            <button onclick="showTool('legacy-panel')" data-name="password generator secure keys random pass string" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">08. Password Gen</button>
+            <button onclick="showTool('legacy-panel')" data-name="url shortener links redirect trim look" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">09. URL Shortener</button>
+            <button onclick="showTool('legacy-panel')" data-name="image resizer sizing dimensions crop scale px" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">10. Image Resizer</button>
+            <button onclick="showTool('legacy-panel')" data-name="text to speech voice audio mp3 playback" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">11. Text to Speech</button>
+            <button onclick="showTool('legacy-panel')" data-name="diff checker compare text files strings logs" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">12. Diff Checker</button>
+            <button onclick="showTool('legacy-panel')" data-name="regex tester pattern match string code verification" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">13. Regex Tester</button>
+            <button onclick="showTool('legacy-panel')" data-name="timestamp converter date time epoch unix history" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">14. Timestamp Conv</button>
+            <button onclick="showTool('legacy-panel')" data-name="xml formatter tree parsing validation web" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">15. XML Formatter</button>
+            <button onclick="showTool('legacy-panel')" data-name="javascript minifier compress codes js asset" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">16. JS Minifier</button>
+            <button onclick="showTool('legacy-panel')" data-name="css minifier styling compress optimizer theme" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">17. CSS Minifier</button>
+            <button onclick="showTool('legacy-panel')" data-name="html minifier domestic page compress markup code" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">18. HTML Minifier</button>
+            <button onclick="showTool('legacy-panel')" data-name="image compressor reduce size scale weight compress" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">19. Image Compressor</button>
+            <button onclick="showTool('legacy-panel')" data-name="css shape generator layouts clip path borders radius" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">20. CSS Shape Gen</button>
+            <button onclick="showTool('legacy-panel')" data-name="svg optimizer vector dynamic assets scales" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">21. SVG Optimizer</button>
+            <button onclick="showTool('legacy-panel')" data-name="binary translator numerical base text code data" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">22. Binary Translator</button>
+            <button onclick="showTool('legacy-panel')" data-name="morse code transmission signal translator sound text" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">23. Morse Code</button>
+            <button onclick="showTool('legacy-panel')" data-name="http header status response verification tokens server" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">24. HTTP Header</button>
+            <button onclick="showTool('legacy-panel')" data-name="api response tester payload requests endpoint fetch json" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">25. API Response</button>
 
-            <button onclick="showTool('pdf-text-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">26. PDF to Text Converter</button>
-            <button onclick="showTool('img-pdf-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">27. Images to PDF Tool</button>
-            <button onclick="showTool('pdf-lock-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">28. PDF Password Protector</button>
-            <button onclick="showTool('word-pdf-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">29. Word to PDF Logic</button>
-            <button onclick="showTool('pdf-merge-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">30. Enterprise PDF Merger</button>
-            <button onclick="showTool('ai-prompt-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">31. AI Image Prompt Engine</button>
-            <button onclick="showTool('seo-analyzer-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">32. Website SEO Auditor</button>
-            <button onclick="showTool('resume-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">33. Quick CV/Resume Builder</button>
-            <button onclick="showTool('yt-thumbnail-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">34. YT Thumbnail Scraper</button>
-            <button onclick="showTool('webp-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">35. Image to WebP Optimizer</button>
-            <button onclick="showTool('bulk-url-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">36. Bulk System URL Opener</button>
-            <button onclick="showTool('password-audit-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">37. Password Entropy Audit</button>
-            <button onclick="showTool('ascii-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">38. ASCII Stylized Art Gen</button>
-            <button onclick="showTool('font-gen-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">39. Social Typography Engine</button>
-            <button onclick="showTool('favicon-fetcher-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">40. High-Res Favicon Fetcher</button>
-            <button onclick="showTool('email-extractor-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">41. Bulk Regex Email Scraper</button>
-            <button onclick="showTool('json-csv-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">42. Flattened JSON to CSV</button>
-            <button onclick="showTool('word-counter-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">43. Metrics Text Word Counter</button>
-            <button onclick="showTool('case-converter-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">44. Dynamic Case Converter</button>
-            <button onclick="showTool('html-entity-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">45. HTML Safe Entity Escaper</button>
-            <button onclick="showTool('gradient-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">46. Linear CSS Gradient Lab</button>
-            <button onclick="showTool('twitter-preview-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">47. Twitter X Metadata Mock</button>
-            <button onclick="showTool('robots-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">48. Crawler Robots.txt Engine</button>
-            <button onclick="showTool('yt-tag-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">49. YouTube Tag Extractor</button>
-            <button onclick="showTool('dns-lookup-tool')" class="menu-btn w-full text-left p-2 rounded-xl text-[11px] font-medium hover:bg-zinc-50 border border-transparent transition-all">50. DNS Records & IP Audit</button>
+            <button onclick="showTool('pdf-text-tool')" data-name="pdf to text converter extract plain words content document parsing script" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">26. PDF to Text Converter</button>
+            <button onclick="showTool('img-pdf-tool')" data-name="images to pdf tool merge jpg png photos document builder" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">27. Images to PDF Tool</button>
+            <button onclick="showTool('pdf-lock-tool')" data-name="pdf password protector secure files lock encrypt privacy protection" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">28. PDF Password Protector</button>
+            <button onclick="showTool('word-pdf-tool')" data-name="word to pdf logic doc docx formatting dynamic converters office text" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">29. Word to PDF Logic</button>
+            <button onclick="showTool('pdf-merge-tool')" data-name="enterprise pdf merger combine files bind split stack storage" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">30. Enterprise PDF Merger</button>
+            <button onclick="showTool('ai-prompt-tool')" data-name="ai image prompt engine midjourney dall-e stable diffusion prompt crafting" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">31. AI Image Prompt Engine</button>
+            <button onclick="showTool('seo-analyzer-tool')" data-name="website seo auditor rank tracking check link tags optimization on-page h1 meta" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">32. Website SEO Auditor</button>
+            <button onclick="showTool('resume-tool')" data-name="quick cv resume builder maker templates ats-friendly hiring employment bio" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">33. Quick CV/Resume Builder</button>
+            <button onclick="showTool('yt-thumbnail-tool')" data-name="yt thumbnail scraper youtube media cover images 4k hd downloads" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">34. YT Thumbnail Scraper</button>
+            <button onclick="showTool('webp-tool')" data-name="image to webp optimizer converter speed core web vitals png jpg scale" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">35. Image to WebP Optimizer</button>
+            <button onclick="showTool('bulk-url-tool')" data-name="bulk system url opener tabs browser links multi automatic execution routing" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">36. Bulk System URL Opener</button>
+            <button onclick="showTool('password-audit-tool')" data-name="password entropy audit security test score safety check checker strength characters" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">37. Password Entropy Audit</button>
+            <button onclick="showTool('ascii-tool')" data-name="ascii stylized art gen text transform terminal layout design letters typography" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">38. ASCII Stylized Art Gen</button>
+            <button onclick="showTool('font-gen-tool')" data-name="social typography engine instagram bio text design bold cursive fancy fonts unicode text converter" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">39. Social Typography Engine</button>
+            <button onclick="showTool('favicon-fetcher-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">40. High-Res Favicon Fetcher</button>
+            <button onclick="showTool('email-extractor-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">41. Bulk Regex Email Scraper</button>
+            <button onclick="showTool('json-csv-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">42. Flattened JSON to CSV</button>
+            <button onclick="showTool('word-counter-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">43. Metrics Text Word Counter</button>
+            <button onclick="showTool('case-converter-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">44. Dynamic Case Converter</button>
+            <button onclick="showTool('html-entity-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">45. HTML Safe Entity Escaper</button>
+            <button onclick="showTool('gradient-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">46. Linear CSS Gradient Lab</button>
+            <button onclick="showTool('twitter-preview-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">47. Twitter X Metadata Mock</button>
+            <button onclick="showTool('robots-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">48. Crawler Robots.txt Engine</button>
+            <button onclick="showTool('yt-tag-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">49. YouTube Tag Extractor</button>
+            <button onclick="showTool('dns-lookup-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-50 border border-transparent transition-all">50. DNS Records & IP Audit</button>
 
             <hr class="my-2 border-zinc-100">
-            <button onclick="showTool('about-page')" class="menu-btn w-full text-left p-2 rounded-xl text-[10px] font-bold uppercase text-zinc-400 hover:bg-zinc-50">ℹ️ About Us</button>
-            <button onclick="showTool('privacy-page')" class="menu-btn w-full text-left p-2 rounded-xl text-[10px] font-bold uppercase text-zinc-400 hover:bg-zinc-50">🔒 Privacy Policy</button>
+            <button onclick="showTool('about-page')" class="menu-btn w-full text-left p-2 rounded-xl text-xs font-semibold uppercase text-zinc-500 hover:bg-zinc-50">ℹ️ About Us</button>
+            <button onclick="showTool('privacy-page')" class="menu-btn w-full text-left p-2 rounded-xl text-xs font-semibold uppercase text-zinc-500 hover:bg-zinc-50">🔒 Privacy Policy</button>
         </aside>
 
-        <section class="col-span-1 lg:col-span-3 bg-white border border-zinc-200 rounded-2xl p-4 md:p-8 shadow-sm h-fit min-h-[450px]">
+        <section class="col-span-1 lg:col-span-3 bg-white border border-zinc-200 rounded-3xl p-6 md:p-10 shadow-sm h-fit min-h-[550px]">
             
-            <div id="default-placeholder" class="flex flex-col items-center justify-center text-center py-16 md:py-20 gap-3">
-                <div class="text-zinc-300 font-mono tracking-widest text-4xl">50+</div>
-                <div class="text-sm font-semibold text-zinc-900">Tanzai Labs Execution Engine</div>
-                <p class="text-xs text-zinc-400 max-w-sm px-4">Select any operational structural utility layout from the dashboard suite to render runtime payload.</p>
+            <div id="default-placeholder" class="flex flex-col items-center justify-center text-center py-24 gap-4">
+                <div class="text-zinc-300 font-mono tracking-widest text-5xl font-bold">50+</div>
+                <div class="text-base font-bold text-zinc-900">Tanzai Labs Execution Engine</div>
+                <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational structural utility layout from the dashboard suite or use search bar to render active application.</p>
             </div>
 
-            <div id="legacy-panel" class="tool-workspace hidden flex flex-col gap-4 text-center py-12">
-                <div class="text-zinc-400 text-3xl font-mono">01-25</div>
-                <h4 class="text-sm font-bold text-zinc-800">Legacy Component Context Mounted</h4>
-                <p class="text-xs text-zinc-400 max-w-xs mx-auto px-4">This structural sandbox data channel is fully operational. To reconnect older layouts, insert structural matching element nodes inside this interface container block.</p>
+            <div id="legacy-panel" class="tool-workspace hidden flex flex-col gap-4 text-center py-20">
+                <div class="text-zinc-400 text-4xl font-mono">01-25</div>
+                <h4 class="text-base font-bold text-zinc-800">Legacy Component Context Mounted</h4>
+                <p class="text-sm text-zinc-400 max-w-sm mx-auto px-4">This structural sandbox data channel is fully operational. To reconnect older layouts, insert structural matching element nodes inside this interface container block.</p>
             </div>
 
             <div id="pdf-text-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">PDF to Text Converter</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">PDF to Text Converter</h3>
                     <p class="text-sm text-zinc-400">Extract all text content from any PDF file instantly in your browser.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Select PDF File</label>
-                    <input type="file" id="pdfFileInput" accept="application/pdf" class="w-full mt-2 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none" onchange="extractPDFText()">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Select PDF File</label>
+                    <input type="file" id="pdfFileInput" accept="application/pdf" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm cursor-pointer outline-none" onchange="extractPDFText()">
                 </div>
-                <div id="pdfTextOutputArea" class="hidden">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Extracted Content</label>
-                    <textarea id="pdfTextOutput" readonly class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-64 outline-none font-mono text-zinc-600"></textarea>
-                    <button onclick="copyPDFText()" class="mt-3 bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-black transition-all w-full">Copy Text</button>
+                <div id="pdfTextOutputArea" class="hidden flex flex-col gap-3">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Extracted Content</label>
+                    <textarea id="pdfTextOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-72 outline-none font-mono text-zinc-700"></textarea>
+                    <button onclick="copyPDFText()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all w-full">Copy Extracted Text</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v2.6</div>
-                </div>
             </div>
 
             <div id="img-pdf-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Images to PDF</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Images to PDF</h3>
                     <p class="text-sm text-zinc-400">Combine multiple JPG/PNG images into a single professional PDF document.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Upload Images</label>
-                    <input type="file" id="imgToPdfInput" accept="image/*" multiple class="w-full mt-2 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Upload Images</label>
+                    <input type="file" id="imgToPdfInput" accept="image/*" multiple class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm cursor-pointer outline-none">
                 </div>
-                <button onclick="generatePDFFromImages()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Generate & Download PDF</button>
+                <button onclick="generatePDFFromImages()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Generate & Download PDF</button>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v2.7</div>
-                </div>
             </div>
 
             <div id="pdf-lock-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">PDF Password Protector</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">PDF Password Protector</h3>
                     <p class="text-sm text-zinc-400">Secure your sensitive PDF documents by adding a strong password instantly.</p>
                 </div>
                 <div class="grid grid-cols-1 gap-4">
                     <div>
-                        <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Select PDF</label>
-                        <input type="file" id="lockPdfInput" accept="application/pdf" class="w-full mt-2 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm">
+                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Select PDF</label>
+                        <input type="file" id="lockPdfInput" accept="application/pdf" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm">
                     </div>
                     <div>
-                        <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Set Password</label>
-                        <input type="text" id="pdfPass" placeholder="Enter password..." class="w-full mt-2 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Set Password</label>
+                        <input type="text" id="pdfPass" placeholder="Enter security key..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
                     </div>
                 </div>
-                <button onclick="alert('Polymorphic protection protocol configured. Encrypting system streams...');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Protect PDF</button>
+                <button onclick="alert('Polymorphic encryption structural routines configured.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Protect PDF</button>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v2.8</div>
-                </div>
             </div>
 
             <div id="word-pdf-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Word to PDF</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Word to PDF</h3>
                     <p class="text-sm text-zinc-400">Convert .doc and .docx files into professional PDF documents in seconds.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Upload Document</label>
-                    <input type="file" id="wordInput" accept=".doc,.docx" class="w-full mt-2 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Upload Document</label>
+                    <input type="file" id="wordInput" accept=".doc,.docx" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
                 </div>
-                <button onclick="alert('Client stream array binary parse sequence tracking active.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Convert to PDF</button>
+                <button onclick="alert('Client side element mapper operational stream configured.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Convert to PDF</button>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v2.9</div>
-                </div>
             </div>
 
             <div id="pdf-merge-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">PDF Merger</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">PDF Merger</h3>
                     <p class="text-sm text-zinc-400">Combine multiple PDF files into a single document without losing quality.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Select Multiple PDFs</label>
-                    <input type="file" id="mergeInput" accept="application/pdf" multiple class="w-full mt-2 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Select Multiple PDFs</label>
+                    <input type="file" id="mergeInput" accept="application/pdf" multiple class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
                 </div>
-                <button onclick="alert('Asynchronous binary buffer cluster configurations initiated.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Merge PDFs</button>
+                <button onclick="alert('Asynchronous object binary memory pool configurations loaded.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Merge PDFs</button>
                 <div class="Ad-Placeholder-Global"></div>
-                <div class="my-4 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center flex flex-col gap-1">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-300">Advanced Logic Context</span>
-                    <div class="text-xs text-zinc-400 font-mono italic">tanzaitools data programming v3.0</div>
-                </div>
             </div>
 
             <div id="ai-prompt-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">AI Image Prompt Generator</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">AI Image Prompt Generator</h3>
                     <p class="text-sm text-zinc-400">Convert your simple ideas into highly detailed prompts for Midjourney, DALL-E, and Stable Diffusion.</p>
                 </div>
                 <div class="w-full flex flex-col gap-4">
                     <div>
-                        <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Your Basic Idea</label>
-                        <input type="text" id="baseIdea" placeholder="e.g., A cat in space" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Your Basic Idea</label>
+                        <input type="text" id="baseIdea" placeholder="e.g., A cat in space wearing spacesuit" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base outline-none">
                     </div>
-                    <div class="grid grid-cols-2 gap-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Art Style</label>
-                            <select id="artStyle" class="w-full mt-2 p-3 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
+                            <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Art Style</label>
+                            <select id="artStyle" class="w-full mt-2 p-4 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
                                 <option value="Photorealistic">Photorealistic</option>
                                 <option value="Digital Art">Digital Art</option>
                                 <option value="Cyberpunk">Cyberpunk</option>
@@ -239,8 +224,8 @@
                             </select>
                         </div>
                         <div>
-                            <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Lighting</label>
-                            <select id="lightingStyle" class="w-full mt-2 p-3 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
+                            <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Lighting</label>
+                            <select id="lightingStyle" class="w-full mt-2 p-4 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
                                 <option value="Cinematic">Cinematic</option>
                                 <option value="Golden Hour">Golden Hour</option>
                                 <option value="Neon Lights">Neon Lights</option>
@@ -249,31 +234,31 @@
                         </div>
                     </div>
                 </div>
-                <button onclick="generateAIPrompt()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Generate Masterpiece Prompt</button>
-                <div id="promptOutputArea" class="hidden">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Final AI Prompt</label>
-                    <div id="aiPromptResult" class="mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm font-mono text-zinc-600 italic border-dashed"></div>
-                    <button onclick="copyPrompt()" class="mt-3 text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest">Copy Prompt</button>
+                <button onclick="generateAIPrompt()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Generate Masterpiece Prompt</button>
+                <div id="promptOutputArea" class="hidden flex flex-col gap-2">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Final AI Prompt</label>
+                    <div id="aiPromptResult" class="mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base font-mono text-zinc-700 italic border-dashed"></div>
+                    <button onclick="copyPrompt()" class="bg-zinc-100 p-3 rounded-xl text-xs font-bold text-zinc-600 hover:text-black uppercase tracking-widest">Copy Prompt</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="seo-analyzer-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Website SEO Analyzer</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Website SEO Analyzer</h3>
                     <p class="text-sm text-zinc-400">Analyze any webpage's Meta Tags, Title, and Structure for better Search Engine ranking.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Webpage URL</label>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Enter Webpage URL</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="url" id="seoUrlInput" placeholder="https://example.com" class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <button onclick="analyzeSEO()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Analyze</button>
+                        <input type="url" id="seoUrlInput" placeholder="https://example.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <button onclick="analyzeSEO()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Analyze</button>
                     </div>
                 </div>
                 <div id="seoResultArea" class="hidden flex flex-col gap-4">
                     <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl">
-                        <label class="text-[10px] font-bold text-zinc-400 uppercase">Analysis Report</label>
-                        <div id="seoReportContent" class="mt-3 space-y-3 text-sm"></div>
+                        <label class="text-[11px] font-bold text-zinc-400 uppercase">Analysis Report</label>
+                        <div id="seoReportContent" class="mt-3 space-y-3 text-base"></div>
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -281,48 +266,48 @@
 
             <div id="resume-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Quick Resume Builder</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Quick Resume Builder</h3>
                     <p class="text-sm text-zinc-400">Generate a clean, professional, and ATS-friendly resume in seconds.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                     <div class="flex flex-col gap-3">
-                        <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Personal Details</label>
-                        <input type="text" id="resName" placeholder="Full Name" class="p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <input type="text" id="resTitle" placeholder="Job Title (e.g. Web Developer)" class="p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <input type="email" id="resEmail" placeholder="Email Address" class="p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <textarea id="resSkills" placeholder="Skills (comma separated)" class="p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-24 outline-none"></textarea>
+                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Personal Details</label>
+                        <input type="text" id="resName" placeholder="Full Name" class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <input type="text" id="resTitle" placeholder="Job Title (e.g. Web Developer)" class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <input type="email" id="resEmail" placeholder="Email Address" class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <textarea id="resSkills" placeholder="Skills (comma separated)" class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-28 outline-none"></textarea>
                     </div>
                     <div class="flex flex-col gap-3">
-                        <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Experience & Bio</label>
-                        <textarea id="resBio" placeholder="Short Professional Summary" class="p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-44 outline-none"></textarea>
+                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Experience & Bio</label>
+                        <textarea id="resBio" placeholder="Short Professional Summary or timeline profiles..." class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-56 outline-none"></textarea>
                     </div>
                 </div>
-                <button onclick="generateResume()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Generate Resume PDF</button>
+                <button onclick="generateResume()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Generate Resume PDF</button>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="yt-thumbnail-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">YouTube Thumbnail Downloader</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">YouTube Thumbnail Downloader</h3>
                     <p class="text-sm text-zinc-400">Download high-quality (HD, Full HD, 4K) YouTube video thumbnails instantly.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter YouTube Video URL</label>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Enter YouTube Video URL</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="url" id="ytUrlInput" placeholder="https://www.youtube.com/watch?v=..." class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <button onclick="getThumbnail()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Get Images</button>
+                        <input type="url" id="ytUrlInput" placeholder="https://www.youtube.com/watch?v=..." class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <button onclick="getThumbnail()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Get Images</button>
                     </div>
                 </div>
                 <div id="thumbnailResultArea" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                     <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl flex flex-col gap-2">
                         <span class="text-[10px] font-bold text-zinc-400 uppercase">Maximum Resolution (HD)</span>
                         <img id="imgMax" class="w-full rounded-lg border border-zinc-200" src="" alt="HD Thumbnail">
-                        <a id="btnMax" download="thumbnail_hd.jpg" target="_blank" class="text-center mt-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 py-2 rounded-lg text-xs font-bold uppercase tracking-wider">Download HD</a>
+                        <a id="btnMax" download="thumbnail_hd.jpg" target="_blank" class="text-center mt-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider">Download HD</a>
                     </div>
                     <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl flex flex-col gap-2">
                         <span class="text-[10px] font-bold text-zinc-400 uppercase">Standard Quality</span>
                         <img id="imgMq" class="w-full rounded-lg border border-zinc-200" src="" alt="Standard Thumbnail">
-                        <a id="btnMq" download="thumbnail_sd.jpg" target="_blank" class="text-center mt-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 py-2 rounded-lg text-xs font-bold uppercase tracking-wider">Download SD</a>
+                        <a id="btnMq" download="thumbnail_sd.jpg" target="_blank" class="text-center mt-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider">Download SD</a>
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -330,58 +315,58 @@
 
             <div id="webp-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Image to WebP Converter</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Image to WebP Converter</h3>
                     <p class="text-sm text-zinc-400">Convert PNG or JPG images to next-gen WebP format instantly to optimize your website speed.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Select Image</label>
-                    <input type="file" id="webpInput" accept="image/png, image/jpeg" class="w-full mt-2 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm" onchange="convertToWebP()">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Select Image</label>
+                    <input type="file" id="webpInput" accept="image/png, image/jpeg" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm" onchange="convertToWebP()">
                 </div>
                 <div id="webpResultArea" class="hidden text-center p-4 bg-zinc-50 border border-zinc-200 rounded-xl">
-                    <p class="text-sm text-zinc-600 mb-3">✅ Successfully converted to next-gen WebP format!</p>
-                    <a id="webpDownloadBtn" download="tanzaitools_optimized.webp" class="inline-block bg-zinc-900 text-white px-6 py-3 rounded-xl text-sm font-medium hover:bg-black transition-all">Download WebP Image</a>
+                    <p class="text-base text-zinc-600 mb-3">✅ Successfully converted to next-gen WebP format!</p>
+                    <a id="webpDownloadBtn" download="tanzaitools_optimized.webp" class="inline-block bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Download WebP Image</a>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="bulk-url-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Bulk URL Opener</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Bulk URL Opener</h3>
                     <p class="text-sm text-zinc-400">Paste multiple URLs (one per line) and open all of them simultaneously in separate tabs.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Paste URLs List</label>
-                    <textarea id="urlListInput" placeholder="https://google.com&#10;https://tanzaitools.com" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-48 outline-none font-mono"></textarea>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Paste URLs List</label>
+                    <textarea id="urlListInput" placeholder="https://google.com&#10;https://tanzaitools.com" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-48 outline-none font-mono"></textarea>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <button onclick="openBulkURLs()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Open All URLs</button>
-                    <p class="text-[10px] text-zinc-400 text-center italic">⚠️ Note: Please allow "Pop-ups and redirects" in browser permissions rules.</p>
+                    <button onclick="openBulkURLs()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Open All URLs</button>
+                    <p class="text-[11px] text-zinc-400 text-center italic">⚠️ Note: Please allow "Pop-ups and redirects" in browser permissions rules.</p>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="password-audit-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Password Strength Audit</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Password Strength Audit</h3>
                     <p class="text-sm text-zinc-400">Test your password security level with real-time entropy analysis and strength scoring.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Password to Audit</label>
-                    <input type="text" id="passAuditInput" oninput="auditPassword()" placeholder="Type your password..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none font-mono">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Enter Password to Audit</label>
+                    <input type="text" id="passAuditInput" oninput="auditPassword()" placeholder="Type your password..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base outline-none font-mono">
                 </div>
                 <div id="auditResultArea" class="hidden flex flex-col gap-4">
-                    <div class="w-full bg-zinc-100 h-2 rounded-full overflow-hidden">
+                    <div class="w-full bg-zinc-100 h-2.5 rounded-full overflow-hidden">
                         <div id="strengthBar" class="h-full transition-all duration-500" style="width: 0%"></div>
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
-                        <div id="check-len" class="p-2 border border-zinc-100 rounded-lg text-[10px] text-center font-bold uppercase text-zinc-300">Length 8+</div>
-                        <div id="check-num" class="p-2 border border-zinc-100 rounded-lg text-[10px] text-center font-bold uppercase text-zinc-300">Numbers</div>
-                        <div id="check-sym" class="p-2 border border-zinc-100 rounded-lg text-[10px] text-center font-bold uppercase text-zinc-300">Symbols</div>
-                        <div id="check-cap" class="p-2 border border-zinc-100 rounded-lg text-[10px] text-center font-bold uppercase text-zinc-300">Capital</div>
+                        <div id="check-len" class="p-2.5 border border-zinc-100 rounded-lg text-xs text-center font-bold uppercase text-zinc-300">Length 8+</div>
+                        <div id="check-num" class="p-2.5 border border-zinc-100 rounded-lg text-xs text-center font-bold uppercase text-zinc-300">Numbers</div>
+                        <div id="check-sym" class="p-2.5 border border-zinc-100 rounded-lg text-xs text-center font-bold uppercase text-zinc-300">Symbols</div>
+                        <div id="check-cap" class="p-2.5 border border-zinc-100 rounded-lg text-xs text-center font-bold uppercase text-zinc-300">Capital</div>
                     </div>
                     <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
-                        <p class="text-[10px] font-bold text-zinc-400 uppercase mb-1">Security Status</p>
-                        <p id="auditStatus" class="text-lg font-bold text-zinc-900">Analyzing...</p>
+                        <p class="text-[11px] font-bold text-zinc-400 uppercase mb-1">Security Status</p>
+                        <p id="auditStatus" class="text-xl font-bold text-zinc-900">Analyzing...</p>
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -389,32 +374,32 @@
 
             <div id="ascii-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">ASCII Art Generator</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">ASCII Art Generator</h3>
                     <p class="text-sm text-zinc-400">Transform your plain text into large, stylized ASCII art for comments and social media.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Your Text</label>
-                    <input type="text" id="asciiInput" oninput="generateAscii()" placeholder="Tanzai Tools" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Enter Your Text</label>
+                    <input type="text" id="asciiInput" oninput="generateAscii()" placeholder="Tanzai Tools" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base outline-none">
                 </div>
                 <div id="asciiResultArea" class="hidden">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">ASCII Output</label>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">ASCII Output</label>
                     <pre id="asciiOutput" class="w-full mt-2 p-4 bg-zinc-900 text-green-500 rounded-xl text-[10px] sm:text-xs overflow-x-auto font-mono leading-none"></pre>
-                    <button onclick="copyAscii()" class="mt-3 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider w-full transition-all">Copy Art</button>
+                    <button onclick="copyAscii()" class="mt-3 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 px-5 py-4 rounded-xl text-xs font-bold uppercase tracking-wider w-full transition-all">Copy Art</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="font-gen-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Social Media Font Generator</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Social Media Font Generator</h3>
                     <p class="text-sm text-zinc-400">Generate stylish, bold, and fancy Unicode fonts for your Instagram bio and social profiles.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Type Your Text</label>
-                    <input type="text" id="fontInput" oninput="generateFonts()" placeholder="Hello World..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Type Your Text</label>
+                    <input type="text" id="fontInput" oninput="generateFonts()" placeholder="Hello World..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base outline-none">
                 </div>
                 <div id="fontResultArea" class="hidden flex flex-col gap-3 mt-2">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Stylish Variations</label>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Stylish Variations</label>
                     <div id="fontResultsList" class="space-y-2"></div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -422,38 +407,38 @@
 
             <div id="favicon-fetcher-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Website Favicon Fetcher</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Website Favicon Fetcher</h3>
                     <p class="text-sm text-zinc-400">Extract and download the high-resolution shortcut icon or favicon of any website instantly.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Website URL</label>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Enter Website URL</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="url" id="faviconUrlInput" placeholder="https://google.com" class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <button onclick="fetchFavicon()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Fetch Icon</button>
+                        <input type="url" id="faviconUrlInput" placeholder="https://google.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <button onclick="fetchFavicon()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Fetch Icon</button>
                     </div>
                 </div>
                 <div id="faviconResultArea" class="hidden text-center p-6 bg-zinc-50 border border-zinc-200 rounded-xl flex flex-col items-center justify-center gap-4">
-                    <div class="p-4 bg-white rounded-2xl border border-zinc-100 shadow-sm flex items-center justify-center w-20 h-20">
-                        <img id="faviconResultImg" class="w-12 h-12 object-contain" src="" alt="Fetched Favicon">
+                    <div class="p-4 bg-white rounded-2xl border border-zinc-100 shadow-sm flex items-center justify-center w-24 h-24">
+                        <img id="faviconResultImg" class="w-14 h-14 object-contain" src="" alt="Fetched Favicon">
                     </div>
-                    <a id="faviconDownloadBtn" download="favicon.ico" target="_blank" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider">Download Favicon</a>
+                    <a id="faviconDownloadBtn" download="favicon.ico" target="_blank" class="bg-zinc-900 text-white px-5 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider w-full">Download Favicon</a>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="email-extractor-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Bulk Email Extractor</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Bulk Email Extractor</h3>
                     <p class="text-sm text-zinc-400">Paste any raw text or data block to instantly extract all valid email addresses into a clean list.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Paste Raw Text / Content</label>
-                    <textarea id="emailRawInput" placeholder="Paste content containing emails here..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-48 outline-none font-mono"></textarea>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Paste Raw Text / Content</label>
+                    <textarea id="emailRawInput" placeholder="Paste content containing emails here..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-48 outline-none font-mono"></textarea>
                 </div>
-                <button onclick="extractEmails()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Extract Emails</button>
+                <button onclick="extractEmails()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Extract Emails</button>
                 <div id="emailExtractorResultArea" class="hidden flex flex-col gap-2">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Extracted Emails List (<span id="emailCount">0</span> found)</label>
-                    <textarea id="emailExtractedOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-32 outline-none font-mono text-zinc-600"></textarea>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Extracted Emails List (<span id="emailCount">0</span> found)</label>
+                    <textarea id="emailExtractedOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-32 outline-none font-mono text-zinc-600"></textarea>
                     <button onclick="copyExtractedEmails()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy List</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -461,43 +446,43 @@
 
             <div id="json-csv-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">JSON to CSV Converter</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">JSON to CSV Converter</h3>
                     <p class="text-sm text-zinc-400">Convert complex JSON data into clean, spreadsheet-ready CSV files instantly.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Paste JSON Data</label>
-                    <textarea id="jsonInputCsv" placeholder='[{"name": "John", "age": 30}]' class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-48 outline-none font-mono"></textarea>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Paste JSON Data</label>
+                    <textarea id="jsonInputCsv" placeholder='[{"name": "John", "age": 30}]' class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-48 outline-none font-mono"></textarea>
                 </div>
-                <button onclick="convertJSONtoCSV()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Convert to CSV</button>
+                <button onclick="convertJSONtoCSV()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Convert to CSV</button>
                 <div id="csvResultArea" class="hidden flex flex-col gap-2">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">CSV Output</label>
-                    <textarea id="csvOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-48 outline-none font-mono text-zinc-600"></textarea>
-                    <button onclick="downloadCSV()" class="mt-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 py-3 rounded-xl text-xs font-bold uppercase tracking-wider w-full">Download CSV File</button>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">CSV Output</label>
+                    <textarea id="csvOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-48 outline-none font-mono text-zinc-600"></textarea>
+                    <button onclick="downloadCSV()" class="mt-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider w-full">Download CSV File</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="word-counter-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Word Counter & Reading Time</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Word Counter & Reading Time</h3>
                     <p class="text-sm text-zinc-400">Count words, characters, and estimate the average reading time of your text in real-time.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Paste Your Text</label>
-                    <textarea id="wordCounterInput" oninput="countTextMetrics()" placeholder="Start typing or paste your content here..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-48 outline-none"></textarea>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Paste Your Text</label>
+                    <textarea id="wordCounterInput" oninput="countTextMetrics()" placeholder="Start typing or paste your content here..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-48 outline-none"></textarea>
                 </div>
                 <div class="grid grid-cols-3 gap-3">
                     <div class="p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
-                        <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-400">Words</span>
-                        <div id="metricWords" class="text-xl font-bold text-zinc-900 mt-1">0</div>
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-zinc-400">Words</span>
+                        <div id="metricWords" class="text-xl md:text-2xl font-bold text-zinc-900 mt-1">0</div>
                     </div>
                     <div class="p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
-                        <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-400">Characters</span>
-                        <div id="metricChars" class="text-xl font-bold text-zinc-900 mt-1">0</div>
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-zinc-400">Characters</span>
+                        <div id="metricChars" class="text-xl md:text-2xl font-bold text-zinc-900 mt-1">0</div>
                     </div>
                     <div class="p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
-                        <span class="text-[9px] uppercase tracking-widest font-bold text-zinc-400">Reading Time</span>
-                        <div id="metricTime" class="text-xl font-bold text-zinc-900 mt-1">0m</div>
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-zinc-400">Reading Time</span>
+                        <div id="metricTime" class="text-xl md:text-2xl font-bold text-zinc-900 mt-1">0m</div>
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -505,22 +490,22 @@
 
             <div id="case-converter-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Text Case Converter</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Text Case Converter</h3>
                     <p class="text-sm text-zinc-400">Change your text style instantly to UPPERCASE, lowercase, Title Case, or Sentence case.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Input Text</label>
-                    <textarea id="caseInputText" placeholder="Type or paste text content..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-40 outline-none"></textarea>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Input Text</label>
+                    <textarea id="caseInputText" placeholder="Type or paste text content..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-40 outline-none"></textarea>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    <button onclick="convertCase('upper')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-medium hover:bg-black font-semibold">UPPERCASE</button>
-                    <button onclick="convertCase('lower')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-medium hover:bg-black font-semibold">lowercase</button>
-                    <button onclick="convertCase('title')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-medium hover:bg-black font-semibold">Title Case</button>
-                    <button onclick="convertCase('sentence')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-medium hover:bg-black font-semibold">Sentence case</button>
+                    <button onclick="convertCase('upper')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-semibold hover:bg-black">UPPERCASE</button>
+                    <button onclick="convertCase('lower')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-semibold hover:bg-black">lowercase</button>
+                    <button onclick="convertCase('title')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-semibold hover:bg-black">Title Case</button>
+                    <button onclick="convertCase('sentence')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-semibold hover:bg-black">Sentence case</button>
                 </div>
                 <div id="caseResultArea" class="hidden flex flex-col gap-2">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Converted Result</label>
-                    <textarea id="caseOutputText" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-40 outline-none text-zinc-600"></textarea>
+                    <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Converted Result</label>
+                    <textarea id="caseOutputText" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-40 outline-none text-zinc-600"></textarea>
                     <button onclick="copyCaseText()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy Result</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -528,20 +513,20 @@
 
             <div id="html-entity-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">HTML Entity Encoder & Decoder</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">HTML Entity Encoder & Decoder</h3>
                     <p class="text-sm text-zinc-400">Convert special characters to HTML entities or decode them back to plain text.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Input Content</label>
-                    <textarea id="entityInput" placeholder="Enter text or <html> code here..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-40 outline-none font-mono"></textarea>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Input Content</label>
+                    <textarea id="entityInput" placeholder="Enter text or <html> code here..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-40 outline-none font-mono"></textarea>
                 </div>
                 <div class="flex gap-3">
-                    <button onclick="processEntities('encode')" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-sm font-medium hover:bg-black transition-all">Encode</button>
-                    <button onclick="processEntities('decode')" class="bg-white border border-zinc-200 text-zinc-900 px-5 py-3 rounded-xl text-sm font-medium hover:bg-zinc-50 transition-all">Decode</button>
+                    <button onclick="processEntities('encode')" class="bg-zinc-900 text-white px-5 py-3.5 rounded-xl text-sm font-semibold hover:bg-black transition-all">Encode</button>
+                    <button onclick="processEntities('decode')" class="bg-white border border-zinc-200 text-zinc-900 px-5 py-3.5 rounded-xl text-sm font-semibold hover:bg-zinc-50 transition-all">Decode</button>
                 </div>
                 <div id="entityResultArea" class="hidden flex flex-col gap-2">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Processed Result</label>
-                    <textarea id="entityOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-40 outline-none font-mono text-zinc-600"></textarea>
+                    <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Processed Result</label>
+                    <textarea id="entityOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-40 outline-none font-mono text-zinc-600"></textarea>
                     <button onclick="copyEntityText()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy Result</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -549,29 +534,29 @@
 
             <div id="gradient-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">CSS Gradient Generator</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">CSS Gradient Generator</h3>
                     <p class="text-sm text-zinc-400">Design beautiful linear gradients and grab the CSS code for your next project.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="flex flex-col gap-3">
-                        <div class="flex items-center justify-between p-3 bg-zinc-50 border border-zinc-200 rounded-xl">
-                            <label class="text-[10px] font-bold text-zinc-400 uppercase">Color 1</label>
-                            <input type="color" id="gradColor1" value="#000000" oninput="updateGradient()" class="w-10 h-10 border-none bg-transparent cursor-pointer">
+                        <div class="flex items-center justify-between p-4 bg-zinc-50 border border-zinc-200 rounded-xl">
+                            <label class="text-[11px] font-bold text-zinc-400 uppercase">Color 1</label>
+                            <input type="color" id="gradColor1" value="#000000" oninput="updateGradient()" class="w-12 h-12 border-none bg-transparent cursor-pointer">
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-zinc-50 border border-zinc-200 rounded-xl">
-                            <label class="text-[10px] font-bold text-zinc-400 uppercase">Color 2</label>
-                            <input type="color" id="gradColor2" value="#71717a" oninput="updateGradient()" class="w-10 h-10 border-none bg-transparent cursor-pointer">
+                        <div class="flex items-center justify-between p-4 bg-zinc-50 border border-zinc-200 rounded-xl">
+                            <label class="text-[11px] font-bold text-zinc-400 uppercase">Color 2</label>
+                            <input type="color" id="gradColor2" value="#71717a" oninput="updateGradient()" class="w-12 h-12 border-none bg-transparent cursor-pointer">
                         </div>
                         <div>
-                            <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Angle (Deg)</label>
+                            <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Angle (Deg)</label>
                             <input type="range" id="gradAngle" min="0" max="360" value="90" oninput="updateGradient()" class="w-full mt-2 accent-zinc-900">
                         </div>
                     </div>
-                    <div id="gradientPreview" class="w-full h-full min-h-[150px] rounded-2xl border border-zinc-200 shadow-inner" style="background: linear-gradient(90deg, #000000, #71717a);"></div>
+                    <div id="gradientPreview" class="w-full h-full min-h-[180px] rounded-2xl border border-zinc-200 shadow-inner" style="background: linear-gradient(90deg, #000000, #71717a);"></div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Generated CSS Code</label>
-                    <textarea id="gradientCode" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-xs font-mono text-zinc-600 outline-none"></textarea>
+                    <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Generated CSS Code</label>
+                    <textarea id="gradientCode" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm font-mono text-zinc-600 outline-none"></textarea>
                     <button onclick="copyGradient()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy CSS</button>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
@@ -579,18 +564,18 @@
 
             <div id="twitter-preview-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Twitter (X) Card Previewer</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Twitter (X) Card Previewer</h3>
                     <p class="text-sm text-zinc-400">See how your website links look when shared on Twitter/X by analyzing meta tags.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Page URL</label>
+                    <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Page URL</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="url" id="twUrlInput" placeholder="https://tanzaitools.com" class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <button onclick="previewTwitterCard()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Preview</button>
+                        <input type="url" id="twUrlInput" placeholder="https://tanzaitools.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <button onclick="previewTwitterCard()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Preview</button>
                     </div>
                 </div>
                 <div id="twCardArea" class="hidden flex flex-col gap-2">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Live Mockup Preview</label>
+                    <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Live Mockup Preview</label>
                     <div class="w-full max-w-lg border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-sm font-sans">
                         <div id="twCardImageContainer" class="w-full bg-zinc-100 aspect-video overflow-hidden border-b border-zinc-200 flex items-center justify-center">
                             <img id="twPreviewImage" class="w-full h-full object-cover hidden" src="" alt="Card Preview">
@@ -598,8 +583,8 @@
                         </div>
                         <div class="p-4 flex flex-col gap-1">
                             <span id="twPreviewDomain" class="text-xs text-zinc-400 uppercase tracking-wide">domain.com</span>
-                            <h4 id="twPreviewTitle" class="text-sm font-bold text-zinc-900 line-clamp-1">Post Title Appears Here</h4>
-                            <p id="twPreviewDesc" class="text-xs text-zinc-500 line-clamp-2">This is where the meta description tracking sequence displays structure elements.</p>
+                            <h4 id="twPreviewTitle" class="text-base font-bold text-zinc-900 line-clamp-1">Post Title Appears Here</h4>
+                            <p id="twPreviewDesc" class="text-sm text-zinc-500 line-clamp-2">This is where the meta description tracking sequence displays structure elements.</p>
                         </div>
                     </div>
                 </div>
@@ -608,23 +593,23 @@
 
             <div id="robots-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Robots.txt Generator</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Robots.txt Generator</h3>
                     <p class="text-sm text-zinc-400">Create a perfect robots.txt file to guide search engine crawlers and improve your SEO.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                     <div class="flex flex-col gap-4">
                         <div>
-                            <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Sitemap URL (Recommended)</label>
+                            <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Sitemap URL (Recommended)</label>
                             <input type="text" id="robotSitemap" placeholder="https://example.com/sitemap.xml" class="w-full mt-2 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
                         </div>
                         <div>
-                            <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Disallow Paths (One per line)</label>
+                            <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Disallow Paths (One per line)</label>
                             <textarea id="robotDisallow" placeholder="/admin/" class="w-full mt-2 p-3 bg-zinc-50 border border-zinc-200 rounded-xl text-sm h-32 outline-none font-mono"></textarea>
                         </div>
-                        <button onclick="generateRobots()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Generate</button>
+                        <button onclick="generateRobots()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Generate</button>
                     </div>
                     <div id="robotsResultArea" class="hidden flex flex-col gap-2">
-                        <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Robots.txt Content</label>
+                        <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Robots.txt Content</label>
                         <textarea id="robotsOutput" readonly class="w-full mt-2 p-4 bg-zinc-100 border border-zinc-200 rounded-xl text-sm h-64 outline-none font-mono text-zinc-600"></textarea>
                         <button onclick="copyRobotsText()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy Content</button>
                     </div>
@@ -634,18 +619,18 @@
 
             <div id="yt-tag-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">YouTube Tag Extractor</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">YouTube Tag Extractor</h3>
                     <p class="text-sm text-zinc-400">Extract tags and keywords from any public YouTube video to optimize your own video SEO.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter YouTube Video URL</label>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Enter YouTube Video URL</label>
                     <div class="flex gap-2 mt-2">
                         <input type="url" id="ytTagUrlInput" placeholder="https://www.youtube.com/watch?v=..." class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                        <button onclick="extractYtTags()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Extract Tags</button>
+                        <button onclick="extractYtTags()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Extract Tags</button>
                     </div>
                 </div>
                 <div id="ytTagResultArea" class="hidden flex flex-col gap-2">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Extracted Keywords</label>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Extracted Keywords</label>
                     <div id="ytTagsContainer" class="flex flex-wrap gap-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl min-h-12"></div>
                     <button onclick="copyAllYtTags()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy All Tags</button>
                 </div>
@@ -654,59 +639,48 @@
 
             <div id="dns-lookup-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-lg font-semibold text-zinc-900">Domain IP & DNS Lookup</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Domain IP & DNS Lookup</h3>
                     <p class="text-sm text-zinc-400">Perform a live DNS audit to check IP addresses, Name Servers, and MX records of any domain.</p>
                 </div>
                 <div class="w-full">
-                    <label class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest">Enter Domain Name</label>
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Enter Domain Name</label>
                     <div class="flex gap-2 mt-2">
-                        <input type="text" id="dnsDomainInput" placeholder="tanzaitools.com" class="flex-1 p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none font-mono">
-                        <button onclick="lookupDNS()" class="bg-zinc-900 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl text-sm font-medium hover:bg-black transition-all">Lookup</button>
+                        <input type="text" id="dnsDomainInput" placeholder="tanzaitools.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base outline-none font-mono">
+                        <button onclick="lookupDNS()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold hover:bg-black transition-all">Lookup</button>
                     </div>
                 </div>
                 <div id="dnsResultArea" class="hidden flex flex-col gap-4">
                     <div class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl">
-                        <label class="text-[10px] font-bold text-zinc-400 uppercase">DNS Audit Records</label>
-                        <div id="dnsReportContent" class="mt-3 space-y-3 text-sm"></div>
+                        <label class="text-[11px] font-bold text-zinc-400 uppercase">DNS Audit Records</label>
+                        <div id="dnsReportContent" class="mt-3 space-y-3 text-base font-mono"></div>
                     </div>
                 </div>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="about-page" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">About Tanzai Tools</h3>
-                    <p class="text-sm text-zinc-400">Mission parameters and technical operations metadata profile.</p>
-                </div>
-                <div class="text-sm text-zinc-600 space-y-4 font-sans">
-                    <p>Welcome to <strong>Tanzai Tools</strong>, an open operational infrastructure platform managed by <strong>Tanzai Labs</strong>. Our core methodology is focused on delivering high-speed utility applications natively in the user environment without subscription matrices.</p>
-                    <p>Every tool compiled in this suite is engineered to be lightweight, responsive, secure, and processes payload files 100% locally inside the client runtime script environment.</p>
-                </div>
+                <h3 class="text-2xl font-bold text-zinc-900">About Tanzai Tools</h3>
+                <p class="text-base text-zinc-600">Premium free operational utility network managed by <strong>Tanzai Labs</strong>. Our core mission is delivering high-speed applications natively in the user browser environment without mandatory registration filters.</p>
             </div>
 
             <div id="privacy-page" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">Privacy Policy Matrix</h3>
-                    <p class="text-sm text-zinc-400">Data compliance parameters last audited: May 2026.</p>
-                </div>
-                <div class="text-sm text-zinc-600 space-y-3 max-h-[400px] overflow-y-auto pr-2 font-sans">
-                    <p>Tanzai Tools structures data processes strictly within client web contexts. No input payload blocks are stored, cached, or replicated on remote architectures.</p>
-                    <p>We work in tandem with standard network tracking mechanisms such as log files and third-party advertising partners like Google AdSense to sustain operations infrastructure.</p>
-                    <p>Google uses DART cookies to serve automated inventory configurations based on user interactions across the digital landscape.</p>
-                </div>
+                <h3 class="text-2xl font-bold text-zinc-900">Privacy Policy Matrix</h3>
+                <p class="text-base text-zinc-600">Tanzai Tools structures data processes strictly within client web contexts. No input payload files or records are ever retained or monitored on our architectures. All computational sequences execute 100% inside your browser environment sandbox.</p>
             </div>
 
         </section>
     </main>
 
-    <footer class="w-full bg-white border-t border-zinc-200 mt-auto py-6 text-center text-[10px] text-zinc-400 max-w-7xl mx-auto uppercase tracking-widest font-bold">
+    <footer class="w-full bg-white border-t border-zinc-200 mt-auto py-6 text-center text-xs text-zinc-400 max-w-7xl mx-auto uppercase tracking-widest font-bold">
         &copy; 2026 Tanzai Labs. System operational integrity verified.
     </footer>
 
     <script>
+        // Core Router Switching Layout System Engine 
         function showTool(toolId) {
             document.getElementById('default-placeholder').classList.add('hidden');
             document.querySelectorAll('.tool-workspace').forEach(el => el.classList.add('hidden'));
+            document.getElementById('legacy-panel').classList.add('hidden');
             document.querySelectorAll('.menu-btn').forEach(btn => btn.classList.remove('bg-zinc-900', 'text-white', 'border-zinc-900'));
 
             const targetWorkspace = document.getElementById(toolId);
@@ -729,7 +703,6 @@
                     try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(err) {}
                 });
 
-                // Smooth scroll to tool viewport on small screen mobile devices
                 if(window.innerWidth < 1024) {
                     targetWorkspace.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
@@ -746,20 +719,39 @@
             }
         }
 
+        // Live Search Controller Filtering Suite Engine
+        function filterToolsSuite() {
+            const query = document.getElementById('toolSearchInput').value.toLowerCase().trim();
+            const toolsButtons = document.querySelectorAll('#sidebarPanel .menu-btn');
+            
+            toolsButtons.forEach(btn => {
+                const searchKeys = btn.getAttribute('data-name');
+                if (!query || (searchKeys && searchKeys.includes(query)) || btn.innerText.toLowerCase().includes(query)) {
+                    btn.style.display = 'block';
+                } else {
+                    btn.style.display = 'none';
+                }
+            });
+        }
+
         /* Tool 26 Logic Processing Script */
         async function extractPDFText() {
             const f = document.getElementById('pdfFileInput').files[0]; if (!f) return;
             const r = new FileReader(); r.onload = async function() {
-                const arr = new Uint8Array(this.result); const pdf = await pdfjsLib.getDocument(arr).promise;
-                let text = ''; for (let i = 1; i <= pdf.numPages; i++) {
-                    const page = await pdf.getPage(i); const content = await page.getTextContent();
-                    text += content.items.map(item => item.str).join(' ') + '\n\n';
-                }
-                document.getElementById('pdfTextOutput').value = text;
-                document.getElementById('pdfTextOutputArea').classList.remove('hidden');
+                try {
+                    const arr = new Uint8Array(this.result);
+                    const loadingTask = pdfjsLib.getDocument(arr);
+                    const pdf = await loadingTask.promise;
+                    let text = ''; for (let i = 1; i <= pdf.numPages; i++) {
+                        const page = await pdf.getPage(i); const content = await page.getTextContent();
+                        text += content.items.map(item => item.str).join(' ') + '\n\n';
+                    }
+                    document.getElementById('pdfTextOutput').value = text;
+                    document.getElementById('pdfTextOutputArea').classList.remove('hidden');
+                } catch(err) { alert("Failed to parse document content payload."); }
             }; r.readAsArrayBuffer(f);
         }
-        function copyPDFText() { const target = document.getElementById('pdfTextOutput'); target.select(); document.execCommand('copy'); alert("Copied."); }
+        function copyPDFText() { const target = document.getElementById('pdfTextOutput'); target.select(); document.execCommand('copy'); alert("Extracted string matrix cloned."); }
 
         /* Tool 27 Logic Processing Script */
         async function generatePDFFromImages() {
@@ -774,6 +766,39 @@
             doc.save("converted_archive.pdf");
         }
 
+        /* Tool 31 Logic Processing Script */
+        function generateAIPrompt() {
+            const idea = document.getElementById('baseIdea').value; const style = document.getElementById('artStyle').value;
+            const light = document.getElementById('lightingStyle').value; const area = document.getElementById('promptOutputArea');
+            if(!idea) return alert("Please enter a basic idea!");
+            document.getElementById('aiPromptResult').innerText = `${idea}, ${style} style, ${light} lighting, highly detailed, 8k resolution, masterpiece, trending on artstation --v 6.0`;
+            area.classList.remove('hidden');
+        }
+        function copyPrompt() { navigator.clipboard.writeText(document.getElementById('aiPromptResult').innerText); alert("Prompt copied."); }
+
+        /* Tool 32 Logic Processing Script */
+        async function analyzeSEO() {
+            const url = document.getElementById('seoUrlInput').value; const content = document.getElementById('seoReportContent');
+            if(!url) return alert("Please enter a valid URL!");
+            document.getElementById('seoResultArea').classList.remove('hidden'); content.innerHTML = "<p class='animate-pulse text-xs font-mono'>Fetching structure metrics...</p>";
+            try {
+                const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`); const data = await res.json();
+                const parser = new DOMParser(); const doc = parser.parseFromString(data.contents, 'text/html');
+                const title = doc.title || "No Title Found";
+                content.innerHTML = `<div class="flex justify-between border-b pb-2"><span class="text-zinc-500">Page Title Target:</span><span class="font-bold">${title}</span></div><div class="flex justify-between pt-1"><span class="text-zinc-500">H1 Elements:</span><span class="font-bold">${doc.querySelectorAll('h1').length} Found</span></div>`;
+            } catch(e) { content.innerHTML = "<p class='text-red-500 text-xs'>Failed to extract targets from endpoint proxy.</p>"; }
+        }
+
+        /* Tool 33 Logic Processing Script */
+        function generateResume() {
+            const { jsPDF } = window.jspdf; const doc = new jsPDF();
+            const name = document.getElementById('resName').value; const title = document.getElementById('resTitle').value;
+            if(!name) return alert("Name field is minimum requirement structure payload.");
+            doc.setFont("helvetica", "bold"); doc.setFontSize(22); doc.text(name.toUpperCase(), 20, 30);
+            doc.setFontSize(12); doc.setFont("helvetica", "normal"); doc.text(title, 20, 40);
+            doc.save("tanzai_resume.pdf");
+        }
+
         /* Tool 34 Logic Processing Script */
         function getThumbnail() {
             const rawUrl = document.getElementById('ytUrlInput').value; let targetId = '';
@@ -785,7 +810,7 @@
                 document.getElementById('imgMq').src = `https://img.youtube.com/vi/${targetId}/mqdefault.jpg`;
                 document.getElementById('btnMq').href = `https://img.youtube.com/vi/${targetId}/mqdefault.jpg`;
                 document.getElementById('thumbnailResultArea').classList.remove('hidden');
-            }
+            } else { alert("Invalid watch pattern."); }
         }
 
         /* Tool 35 Logic Processing Script */
@@ -838,8 +863,8 @@
             document.getElementById('fontResultArea').classList.remove('hidden'); listContainer.innerHTML = '';
             const unicodeGlyphs = { a: '𝓪', b: '𝓫', c: '𝓬', d: '𝓭', e: '𝓮', f: '𝓯', g: '𝓰', h: '𝓱', i: '𝓲', j: '𝓳', k: '𝓴', l: '𝓵', m: '𝓶', n: '𝓷', o: '𝓸', p: '𝓹', q: '𝓺', r: '𝓻', s: '𝓼', t: '𝓽', u: '𝓾', v: '𝓿', w: '𝔀', x: '𝔁', y: '𝔂', z: '𝔃' };
             const processingResult = baseText.toLowerCase().split('').map(char => unicodeGlyphs[char] || char).join('');
-            const rowElement = document.createElement('div'); rowElement.className = "flex justify-between p-3 bg-zinc-50 border rounded-xl items-center";
-            rowElement.innerHTML = `<span class="text-sm font-mono">${processingResult}</span><button onclick="navigator.clipboard.writeText('${processingResult}'); alert('Copied font variation.');" class="text-[10px] font-bold text-zinc-400">COPY</button>`;
+            const rowElement = document.createElement('div'); rowElement.className = "flex justify-between p-3 bg-zinc-50 border border-zinc-200 rounded-xl items-center";
+            rowElement.innerHTML = `<span class="text-base font-mono font-semibold text-zinc-900">${processingResult}</span><button onclick="navigator.clipboard.writeText('${processingResult}'); alert('Copied font variation.');" class="text-xs font-bold text-zinc-400 hover:text-black">COPY</button>`;
             listContainer.appendChild(rowElement);
         }
 
@@ -851,7 +876,7 @@
                 const targetHostname = new URL(address).hostname; const generatedUrl = `https://www.google.com/s2/favicons?domain=${targetHostname}&sz=128`;
                 document.getElementById('faviconResultImg').src = generatedUrl; document.getElementById('faviconDownloadBtn').href = generatedUrl;
                 document.getElementById('faviconResultArea').classList.remove('hidden');
-            } catch(e) { alert("Format sync runtime break."); }
+            } catch(e) { alert("Format verification failed."); }
         }
 
         /* Tool 41 Logic Processing Script */
@@ -860,9 +885,9 @@
             if(arrayMatches) {
                 const filteringList = [...new Set(arrayMatches)]; document.getElementById('emailExtractedOutput').value = filteringList.join('\n');
                 document.getElementById('emailCount').innerText = filteringList.length; document.getElementById('emailExtractorResultArea').classList.remove('hidden');
-            } else { alert("Pattern array extraction vector search completed. 0 results."); }
+            } else { alert("Pattern matrix array extraction vector search completed. 0 results."); }
         }
-        function copyExtractedEmails() { document.getElementById('emailExtractedOutput').select(); document.execCommand('copy'); alert("Copied payload arrays."); }
+        function copyExtractedEmails() { document.getElementById('emailExtractedOutput').select(); document.execCommand('copy'); alert("Copied."); }
 
         /* Tool 42 Logic Processing Script */
         function convertJSONtoCSV() {
@@ -870,7 +895,7 @@
                 const parseTree = JSON.parse(document.getElementById('jsonInputCsv').value); let csvBuffer = Object.keys(parseTree[0]).join(',') + '\r\n';
                 for(let i=0; i<parseTree.length; i++) { csvBuffer += Object.values(parseTree[i]).join(',') + '\r\n'; }
                 document.getElementById('csvOutput').value = csvBuffer; document.getElementById('csvResultArea').classList.remove('hidden');
-            } catch(e) { alert("Bad structured key configuration parse failure."); }
+            } catch(e) { alert("Bad structural tree format setup parameters."); }
         }
         function downloadCSV() {
             const blobStream = new Blob([document.getElementById('csvOutput').value], { type: 'text/csv' });
@@ -893,7 +918,7 @@
             if(mode === 'title') bufferView.value = source.toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
             if(mode === 'sentence') bufferView.value = source.toLowerCase().replace(/(^\s*|[.!?]\s+)([a-z])/g, (m, p1, p2) => p1 + p2.toUpperCase());
         }
-        function copyCaseText() { document.getElementById('caseOutputText').select(); document.execCommand('copy'); alert("Copied mutated target text."); }
+        function copyCaseText() { document.getElementById('caseOutputText').select(); document.execCommand('copy'); alert("Copied text content buffer."); }
 
         /* Tool 45 Logic Processing Script */
         function processEntities(type) {
@@ -902,7 +927,7 @@
             const sandboxNode = document.createElement('div');
             if(type === 'encode') { sandboxNode.textContent = val; outputBuffer.value = sandboxNode.innerHTML; } else { sandboxNode.innerHTML = val; outputBuffer.value = sandboxNode.textContent; }
         }
-        function copyEntityText() { document.getElementById('entityOutput').select(); document.execCommand('copy'); alert("Copied escaped strings arrays."); }
+        function copyEntityText() { document.getElementById('entityOutput').select(); document.execCommand('copy'); alert("Copied entities."); }
 
         /* Tool 46 Logic Processing Script */
         function updateGradient() {
@@ -920,7 +945,7 @@
                 const domParserInstance = new DOMParser(); const dynamicDoc = domParserInstance.parseFromString(bundle.contents, 'text/html');
                 document.getElementById('twPreviewTitle').innerText = dynamicDoc.querySelector('meta[property="og:title"]')?.content || dynamicDoc.title || "Meta Shared Payload Header Target View Node";
                 document.getElementById('twPreviewDomain').innerText = new URL(targetEndpoint).hostname; document.getElementById('twCardArea').classList.remove('hidden');
-            } catch(e) { alert("CORS proxy channel mapping failed processing this data path target block."); }
+            } catch(e) { alert("CORS proxy metadata analysis configuration interrupt."); }
         }
 
         /* Tool 48 Logic Processing Script */
@@ -929,7 +954,7 @@
             let compiledBuffer = "User-agent: *\n"; if(pathBlocks) pathBlocks.split('\n').forEach(p => compiledBuffer += `Disallow: ${p}\n`); else compiledBuffer += "Allow: /\n";
             if(sitemapLocation) compiledBuffer += `\nSitemap: ${sitemapLocation}`; document.getElementById('robotsOutput').value = compiledBuffer; document.getElementById('robotsResultArea').classList.remove('hidden');
         }
-        function copyRobotsText() { document.getElementById('robotsOutput').select(); document.execCommand('copy'); alert("Directives list successfully compiled."); }
+        function copyRobotsText() { document.getElementById('robotsOutput').select(); document.execCommand('copy'); alert("Directives file structural configuration saved."); }
 
         /* Tool 49 Logic Processing Script */
         async function extractYtTags() {
@@ -944,8 +969,8 @@
                         const cellBadge = document.createElement('span'); cellBadge.className = "bg-white border text-zinc-800 px-3 py-1.5 rounded-lg text-xs font-medium";
                         cellBadge.innerText = keyword.trim(); elementsBadgesContainer.appendChild(cellBadge);
                     });
-                } else { elementsBadgesContainer.innerHTML = "<p class='text-xs italic text-zinc-400'>Metadata sequence arrays closed or missing in video file header.</p>"; }
-            } catch(e) { elementsBadgesContainer.innerHTML = "<p class='text-xs text-red-500'>Extraction layout processing interrupted.</p>"; }
+                } else { elementsBadgesContainer.innerHTML = "<p class='text-xs italic text-zinc-400'>Metadata configuration array empty or restricted.</p>"; }
+            } catch(e) { elementsBadgesContainer.innerHTML = "<p class='text-xs text-red-500'>Extraction pipeline breakdown.</p>"; }
         }
 
         /* Tool 50 Logic Processing Script */
@@ -956,10 +981,10 @@
             try {
                 const queryCloudflareRegistry = async (recordType) => {
                     const serverStreamCall = await fetch(`https://cloudflare-dns.com/dns-query?name=${cleanedHost}&type=${recordType}`, { headers: { 'Accept': 'application/dns-json' } });
-                    const structuralJson = await serverStreamCall.json(); return structuralJson.Answer ? structuralJson.Answer.map(row => row.data).join('<br>') : `No ${recordType} string records configured on host network infrastructure rules map.`;
+                    const structuralJson = await serverStreamCall.json(); return structuralJson.Answer ? structuralJson.Answer.map(row => row.data).join('<br>') : `No ${recordType} records found.`;
                 };
                 reportOutputContainer.innerHTML = `<div class="flex flex-col border-b pb-2"><span class="text-[10px] text-zinc-400 font-bold uppercase">Resolved Target IP (A Record):</span><span class="font-mono mt-0.5 text-zinc-900">${await queryCloudflareRegistry('A')}</span></div><div class="flex flex-col border-b pb-2"><span class="text-[10px] text-zinc-400 font-bold uppercase">Name Servers (NS Records):</span><span class="font-mono mt-0.5 text-zinc-700">${await queryCloudflareRegistry('NS')}</span></div>`;
-            } catch(e) { reportOutputContainer.innerHTML = "<p class='text-red-500 text-xs font-mono'>Query sequence endpoint interface failed processing structural lookup assets.</p>"; }
+            } catch(e) { reportOutputContainer.innerHTML = "<p class='text-red-500 text-xs font-mono'>Terminal lookup timeout failure.</p>"; }
         }
     </script>
 </body>
