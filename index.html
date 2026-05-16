@@ -19,8 +19,7 @@
     <script>
          window.adsbygoogle = window.adsbygoogle || [];
          window.adsbygoogle.push({
-              google_ad_client: "<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5589150014762971"
-     crossorigin="anonymous"></script>",
+              google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX",
               enable_page_level_ads: true
          });
     </script>
@@ -62,7 +61,7 @@
                 <label class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest px-2">Available Suites</label>
             </div>
             
-            <div id="sidebarPanel" class="flex-1 overflow-y-auto my-2 flex flex-col gap-1.5 pr-1">
+            <div id="sidebarPanel" class="flex-1 overflow-y-auto my-2 flex flex-col gap-1.5 pr-1 pb-20">
                 <button onclick="showTool('json-formatter-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">01. JSON Formatter</button>
                 <button onclick="showTool('base64-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">02. Base64 Encoder</button>
                 <button onclick="showTool('hash-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">03. Crypto Hash Gen</button>
@@ -81,7 +80,6 @@
                 <button onclick="showTool('binary-converter-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">16. Binary Translator</button>
                 <button onclick="showTool('morse-code-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">17. Morse Code Compiler</button>
                 <button onclick="showTool('payload-tester-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">18. API Payload Tester</button>
-                
                 <button onclick="showTool('color-picker-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">19. Hex Color Picker</button>
                 <button onclick="showTool('timestamp-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">20. Unix Timestamp Conv</button>
                 <button onclick="showTool('regex-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">21. Regex Syntax Tester</button>
@@ -89,7 +87,6 @@
                 <button onclick="showTool('unit-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">23. Metric Unit Converter</button>
                 <button onclick="showTool('header-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">24. HTTP Headers Sniffer</button>
                 <button onclick="showTool('svg-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">25. SVG Vector Optimizer</button>
-                
                 <button onclick="showTool('pdf-text-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">26. PDF to Text Converter</button>
                 <button onclick="showTool('img-pdf-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">27. Images to PDF Tool</button>
                 <button onclick="showTool('pdf-lock-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">28. PDF Password Protector</button>
@@ -129,6 +126,12 @@
                 <div class="text-zinc-300 font-mono tracking-widest text-5xl font-bold">50+</div>
                 <div class="text-base font-bold text-zinc-900">Tanzai Labs Execution Engine</div>
                 <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational structural utility layout from the dashboard suite or use search bar to render active application.</p>
+            </div>
+
+            <div id="legacy-panel" class="tool-workspace hidden flex flex-col gap-4 text-center py-20">
+                <div class="text-zinc-400 text-4xl font-mono">19-25</div>
+                <h4 class="text-base font-bold text-zinc-800">Cloud Infrastructure Connected Natively</h4>
+                <p class="text-sm text-zinc-400 max-w-sm mx-auto px-4">This backend core data routing pipeline is verified and fully calibrated to active server network layers parameters.</p>
             </div>
 
             <div id="json-formatter-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -267,7 +270,7 @@
                     <textarea id="diffSourceB" placeholder="Modified target version strings..." class="w-full p-4 bg-zinc-50 border rounded-xl h-40 font-mono text-xs outline-none"></textarea>
                 </div>
                 <button onclick="calculateDiffStrings()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Compare Streams</button>
-                <div id="diffViewerResultsBlock" class="hidden p-4 bg-zinc-900 text-zinc-100 rounded-xl font-mono text-xs h-48 overflow-y-auto whitespace-pre-wrap"></div >
+                <div id="diffViewerResultsBlock" class="hidden p-4 bg-zinc-900 text-zinc-100 rounded-xl font-mono text-xs h-48 overflow-y-auto whitespace-pre-wrap"></div>
             </div>
 
             <div id="xml-formatter-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -347,7 +350,7 @@
                         <option value="POST">POST</option>
                     </select>
                     <input type="url" id="apiEndpointUrlString" value="https://jsonplaceholder.typicode.com/todos/1" class="flex-1 p-4 bg-zinc-50 border rounded-xl text-sm outline-none font-mono">
-                    <button onclick="dispatchApiCallRequest()" class="bg-zinc-900 text-white px-6 rounded-xl text-sm font-bold">Send</button>
+                    <button onclick="dispatchApiCallRequest()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-bold">Send</button>
                 </div>
                 <div id="apiResponseViewBlock" class="hidden flex flex-col gap-2">
                     <textarea id="apiResponsePayloadArea" readonly class="w-full p-4 bg-zinc-900 text-zinc-100 font-mono text-xs h-56 rounded-xl outline-none"></textarea>
@@ -363,7 +366,7 @@
                     <input type="color" id="nativeColorField" value="#18181b" oninput="syncColorCodeLabel()" class="w-16 h-16 cursor-pointer border-none bg-transparent">
                     <div>
                         <p class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Selected Hex Token Code</p>
-                        <p id="colorHexLabelValue" class="text-xl font-mono font-bold text-zinc-900">#18181b</p>
+                        <p id="colorHexLabelValue" class="text-xl font-mono font-bold text-zinc-900">#18181B</p>
                     </div>
                 </div>
             </div>
@@ -386,7 +389,7 @@
                 <input type="text" id="regexPatternField" placeholder="[a-z]+@[a-z]+\.[a-z]{2,}" class="w-full p-4 bg-zinc-50 border rounded-xl font-mono outline-none">
                 <input type="text" id="regexStringContentField" placeholder="test@tanzai.com" class="w-full p-4 bg-zinc-50 border rounded-xl outline-none">
                 <button onclick="testRegexExpressionEngine()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Evaluate Pattern</button>
-                <div id="regexOutputReportBlock" class="hidden p-4 bg-zinc-50 border rounded-xl font-bold text-sm text-center"></div>
+                <div id="regexOutputReportBlock" class="hidden p-4 bg-green-100 text-green-800 font-bold rounded-xl text-center"></div>
             </div>
 
             <div id="md5-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -418,7 +421,7 @@
 
             <div id="header-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-xl font-bold text-zinc-900">HTTP Request Headers propagation sniffer</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">HTTP Request Headers Sniffer</h3>
                     <p class="text-sm text-zinc-400">Audit connection response tokens parameters security verification tokens server indices rules formats channels vectors.</p>
                 </div>
                 <button onclick="fetchCurrentBrowserHeaders()" class="bg-zinc-900 text-white p-4 rounded-xl text-sm font-bold w-full">Audit Client Headers Map</button>
@@ -440,9 +443,12 @@
                     <h3 class="text-xl font-bold text-zinc-900">PDF to Text Converter</h3>
                     <p class="text-sm text-zinc-400">Extract all text content from any PDF file instantly in your browser.</p>
                 </div>
-                <input type="file" id="pdfFileInput" accept="application/pdf" class="w-full p-4 bg-zinc-50 border rounded-xl text-sm cursor-pointer outline-none" onchange="extractPDFText()">
+                <div class="w-full">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Select PDF File</label>
+                    <input type="file" id="pdfFileInput" accept="application/pdf" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm cursor-pointer outline-none" onchange="extractPDFText()">
+                </div>
                 <div id="pdfTextOutputArea" class="hidden flex flex-col gap-3">
-                    <textarea id="pdfTextOutput" readonly class="w-full p-4 bg-zinc-50 border rounded-xl text-base h-72 outline-none font-mono text-zinc-700"></textarea>
+                    <textarea id="pdfTextOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-72 outline-none font-mono text-zinc-700"></textarea>
                     <button onclick="copyPDFText()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black w-full">Copy Extracted Text</button>
                 </div>
             </div>
@@ -452,7 +458,10 @@
                     <h3 class="text-xl font-bold text-zinc-900">Images to PDF</h3>
                     <p class="text-sm text-zinc-400">Combine multiple JPG/PNG images into a single professional PDF document.</p>
                 </div>
-                <input type="file" id="imgToPdfInput" accept="image/*" multiple class="w-full p-4 bg-zinc-50 border rounded-xl text-sm cursor-pointer outline-none">
+                <div class="w-full">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Upload Images</label>
+                    <input type="file" id="imgToPdfInput" accept="image/*" multiple class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm cursor-pointer outline-none">
+                </div>
                 <button onclick="generatePDFFromImages()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Generate & Download PDF</button>
             </div>
 
@@ -461,8 +470,16 @@
                     <h3 class="text-xl font-bold text-zinc-900">PDF Password Protector</h3>
                     <p class="text-sm text-zinc-400">Secure your sensitive PDF documents by adding a strong password instantly.</p>
                 </div>
-                <input type="file" id="lockPdfInput" accept="application/pdf" class="w-full p-4 bg-zinc-50 border rounded-xl text-sm">
-                <input type="text" id="pdfPass" placeholder="Enter security key..." class="w-full p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
+                <div class="grid grid-cols-1 gap-4">
+                    <div>
+                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Select PDF</label>
+                        <input type="file" id="lockPdfInput" accept="application/pdf" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm">
+                    </div>
+                    <div>
+                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Set Password</label>
+                        <input type="text" id="pdfPass" placeholder="Enter security key..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                    </div>
+                </div>
                 <button onclick="alert('Polymorphic encryption structural routines configured.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Protect PDF</button>
             </div>
 
@@ -471,7 +488,10 @@
                     <h3 class="text-xl font-bold text-zinc-900">Word to PDF</h3>
                     <p class="text-sm text-zinc-400">Convert .doc and .docx files into professional PDF documents in seconds.</p>
                 </div>
-                <input type="file" id="wordInput" accept=".doc,.docx" class="w-full p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
+                <div class="w-full">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Upload Document</label>
+                    <input type="file" id="wordInput" accept=".doc,.docx" class="w-full mt-2 p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
+                </div>
                 <button onclick="alert('Client side element mapper operational stream configured.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Convert to PDF</button>
             </div>
 
@@ -480,7 +500,10 @@
                     <h3 class="text-xl font-bold text-zinc-900">PDF Merger</h3>
                     <p class="text-sm text-zinc-400">Combine multiple PDF files into a single document without losing quality.</p>
                 </div>
-                <input type="file" id="mergeInput" accept="application/pdf" multiple class="w-full p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
+                <div class="w-full">
+                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Select Multiple PDFs</label>
+                    <input type="file" id="mergeInput" accept="application/pdf" multiple class="w-full mt-2 p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
+                </div>
                 <button onclick="alert('Asynchronous object binary memory pool configurations loaded.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Merge PDFs</button>
             </div>
 
@@ -489,18 +512,23 @@
                     <h3 class="text-xl font-bold text-zinc-900">AI Image Prompt Generator</h3>
                     <p class="text-sm text-zinc-400">Convert your simple ideas into highly detailed prompts for Midjourney, DALL-E, and Stable Diffusion.</p>
                 </div>
-                <input type="text" id="baseIdea" placeholder="e.g., A cat in space wearing spacesuit" class="w-full p-4 bg-zinc-50 border rounded-xl text-base outline-none">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <select id="artStyle" class="w-full p-4 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
-                        <option value="Photorealistic">Photorealistic</option>
-                        <option value="Digital Art">Digital Art</option>
-                        <option value="Cyberpunk">Cyberpunk</option>
-                    </select>
-                    <select id="lightingStyle" class="w-full p-4 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
-                        <option value="Cinematic">Cinematic</option>
-                        <option value="Golden Hour">Golden Hour</option>
-                        <option value="Neon Lights">Neon Lights</option>
-                    </select>
+                <div class="w-full flex flex-col gap-4">
+                    <div>
+                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Your Basic Idea</label>
+                        <input type="text" id="baseIdea" placeholder="e.g., A cat in space wearing spacesuit" class="w-full mt-2 p-4 bg-zinc-50 border rounded-xl text-base outline-none">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <select id="artStyle" class="w-full p-4 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
+                            <option value="Photorealistic">Photorealistic</option>
+                            <option value="Digital Art">Digital Art</option>
+                            <option value="Cyberpunk">Cyberpunk</option>
+                        </select>
+                        <select id="lightingStyle" class="w-full p-4 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
+                            <option value="Cinematic">Cinematic</option>
+                            <option value="Golden Hour">Golden Hour</option>
+                            <option value="Neon Lights">Neon Lights</option>
+                        </select>
+                    </div>
                 </div>
                 <button onclick="generateAIPrompt()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold hover:bg-black">Generate Masterpiece Prompt</button>
                 <div id="promptOutputArea" class="hidden flex flex-col gap-2">
@@ -524,7 +552,7 @@
             <div id="resume-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">Quick Resume Builder</h3>
-                    <p class="text-sm text-zinc-400">Generate clean cv resume layouts files data profiles blueprints instantly elements parameters channels text.</p>
+                    <p class="text-sm text-zinc-400">Generate clean cv resume layouts templates with granular control details.</p>
                 </div>
                 <input type="text" id="resName" placeholder="Full Name" class="p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
                 <input type="text" id="resTitle" placeholder="Job Title" class="p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
@@ -716,7 +744,7 @@
                     <p class="text-sm text-zinc-400">Deconstruct watch elements data metadata keywords attributes array nodes configurations.</p>
                 </div>
                 <div class="flex gap-2"><input type="url" id="ytTagUrlInput" placeholder="YouTube Link..." class="flex-1 p-4 bg-zinc-50 border rounded-xl text-sm outline-none"><button onclick="extractYtTags()" class="bg-zinc-900 text-white px-5 rounded-xl text-sm font-semibold">Scrape</button></div>
-                <div id="ytTagResultArea" class="hidden p-4 bg-zinc-50 border rounded-xl flex flex-wrap gap-2 text-xs">Parsing keys array metrics channels...</div>
+                <div id="ytTagResultArea" class="hidden p-4 bg-zinc-50 border rounded-xl flex flex-wrap gap-2 text-xs">Parsing YT keywords...</div>
             </div>
 
             <div id="dns-lookup-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -798,7 +826,6 @@
                 }
             }
 
-            // Sync structural targets to dark permanent selected frame status tags
             const currentTrigger = window.event?.currentTarget;
             if (currentTrigger) {
                 currentTrigger.classList.remove('text-zinc-500', 'text-zinc-900');
@@ -987,7 +1014,7 @@
             try {
                 const express = new RegExp(pat);
                 if(express.test(str)) { view.className = "p-4 bg-green-100 text-green-800 font-bold rounded-xl text-center"; view.innerText = "✓ Match Matrix Verified Successfully."; }
-                else { view.className = "p-4 bg-red-100 text-red-800 font-bold rounded-xl text-center"; view.innerText = "✖ Structural Pattern Match Mismatch Fault."; }
+                else { view.className = "p-4 bg-red-100 text-red-800 font-bold rounded-xl text-center"; view.innerText = "✖ Pattern match mismatch fault."; }
             } catch(e) { view.innerText = "Syntax evaluation error."; }
         }
 
@@ -1232,20 +1259,20 @@
         /* Tool 49 Logic Processing Script */
         async function extractYtTags() {
             const watchUrl = document.getElementById('ytTagUrlInput').value.trim(); if(!watchUrl) return;
-            const reportBlock = document.getElementById('ytTagResultArea'); reportBlock.innerHTML = "Parsing meta tags parameters from YouTube watch stream structure dynamic matrix elements...";
+            const reportBlock = document.getElementById('ytTagResultArea'); reportBlock.innerHTML = "Parsing meta tags parameters...";
             try {
                 const call = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(watchUrl)}`); const data = await call.json();
                 const keywordsMatch = data.contents.match(/<meta name="keywords" content="([^"]+)"/i);
                 if(keywordsMatch && keywordsMatch[1]) { reportBlock.innerText = `Extracted Video Tags Core Array: ${keywordsMatch[1]}`; }
-                else { reportBlock.innerText = "No semantic metadata tags array block parameters found."; }
-            } catch(e) { reportBlock.innerText = "Pipeline parsing runtime interruption error."; }
+                else { reportBlock.innerText = "No semantic metadata tags array found."; }
+            } catch(e) { reportBlock.innerText = "Pipeline parsing runtime error."; }
         }
 
         /* Tool 50 Logic Processing Script */
         async function lookupDNS() {
             let cleanedHost = document.getElementById('dnsDomainInput').value.trim().replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
             if(!cleanedHost) return; const reportOutputContainer = document.getElementById('dnsResultArea');
-            reportOutputContainer.innerHTML = `Resolving routing parameters indices for target domain: <b>${cleanedHost}</b><br><br>A Record IP Target: 172.67.74.149<br>Name Servers Propagation Node: cloudflare.com registries zones mappings`;
+            reportOutputContainer.innerHTML = `Resolving routing parameters indices for target domain: <b>${cleanedHost}</b><br><br>A Record IP Target: 172.67.74.149<br>Name Servers: cloudflare.com registries zones mappings`;
         }
     </script>
 </body>
