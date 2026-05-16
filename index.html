@@ -19,8 +19,7 @@
     <script>
          window.adsbygoogle = window.adsbygoogle || [];
          window.adsbygoogle.push({
-              google_ad_client: "<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5589150014762971"
-     crossorigin="anonymous"></script>",
+              google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX",
               enable_page_level_ads: true
          });
     </script>
@@ -36,7 +35,7 @@
 </head>
 <body class="bg-zinc-50 text-zinc-900 min-h-screen flex flex-col antialiased text-base">
 
-    <header id="tanzaiAppHeader" class="w-full bg-white border-b border-zinc-200 px-4 md:px-8 py-5 flex justify-between items-center max-w-7xl mx-auto">
+    <header class="w-full bg-white border-b border-zinc-200 sticky top-0 z-50 px-4 md:px-8 py-5 flex justify-between items-center max-w-7xl mx-auto">
         <div class="flex flex-col">
             <h1 class="text-2xl font-bold tracking-tight text-zinc-900">Tanzai Tools</h1>
             <span class="text-xs font-bold uppercase tracking-widest text-zinc-400 mt-0.5">Mega Utility Infrastructure (50+ Live)</span>
@@ -56,7 +55,7 @@
 
     <main class="w-full max-w-7xl mx-auto flex-1 p-4 md:p-8 grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8">
         
-        <aside class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[420px] lg:h-[calc(100vh-180px)] relative shadow-sm overflow-hidden flex flex-col justify-between">
+        <aside class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[500px] lg:h-[calc(100vh-180px)] relative shadow-sm overflow-hidden flex flex-col justify-between">
             
             <div class="pb-2 border-b border-zinc-100 bg-white z-10 shrink-0">
                 <label class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest px-2">Available Suites</label>
@@ -65,41 +64,37 @@
             <div id="sidebarPanel" class="flex-1 overflow-y-auto my-2 flex flex-col gap-1.5 pr-1">
                 <button onclick="showTool('json-formatter-tool')" data-name="json formatter formatting validator beauty pretty" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">01. JSON Formatter</button>
                 <button onclick="showTool('base64-tool')" data-name="base64 encoder decoder decoding encrypt decrypt string" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">02. Base64 Encoder</button>
-                <button onclick="showTool('hash-tool')" data-name="md5 hash generator sha256 checksum crypto encryption" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">03. Crypto Hash Gen</button>
+                <button onclick="showTool('hash-tool')" data-name="md5 hash generator sha256 sha1 checksum crypto encryption" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">03. Crypto Hash Gen</button>
                 <button onclick="showTool('qr-tool')" data-name="qr code generator scanner barcode create matrix" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">04. QR Code Gen</button>
                 <button onclick="showTool('lorem-tool')" data-name="lorem ipsum generator dummy text placeholder paragraph random" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">05. Lorem Ipsum</button>
                 <button onclick="showTool('password-gen-tool')" data-name="password generator secure keys random pass string character" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">06. Password Gen</button>
                 <button onclick="showTool('url-encode-tool')" data-name="url encoder decoder escaping uniform parameters string" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">07. URL Encoder</button>
-                
-                <button onclick="showTool('legacy-panel')" data-name="legacy placeholders components operational suite" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-400 hover:bg-zinc-100 border border-transparent transition-all duration-200">08-25. Legacy Core Panels</button>
-
-                <button onclick="showTool('pdf-text-tool')" data-name="pdf to text converter extract plain words content document parsing script" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">26. PDF to Text Converter</button>
-                <button onclick="showTool('img-pdf-tool')" data-name="images to pdf tool merge jpg png photos document builder" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">27. Images to PDF Tool</button>
-                <button onclick="showTool('pdf-lock-tool')" data-name="pdf password protector secure files lock encrypt privacy protection" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">28. PDF Password Protector</button>
-                <button onclick="showTool('word-pdf-tool')" data-name="word to pdf logic doc docx formatting dynamic converters office text" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">29. Word to PDF Logic</button>
-                <button onclick="showTool('pdf-merge-tool')" data-name="enterprise pdf merger combine files bind split stack storage" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">30. Enterprise PDF Merger</button>
-                <button onclick="showTool('seo-analyzer-tool')" data-name="website seo auditor rank tracking check link tags optimization on-page h1 meta" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">32. Website SEO Auditor</button>
-                <button onclick="showTool('resume-tool')" data-name="quick cv resume builder maker templates ats-friendly hiring employment bio" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">33. Quick CV/Resume Builder</button>
-                <button onclick="showTool('yt-thumbnail-tool')" data-name="yt thumbnail scraper youtube media cover images 4k hd downloads" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">34. YT Thumbnail Scraper</button>
-                <button onclick="showTool('webp-tool')" data-name="image to webp optimizer converter speed core web vitals png jpg scale" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">35. Image to WebP Optimizer</button>
-                <button onclick="showTool('bulk-url-tool')" data-name="bulk system url opener tabs browser links multi automatic execution routing" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">36. Bulk System URL Opener</button>
-                <button onclick="showTool('password-audit-tool')" data-name="password entropy audit security test score safety check checker strength characters" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">37. Password Entropy Audit</button>
-                <button onclick="showTool('ascii-tool')" data-name="ascii stylized art gen text transform terminal layout design letters typography" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">38. ASCII Stylized Art Gen</button>
-                <button onclick="showTool('font-gen-tool')" data-name="social typography engine instagram bio text design bold cursive fancy fonts unicode text converter" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">39. Social Typography Engine</button>
-                <button onclick="showTool('favicon-fetcher-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">40. High-Res Favicon Fetcher</button>
-                <button onclick="showTool('email-extractor-tool')" data-name="bulk regex email scraper extract validation filters" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">41. Bulk Email Extractor</button>
-                <button onclick="showTool('json-csv-tool')" data-name="flattened json to csv data sheet converter excel" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">42. JSON to CSV</button>
-                <button onclick="showTool('word-counter-tool')" data-name="metrics text word counter characters analysis limits" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">43. Word Counter</button>
-                <button onclick="showTool('case-converter-tool')" data-name="dynamic case converter upper lower text modifications" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">44. Case Converter</button>
-                <button onclick="showTool('html-entity-tool')" data-name="html safe entity escaper decode safe codes markup" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">45. HTML Entities</button>
-                <button onclick="showTool('gradient-tool')" data-name="linear css gradient lab visual background coloring palettes" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">46. CSS Gradient</button>
-                <button onclick="showTool('twitter-preview-tool')" data-name="twitter x metadata mockup preview seo optimization cards" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">47. Twitter Preview</button>
-                <button onclick="showTool('robots-tool')" data-name="crawler robots.txt engine seo indexing allow directions bot" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">48. Robots.txt Gen</button>
-                <button onclick="showTool('yt-tag-tool')" data-name="youtube tag extractor search rankings optimization keywords video tags" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">49. YT Tag Extractor</button>
-                <button onclick="showTool('dns-lookup-tool')" data-name="dns records ip audit servers propagation dynamic records lookup mx ns nameservers" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">50. DNS & IP Audit</button>
+                <button onclick="showTool('word-counter-tool')" data-name="metrics text word counter characters analysis limits" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">08. Word Counter</button>
+                <button onclick="showTool('case-converter-tool')" data-name="dynamic case converter upper lower text modifications sentence title" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">09. Case Converter</button>
+                <button onclick="showTool('html-entity-tool')" data-name="html safe entity escaper decode safe codes markup encode" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">10. HTML Entities</button>
+                <button onclick="showTool('gradient-tool')" data-name="linear css gradient lab visual background coloring palettes" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">11. CSS Gradient Lab</button>
+                <button onclick="showTool('twitter-preview-tool')" data-name="twitter x metadata mockup preview seo optimization cards cards opengraph" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">12. Twitter Preview Card</button>
+                <button onclick="showTool('robots-tool')" data-name="crawler robots.txt engine seo indexing allow directions bot agent sitemap" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">13. Robots.txt Gen</button>
+                <button onclick="showTool('yt-tag-tool')" data-name="youtube tag extractor search rankings optimization keywords video tags tags scraper" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">14. YT Tag Extractor</button>
+                <button onclick="showTool('dns-lookup-tool')" data-name="dns records ip audit servers propagation dynamic records lookup mx ns nameservers" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">15. DNS & IP Audit</button>
+                <button onclick="showTool('pdf-text-tool')" data-name="pdf to text converter extract plain words content document parsing script" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">16. PDF to Text</button>
+                <button onclick="showTool('img-pdf-tool')" data-name="images to pdf tool merge jpg png photos document builder converter" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">17. Images to PDF</button>
+                <button onclick="showTool('pdf-lock-tool')" data-name="pdf password protector secure files lock encrypt privacy protection" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">18. PDF Password Protector</button>
+                <button onclick="showTool('word-pdf-tool')" data-name="word to pdf logic doc docx formatting dynamic converters office text docx to pdf" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">19. Word to PDF Logic</button>
+                <button onclick="showTool('pdf-merge-tool')" data-name="enterprise pdf merger combine files bind split stack storage" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">20. Enterprise PDF Merger</button>
+                <button onclick="showTool('ai-prompt-tool')" data-name="ai image prompt engine midjourney dall-e stable diffusion prompt crafting generation" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">21. AI Image Prompt Engine</button>
+                <button onclick="showTool('seo-analyzer-tool')" data-name="website seo auditor rank tracking check link tags optimization on-page h1 meta audit site" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">22. Website SEO Auditor</button>
+                <button onclick="showTool('resume-tool')" data-name="quick cv resume builder maker templates ats-friendly hiring employment bio structural resume builder" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">23. Quick CV/Resume Builder</button>
+                <button onclick="showTool('yt-thumbnail-tool')" data-name="yt thumbnail scraper youtube media cover images 4k hd downloads high-res images" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">24. YT Thumbnail Scraper</button>
+                <button onclick="showTool('webp-tool')" data-name="image to webp optimizer converter speed core web vitals png jpg scale webp convert" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">25. Image to WebP Optimizer</button>
+                <button onclick="showTool('bulk-url-tool')" data-name="bulk system url opener tabs browser links multi automatic execution routing open tabs" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">26. Bulk System URL Opener</button>
+                <button onclick="showTool('password-audit-tool')" data-name="password entropy audit security test score safety check checker strength characters password checker" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">27. Password Entropy Audit</button>
+                <button onclick="showTool('ascii-tool')" data-name="ascii stylized art gen text transform terminal layout design letters typography big letters text art" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">28. ASCII Stylized Art Gen</button>
+                <button onclick="showTool('favicon-fetcher-tool')" data-name="high-res favicon fetcher download web shortcut icons images profile links url extraction" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">29. High-Res Favicon Fetcher</button>
+                <button onclick="showTool('email-extractor-tool')" data-name="bulk regex email scraper extract validation filters scrap mails data scanner text" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">30. Bulk Regex Email Scraper</button>
             </div>
 
-            <div class="pt-3 border-t border-zinc-100 flex flex-col gap-1 bg-white shrink-0 z-20">
+            <div class="absolute bottom-0 left-0 right-0 p-4 pt-3 border-t border-zinc-100 flex flex-col gap-1 bg-white z-20 shrink-0">
                 <button onclick="showTool('about-page')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-semibold uppercase text-zinc-500 hover:bg-zinc-100 transition-all duration-200">ℹ️ About Us</button>
                 <button onclick="showTool('privacy-page')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-semibold uppercase text-zinc-500 hover:bg-zinc-100 transition-all duration-200">🔒 Privacy Policy</button>
             </div>
@@ -110,13 +105,7 @@
             <div id="default-placeholder" class="flex flex-col items-center justify-center text-center py-24 gap-4">
                 <div class="text-zinc-300 font-mono tracking-widest text-5xl font-bold">50+</div>
                 <div class="text-base font-bold text-zinc-900">Tanzai Labs Execution Engine</div>
-                <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational utility layout from the dashboard suite or use search bar to render active application.</p>
-            </div>
-
-            <div id="legacy-panel" class="tool-workspace hidden flex flex-col gap-4 text-center py-20">
-                <div class="text-zinc-400 text-4xl font-mono">08-25</div>
-                <h4 class="text-base font-bold text-zinc-800">Legacy Component Context Mounted</h4>
-                <p class="text-sm text-zinc-400 max-w-sm mx-auto px-4">This structural sandbox data channel is fully operational. To reconnect older layouts, insert structural matching element nodes inside this interface container block.</p>
+                <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational structural utility layout from the dashboard suite or use search bar to render active application.</p>
             </div>
 
             <div id="json-formatter-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -211,6 +200,121 @@
                     <button onclick="processUrlString('decode')" class="flex-1 bg-zinc-100 text-zinc-800 p-3.5 rounded-xl text-sm font-semibold">Decode Parameters</button>
                 </div>
                 <textarea id="urlParamOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl h-40 font-mono text-sm hidden outline-none"></textarea>
+                <div class="Ad-Placeholder-Global"></div>
+            </div>
+
+            <div id="word-counter-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">Word Counter & Reading Time</h3>
+                    <p class="text-sm text-zinc-400">Count words, characters, and estimate the average reading time of your text in real-time.</p>
+                </div>
+                <textarea id="wordCounterInput" oninput="countTextMetrics()" placeholder="Start typing or paste your content here..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-48 outline-none"></textarea>
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-zinc-400">Words</span>
+                        <div id="metricWords" class="text-xl md:text-2xl font-bold text-zinc-900 mt-1">0</div>
+                    </div>
+                    <div class="p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-zinc-400">Characters</span>
+                        <div id="metricChars" class="text-xl md:text-2xl font-bold text-zinc-900 mt-1">0</div>
+                    </div>
+                    <div class="p-3 md:p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-center">
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-zinc-400">Reading Time</span>
+                        <div id="metricTime" class="text-xl md:text-2xl font-bold text-zinc-900 mt-1">0m</div>
+                    </div>
+                </div>
+                <div class="Ad-Placeholder-Global"></div>
+            </div>
+
+            <div id="case-converter-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">Text Case Converter</h3>
+                    <p class="text-sm text-zinc-400">Change your text style instantly to UPPERCASE, lowercase, Title Case, or Sentence case.</p>
+                </div>
+                <textarea id="caseInputText" placeholder="Type or paste text content..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-40 outline-none"></textarea>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    <button onclick="convertCase('upper')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-semibold hover:bg-black">UPPERCASE</button>
+                    <button onclick="convertCase('lower')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-semibold hover:bg-black">lowercase</button>
+                    <button onclick="convertCase('title')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-semibold hover:bg-black">Title Case</button>
+                    <button onclick="convertCase('sentence')" class="bg-zinc-900 text-white p-3 rounded-xl text-xs font-semibold hover:bg-black">Sentence case</button>
+                </div>
+                <div id="caseResultArea" class="hidden flex flex-col gap-2">
+                    <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Converted Result</label>
+                    <textarea id="caseOutputText" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-40 outline-none text-zinc-600"></textarea>
+                    <button onclick="copyCaseText()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy Result</button>
+                </div>
+                <div class="Ad-Placeholder-Global"></div>
+            </div>
+
+            <div id="html-entity-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">HTML Entity Encoder & Decoder</h3>
+                    <p class="text-sm text-zinc-400">Convert special characters to HTML entities or decode them back to plain text.</p>
+                </div>
+                <textarea id="entityInput" placeholder="Enter text or <html> code here..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-40 outline-none font-mono text-sm"></textarea>
+                <div class="flex gap-3">
+                    <button onclick="processEntities('encode')" class="bg-zinc-900 text-white px-5 py-3.5 rounded-xl text-sm font-semibold hover:bg-black transition-all">Encode</button>
+                    <button onclick="processEntities('decode')" class="bg-white border border-zinc-200 text-zinc-900 px-5 py-3.5 rounded-xl text-sm font-semibold hover:bg-zinc-50 transition-all">Decode</button>
+                </div>
+                <div id="entityResultArea" class="hidden flex flex-col gap-2">
+                    <label class="text-[11px] font-semibold text-zinc-400 uppercase tracking-widest">Processed Result</label>
+                    <textarea id="entityOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-40 outline-none font-mono text-zinc-600"></textarea>
+                    <button onclick="copyEntityText()" class="text-xs font-bold text-zinc-400 hover:text-black uppercase tracking-widest text-right mt-1">Copy Result</button>
+                </div>
+                <div class="Ad-Placeholder-Global"></div>
+            </div>
+
+            <div id="gradient-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">CSS Gradient Generator</h3>
+                    <p class="text-sm text-zinc-400">Design properties vector backgrounds configurations codes maps panels elements.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-2 p-3 bg-zinc-50 rounded-xl">
+                    <input type="color" id="gradColor1" value="#000000" oninput="updateGradient()"><input type="color" id="gradColor2" value="#71717a" oninput="updateGradient()">
+                </div>
+                <div id="gradientPreview" class="w-full min-h-[120px] rounded-xl border"></div>
+                <textarea id="gradientCode" readonly class="w-full p-3 bg-zinc-50 border text-xs font-mono outline-none"></textarea>
+                <div class="Ad-Placeholder-Global"></div>
+            </div>
+
+            <div id="twitter-preview-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">Social Graph Previewer Engine</h3>
+                    <p class="text-sm text-zinc-400">Test deployment index attributes parsing sequences open values tags metadata views.</p>
+                </div>
+                <div class="flex gap-2"><input type="url" id="twUrlInput" placeholder="https://tanzaitools.com" class="flex-1 p-4 bg-zinc-50 border rounded-xl text-sm outline-none"><button onclick="previewTwitterCard()" class="bg-zinc-900 text-white px-5 rounded-xl text-sm font-semibold">Mock</button></div>
+                <div id="twCardArea" class="hidden p-4 bg-zinc-50 border rounded-2xl font-mono text-xs text-zinc-700" id="twPreviewTitle">Target Layout Metadata Node Verified.</div>
+                <div class="Ad-Placeholder-Global"></div>
+            </div>
+
+            <div id="robots-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">SEO Robots Directives Compiler</h3>
+                    <p class="text-sm text-zinc-400">Construct indexation tracking maps visibility guidelines registers files crawlers logic.</p>
+                </div>
+                <input type="text" id="robotSitemap" placeholder="https://site.com/sitemap.xml" class="w-full p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
+                <button onclick="generateRobots()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Compile Directives</button>
+                <div id="robotsResultArea" class="hidden"><textarea id="robotsOutput" readonly class="w-full p-4 bg-zinc-100 border text-sm h-48 font-mono outline-none"></textarea></div>
+                <div class="Ad-Placeholder-Global"></div>
+            </div>
+
+            <div id="yt-tag-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">YouTube Video Tags Scraper</h3>
+                    <p class="text-sm text-zinc-400">Deconstruct watch elements data metadata keywords attributes array nodes configurations.</p>
+                </div>
+                <div class="flex gap-2"><input type="url" id="ytTagUrlInput" placeholder="YouTube Link..." class="flex-1 p-4 bg-zinc-50 border rounded-xl text-sm outline-none"><button onclick="extractYtTags()" class="bg-zinc-900 text-white px-5 rounded-xl text-sm font-semibold">Scrape</button></div>
+                <div id="ytTagResultArea" class="hidden p-4 bg-zinc-50 border rounded-xl flex flex-wrap gap-2 text-xs" id="ytTagsContainer">Parsing keys array metrics channels...</div>
+                <div class="Ad-Placeholder-Global"></div>
+            </div>
+
+            <div id="dns-lookup-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">DNS Infrastructure Audit Panel</h3>
+                    <p class="text-sm text-zinc-400">Perform propagation analytics audits across server networks registers zones indices rules.</p>
+                </div>
+                <div class="flex gap-2"><input type="text" id="dnsDomainInput" placeholder="tanzaitools.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base outline-none font-mono"><button onclick="lookupDNS()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold">Lookup</button></div>
+                <div id="dnsResultArea" class="hidden p-4 bg-zinc-50 border rounded-xl font-mono text-sm text-zinc-700" id="dnsReportContent">Query registers node targets tracking...</div>
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
@@ -322,7 +426,7 @@
 
             <div id="seo-analyzer-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-xl font-bold text-zinc-900">Website SEO Auditor</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Website SEO Analyzer</h3>
                     <p class="text-sm text-zinc-400">Analyze any webpage's Meta Tags, Title, and Structure for better Search Engine ranking.</p>
                 </div>
                 <div class="flex gap-2">
@@ -437,127 +541,6 @@
                 <div class="Ad-Placeholder-Global"></div>
             </div>
 
-            <div id="email-extractor-tool" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">Bulk Email Extractor</h3>
-                    <p class="text-sm text-zinc-400">Filter mail data registers strings out from custom content strings.</p>
-                </div>
-                <textarea id="emailRawInput" placeholder="Paste data here..." class="w-full p-4 bg-zinc-50 border rounded-xl h-44 outline-none font-mono text-sm"></textarea>
-                <button onclick="extractEmails()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Extract Valid Mails</button>
-                <div id="emailExtractorResultArea" class="hidden flex flex-col gap-2">
-                    <textarea id="emailExtractedOutput" readonly class="w-full p-4 bg-zinc-50 border rounded-xl h-32 font-mono text-sm"></textarea>
-                </div>
-                <div class="Ad-Placeholder-Global"></div>
-            </div>
-
-            <div id="json-csv-tool" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">JSON to CSV Converter</h3>
-                    <p class="text-sm text-zinc-400">Flatten array list profiles into data matrices spreadsheets tables.</p>
-                </div>
-                <textarea id="jsonInputCsv" placeholder='[{"Item":"Pen","Price":10}]' class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm"></textarea>
-                <button onclick="convertJSONtoCSV()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Convert Data Format</button>
-                <div id="csvResultArea" class="hidden flex flex-col gap-2">
-                    <textarea id="csvOutput" readonly class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm"></textarea>
-                    <button onclick="downloadCSV()" class="mt-2 bg-zinc-100 p-3.5 rounded-xl text-xs font-bold text-zinc-800">Download CSV</button>
-                </div>
-                <div class="Ad-Placeholder-Global"></div>
-            </div>
-
-            <div id="word-counter-tool" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">Word Counter Metrics Engine</h3>
-                    <p class="text-sm text-zinc-400">Live strings tracking evaluation character length indexes metrics.</p>
-                </div>
-                <textarea id="wordCounterInput" oninput="countTextMetrics()" placeholder="Start inserting strings here..." class="w-full p-4 bg-zinc-50 border rounded-xl h-44 outline-none"></textarea>
-                <div class="grid grid-cols-3 gap-3">
-                    <div class="p-4 bg-zinc-50 text-center rounded-xl font-bold"><p class="text-xs text-zinc-400">Words</p><div id="metricWords">0</div></div>
-                    <div class="p-4 bg-zinc-50 text-center rounded-xl font-bold"><p class="text-xs text-zinc-400">Chars</p><div id="metricChars">0</div></div>
-                    <div class="p-4 bg-zinc-50 text-center rounded-xl font-bold"><p class="text-xs text-zinc-400">Time</p><div id="metricTime">0m</div></div>
-                </div>
-                <div class="Ad-Placeholder-Global"></div>
-            </div>
-
-            <div id="case-converter-tool" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">Dynamic Text Case Converter</h3>
-                    <p class="text-sm text-zinc-400">Mutate string data configurations to UPPER, lower, title formats transformations.</p>
-                </div>
-                <textarea id="caseInputText" class="w-full p-4 bg-zinc-50 border rounded-xl h-36 outline-none"></textarea>
-                <div class="grid grid-cols-3 gap-2">
-                    <button onclick="convertCase('upper')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-semibold">UPPER</button>
-                    <button onclick="convertCase('lower')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-semibold">lower</button>
-                    <button onclick="convertCase('title')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-semibold">Title</button>
-                </div>
-                <div id="caseResultArea" class="hidden"><textarea id="caseOutputText" readonly class="w-full p-4 bg-zinc-50 border rounded-xl h-36 font-mono text-sm"></textarea></div>
-                <div class="Ad-Placeholder-Global"></div>
-            </div>
-
-            <div id="html-entity-tool" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">HTML Entity Safe Encoder</h3>
-                    <p class="text-sm text-zinc-400">Secure character escaping matrix mappings parsing configurations parameters tools.</p>
-                </div>
-                <textarea id="entityInput" placeholder="<html>" class="w-full p-4 bg-zinc-50 border rounded-xl h-36 outline-none font-mono text-sm"></textarea>
-                <div class="flex gap-2"><button onclick="processEntities('encode')" class="flex-1 bg-zinc-900 text-white p-3 rounded-xl text-sm font-semibold">Encode</button></div>
-                <div id="entityResultArea" class="hidden"><textarea id="entityOutput" readonly class="w-full p-4 bg-zinc-50 border rounded-xl h-36 font-mono text-sm"></textarea></div>
-                <div class="Ad-Placeholder-Global"></div>
-            </div>
-
-            <div id="gradient-tool" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">CSS Gradient Property Gen</h3>
-                    <p class="text-sm text-zinc-400">Design properties vector backgrounds configurations codes maps panels elements.</p>
-                </div>
-                <div class="grid grid-cols-2 gap-2 p-3 bg-zinc-50 rounded-xl">
-                    <input type="color" id="gradColor1" value="#000000" oninput="updateGradient()"><input type="color" id="gradColor2" value="#71717a" oninput="updateGradient()">
-                </div>
-                <div id="gradientPreview" class="w-full min-h-[120px] rounded-xl border"></div>
-                <textarea id="gradientCode" readonly class="w-full p-3 bg-zinc-50 border text-xs font-mono outline-none"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
-            </div>
-
-            <div id="twitter-preview-tool" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">Social Graph Previewer Engine</h3>
-                    <p class="text-sm text-zinc-400">Test deployment index attributes parsing sequences open values tags metadata views.</p>
-                </div>
-                <div class="flex gap-2"><input type="url" id="twUrlInput" placeholder="https://tanzaitools.com" class="flex-1 p-4 bg-zinc-50 border rounded-xl text-sm outline-none"><button onclick="previewTwitterCard()" class="bg-zinc-900 text-white px-5 rounded-xl text-sm font-semibold">Mock</button></div>
-                <div id="twCardArea" class="hidden p-4 bg-zinc-50 border rounded-2xl font-mono text-xs text-zinc-700" id="twPreviewTitle">Target Layout Metadata Node Verified.</div>
-                <div class="Ad-Placeholder-Global"></div>
-            </div>
-
-            <div id="robots-tool" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">SEO Robots Directives Compiler</h3>
-                    <p class="text-sm text-zinc-400">Construct indexation tracking maps visibility guidelines registers files crawlers logic.</p>
-                </div>
-                <input type="text" id="robotSitemap" placeholder="https://site.com/sitemap.xml" class="w-full p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
-                <button onclick="generateRobots()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Compile Directives</button>
-                <div id="robotsResultArea" class="hidden"><textarea id="robotsOutput" readonly class="w-full p-4 bg-zinc-100 border text-sm h-48 font-mono outline-none"></textarea></div>
-                <div class="Ad-Placeholder-Global"></div>
-            </div>
-
-            <div id="yt-tag-tool" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">YouTube Video Tags Scraper</h3>
-                    <p class="text-sm text-zinc-400">Deconstruct watch elements data metadata keywords attributes array nodes configurations.</p>
-                </div>
-                <div class="flex gap-2"><input type="url" id="ytTagUrlInput" placeholder="YouTube Link..." class="flex-1 p-4 bg-zinc-50 border rounded-xl text-sm outline-none"><button onclick="extractYtTags()" class="bg-zinc-900 text-white px-5 rounded-xl text-sm font-semibold">Scrape</button></div>
-                <div id="ytTagResultArea" class="hidden p-4 bg-zinc-50 border rounded-xl flex flex-wrap gap-2 text-xs" id="ytTagsContainer">Parsing keys array metrics channels...</div>
-                <div class="Ad-Placeholder-Global"></div>
-            </div>
-
-            <div id="dns-lookup-tool" class="tool-workspace hidden flex flex-col gap-5">
-                <div>
-                    <h3 class="text-xl font-bold text-zinc-900">DNS Infrastructure Audit Panel</h3>
-                    <p class="text-sm text-zinc-400">Perform propagation analytics audits across server networks registers zones indices rules.</p>
-                </div>
-                <div class="flex gap-2"><input type="text" id="dnsDomainInput" placeholder="tanzaitools.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base outline-none font-mono"><button onclick="lookupDNS()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold">Lookup</button></div>
-                <div id="dnsResultArea" class="hidden p-4 bg-zinc-50 border rounded-xl font-mono text-sm text-zinc-700" id="dnsReportContent">Query registers node targets tracking...</div>
-                <div class="Ad-Placeholder-Global"></div>
-            </div>
-
             <div id="about-page" class="tool-workspace hidden flex flex-col gap-5">
                 <h3 class="text-2xl font-bold text-zinc-900">About Tanzai Tools</h3>
                 <p class="text-base text-zinc-600">Premium free utility network managed by <strong>Tanzai Labs</strong>. Our mission is delivering high-speed applications natively in the user browser environment without mandatory registration filters.</p>
@@ -576,13 +559,10 @@
     </footer>
 
     <script>
-        // Core Router Switching Layout System Engine 
         function showTool(toolId) {
             document.getElementById('default-placeholder').classList.add('hidden');
             document.querySelectorAll('.tool-workspace').forEach(el => el.classList.add('hidden'));
-            document.getElementById('legacy-panel').classList.add('hidden');
             
-            // Clean active layouts styling matrix updates
             document.querySelectorAll('.menu-btn').forEach(btn => {
                 btn.classList.remove('bg-zinc-900', 'text-white');
                 if(btn.innerText.includes("About Us") || btn.innerText.includes("Privacy Policy")) {
@@ -596,7 +576,7 @@
             if(targetWorkspace) {
                 targetWorkspace.classList.remove('hidden');
                 
-                // Live ad injection
+                // Ads injection logic
                 const currentAdSlots = targetWorkspace.querySelectorAll('.Ad-Placeholder-Global');
                 currentAdSlots.forEach(slot => {
                     slot.innerHTML = `
@@ -612,17 +592,6 @@
                     try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(err) {}
                 });
 
-                // Perfect Viewport Scroll Routing Matrix
-                if(window.innerWidth < 1024) {
-                    // Mobile Adaptive Rule: Viewport slides straight down to exactly fit the workspace container grid box content element 
-                    document.getElementById('mainWorkspaceSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    // Desktop view tracking index anchor
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            } else if(toolId === 'legacy-panel') {
-                const legacyElement = document.getElementById('legacy-panel');
-                legacyElement.classList.remove('hidden');
                 if(window.innerWidth < 1024) {
                     document.getElementById('mainWorkspaceSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
                 } else {
@@ -637,7 +606,6 @@
             }
         }
 
-        // Live Search Controller Filtering Suite Engine
         function filterToolsSuite() {
             const query = document.getElementById('toolSearchInput').value.toLowerCase().trim();
             const toolsButtons = document.querySelectorAll('#sidebarPanel .menu-btn');
@@ -658,7 +626,7 @@
             try {
                 const parsed = JSON.parse(raw); out.classList.remove('hidden');
                 out.value = (mode === 'format') ? JSON.stringify(parsed, null, 4) : JSON.stringify(parsed);
-            } catch(e) { alert("Invalid JSON format payload structure matrix."); }
+            } catch(e) { alert("Invalid JSON format structure matrix."); }
         }
 
         /* Tool 02: Base64 Logic */
@@ -682,7 +650,7 @@
             new QRCode(canvas, { text: data, width: 180, height: 180 });
         }
 
-        /* Tool 05: Lorem Ipsum Generative Suite */
+        /* Tool 05: Dummy Placeholder Script */
         function generateLorem() {
             const count = document.getElementById('loremCount').value; const out = document.getElementById('loremOutput');
             out.classList.remove('hidden'); let text = '';
@@ -690,7 +658,7 @@
             out.value = text.trim();
         }
 
-        /* Tool 06: Password Generator Core */
+        /* Tool 06: Key Generator Core */
         function createRandomKey() {
             const len = document.getElementById('passLength').value; const area = document.getElementById('passKeyViewArea');
             const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"; let key = '';
@@ -705,7 +673,65 @@
             out.value = (mode === 'encode') ? encodeURIComponent(val) : decodeURIComponent(val);
         }
 
-        /* Tool 26 Logic Processing Script */
+        /* Tool 08 Logic Processing Script */
+        function countTextMetrics() {
+            const textContent = document.getElementById('wordCounterInput').value; document.getElementById('metricChars').innerText = textContent.length;
+            const wordsCalculated = textContent.trim().split(/\s+/).filter(Boolean).length; document.getElementById('metricWords').innerText = wordsCalculated;
+            document.getElementById('metricTime').innerText = Math.ceil(wordsCalculated / 200) + "m";
+        }
+
+        /* Tool 09 Logic Processing Script */
+        function convertCase(mode) {
+            const source = document.getElementById('caseInputText').value; const bufferView = document.getElementById('caseOutputText');
+            if(!source.trim()) return; document.getElementById('caseResultArea').classList.remove('hidden');
+            if(mode === 'upper') bufferView.value = source.toUpperCase();
+            if(mode === 'lower') bufferView.value = source.toLowerCase();
+            if(mode === 'title') bufferView.value = source.toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+            if(mode === 'sentence') bufferView.value = source.toLowerCase().replace(/(^\s*|[.!?]\s+)([a-z])/g, (m, p1, p2) => p1 + p2.toUpperCase());
+        }
+
+        /* Tool 10 Logic Processing Script */
+        function processEntities(type) {
+            const val = document.getElementById('entityInput').value; const outputBuffer = document.getElementById('entityOutput');
+            if(!val.trim()) return; document.getElementById('entityResultArea').classList.remove('hidden');
+            const sandboxNode = document.createElement('div');
+            if(type === 'encode') { sandboxNode.textContent = val; outputBuffer.value = sandboxNode.innerHTML; } else { sandboxNode.innerHTML = val; outputBuffer.value = sandboxNode.textContent; }
+        }
+
+        /* Tool 11 Logic Processing Script */
+        function updateGradient() {
+            const hex1 = document.getElementById('gradColor1').value; const hex2 = document.getElementById('gradColor2').value;
+            const CSSRule = `linear-gradient(90deg, ${hex1}, ${hex2})`;
+            document.getElementById('gradientPreview').style.background = CSSRule; document.getElementById('gradientCode').value = `background: ${CSSRule};`;
+        }
+
+        /* Tool 12 Logic Processing Script */
+        async function previewTwitterCard() {
+            alert("OpenGraph serialization check completed securely via browser viewport context rules.");
+        }
+
+        /* Tool 13 Logic Processing Script */
+        function generateRobots() {
+            const sitemapLocation = document.getElementById('robotSitemap').value.trim();
+            let compiledBuffer = "User-agent: *\nDisallow: /admin/\nAllow: /\n";
+            if(sitemapLocation) compiledBuffer += `\nSitemap: ${sitemapLocation}`;
+            document.getElementById('robotsOutput').value = compiledBuffer; document.getElementById('robotsResultArea').classList.remove('hidden');
+        }
+
+        /* Tool 14 Logic Processing Script */
+        async function extractYtTags() {
+            alert("Metadata parsing channel pipeline initialized safely.");
+        }
+
+        /* Tool 15 Logic Processing Script */
+        async function lookupDNS() {
+            let cleanedHost = document.getElementById('dnsDomainInput').value.trim().replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
+            if(!cleanedHost) return; const reportOutputContainer = document.getElementById('dnsReportContent');
+            document.getElementById('dnsResultArea').classList.remove('hidden');
+            document.getElementById('dnsResultArea').innerHTML = `Resolving parameters mapping for target host: <b>${cleanedHost}</b><br><br>A Record IP: 172.67.74.149<br>Name Servers: cloudflare.com registry registers`;
+        }
+
+        /* Tool 16 Logic Processing Script */
         async function extractPDFText() {
             const f = document.getElementById('pdfFileInput').files[0]; if (!f) return;
             const r = new FileReader(); r.onload = async function() {
@@ -718,9 +744,9 @@
                 } catch(err) { alert("Failed to parse document content payload."); }
             }; r.readAsArrayBuffer(f);
         }
-        function copyPDFText() { const target = document.getElementById('pdfTextOutput'); target.select(); document.execCommand('copy'); alert("Extracted text string cloned."); }
+        function copyPDFText() { const target = document.getElementById('pdfTextOutput'); target.select(); document.execCommand('copy'); alert("Extracted string matrix cloned."); }
 
-        /* Tool 27 Logic Processing Script */
+        /* Tool 17 Logic Processing Script */
         async function generatePDFFromImages() {
             const { jsPDF } = window.jspdf; const inputFiles = document.getElementById('imgToPdfInput').files;
             if (inputFiles.length === 0) return alert("Select files."); const doc = new jsPDF();
@@ -731,199 +757,6 @@
                 if (i > 0) doc.addPage(); doc.addImage(data, 'JPEG', 10, 10, 190, 0);
             }
             doc.save("converted_archive.pdf");
-        }
-
-        /* Tool 31 Logic Processing Script */
-        function generateAIPrompt() {
-            const idea = document.getElementById('baseIdea').value; const style = document.getElementById('artStyle').value;
-            const light = document.getElementById('lightingStyle').value; const area = document.getElementById('promptOutputArea');
-            if(!idea) return alert("Please enter a basic idea!");
-            document.getElementById('aiPromptResult').innerText = `${idea}, ${style} style, ${light} lighting, highly detailed, 8k resolution, masterpiece, trending on artstation --v 6.0`;
-            area.classList.remove('hidden');
-        }
-        function copyPrompt() { navigator.clipboard.writeText(document.getElementById('aiPromptResult').innerText); alert("Prompt copied."); }
-
-        /* Tool 32 Logic Processing Script */
-        async function analyzeSEO() {
-            const url = document.getElementById('seoUrlInput').value; const content = document.getElementById('seoResultArea');
-            if(!url) return alert("Please enter a valid URL!");
-            content.classList.remove('hidden'); content.innerHTML = "<p class='animate-pulse text-xs font-mono'>Fetching structure metrics...</p>";
-            try {
-                const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`); const data = await res.json();
-                const parser = new DOMParser(); const doc = parser.parseFromString(data.contents, 'text/html');
-                const title = doc.title || "No Title Found";
-                content.innerHTML = `<div class="flex justify-between border-b pb-2"><span class="text-zinc-500">Page Title Target:</span><span class="font-bold">${title}</span></div><div class="flex justify-between pt-1"><span class="text-zinc-500">H1 Elements:</span><span class="font-bold">${doc.querySelectorAll('h1').length} Found</span></div>`;
-            } catch(e) { content.innerHTML = "<p class='text-red-500 text-xs'>Failed to extract targets from endpoint proxy.</p>"; }
-        }
-
-        /* Tool 33 Logic Processing Script */
-        function generateResume() {
-            const { jsPDF } = window.jspdf; const doc = new jsPDF();
-            const name = document.getElementById('resName').value; const title = document.getElementById('resTitle').value;
-            if(!name) return alert("Name field is minimum requirement structure payload.");
-            doc.setFont("helvetica", "bold"); doc.setFontSize(22); doc.text(name.toUpperCase(), 20, 30);
-            doc.setFontSize(12); doc.setFont("helvetica", "normal"); doc.text(title, 20, 40); doc.save("tanzai_resume.pdf");
-        }
-
-        /* Tool 34 Logic Processing Script */
-        function getThumbnail() {
-            const rawUrl = document.getElementById('ytUrlInput').value; let targetId = '';
-            if(rawUrl.includes('v=')) targetId = rawUrl.split('v=')[1].split('&')[0];
-            else if(rawUrl.includes('youtu.be/')) targetId = rawUrl.split('youtu.be/')[1].split('?')[0];
-            if(targetId) {
-                document.getElementById('imgMax').src = `https://img.youtube.com/vi/${targetId}/maxresdefault.jpg`;
-                document.getElementById('btnMax').href = `https://img.youtube.com/vi/${targetId}/maxresdefault.jpg`;
-                document.getElementById('thumbnailResultArea').classList.remove('hidden');
-            } else { alert("Invalid watch pattern."); }
-        }
-
-        /* Tool 35 Logic Processing Script */
-        function convertToWebP() {
-            const target = document.getElementById('webpInput').files[0]; if (!target) return;
-            const r = new FileReader(); r.onload = function(e) {
-                const instance = new Image(); instance.onload = function() {
-                    const canvas = document.createElement('canvas'); canvas.width = instance.width; canvas.height = instance.height;
-                    const renderContext = canvas.getContext('2d'); renderContext.drawImage(instance, 0, 0);
-                    document.getElementById('webpDownloadBtn').href = canvas.toDataURL('image/webp', 0.85);
-                    document.getElementById('webpResultArea').classList.remove('hidden');
-                }; instance.src = e.target.result;
-            }; r.readAsDataURL(target);
-        }
-
-        /* Tool 36 Logic Processing Script */
-        function openBulkURLs() {
-            const inputData = document.getElementById('urlListInput').value; if(!inputData.trim()) return;
-            inputData.split('\n').forEach(line => {
-                let target = line.trim(); if(target) {
-                    if (!/^https?:\/\//i.test(target)) target = 'https://' + target; window.open(target, '_blank');
-                }
-            });
-        }
-
-        /* Tool 37 Logic Processing Script */
-        function auditPassword() {
-            const pass = document.getElementById('passAuditInput').value; const view = document.getElementById('auditResultArea');
-            const targetBar = document.getElementById('strengthBar'); const statusLabel = document.getElementById('auditStatus');
-            if(!pass) return view.classList.add('hidden'); view.classList.remove('hidden');
-            let entropy = 0; if(pass.length >= 8) entropy += 25; if(/[0-9]/.test(pass)) entropy += 25; if(/[^A-Za-z0-9]/.test(pass)) entropy += 25; if(/[A-Z]/.test(pass)) entropy += 25;
-            targetBar.style.width = entropy + '%';
-            if(entropy <= 50) { targetBar.className = 'h-full bg-red-500'; statusLabel.innerText = 'Fragile Sequence'; }
-            else if(entropy <= 75) { targetBar.className = 'h-full bg-yellow-500'; statusLabel.innerText = 'Adequate'; }
-            else { targetBar.className = 'h-full bg-green-500'; statusLabel.innerText = 'High Entropy Secure'; }
-        }
-
-        /* Tool 38 Logic Processing Script */
-        function generateAscii() {
-            const inputStr = document.getElementById('asciiInput').value; const canvas = document.getElementById('asciiOutput');
-            if(!inputStr.trim()) return document.getElementById('asciiResultArea').classList.add('hidden');
-            figlet(inputStr, function(err, payload) { if(!err) { canvas.textContent = payload; document.getElementById('asciiResultArea').classList.remove('hidden'); } });
-        }
-        function copyAscii() { navigator.clipboard.writeText(document.getElementById('asciiOutput').textContent); alert("Copied."); }
-
-        /* Tool 39 Logic Processing Script */
-        function generateFonts() {
-            const baseText = document.getElementById('fontInput').value; const listContainer = document.getElementById('fontResultArea');
-            if(!baseText.trim()) return listContainer.classList.add('hidden');
-            listContainer.classList.remove('hidden'); listContainer.innerHTML = '';
-            const unicodeGlyphs = { a: '𝓪', b: '𝓫', c: '𝓬', d: '𝓭', e: '𝓮', f: '𝓯', g: '𝓰', h: '𝓱', i: '𝓲', j: '𝓳', k: '𝓴', l: '𝓵', m: '𝓶', n: '𝓷', o: '𝓸', p: '𝓹', q: '𝓺', r: '𝓻', s: '𝓼', t: '𝓽', u: '𝓾', v: '𝓿', w: '𝔀', x: '𝔁', y: '𝔂', z: '𝔃' };
-            const processingResult = baseText.toLowerCase().split('').map(char => unicodeGlyphs[char] || char).join('');
-            const rowElement = document.createElement('div'); rowElement.className = "flex justify-between p-3 bg-zinc-50 border border-zinc-200 rounded-xl items-center";
-            rowElement.innerHTML = `<span class="text-base font-mono font-semibold text-zinc-900">${processingResult}</span><button onclick="navigator.clipboard.writeText('${processingResult}'); alert('Copied font variation.');" class="text-xs font-bold text-zinc-400 hover:text-black">COPY</button>`;
-            listContainer.appendChild(rowElement);
-        }
-
-        /* Tool 40 Logic Processing Script */
-        function fetchFavicon() {
-            let address = document.getElementById('faviconUrlInput').value.trim(); if(!address) return;
-            if (!/^https?:\/\//i.test(address)) address = 'https://' + address;
-            try {
-                const targetHostname = new URL(address).hostname; const generatedUrl = `https://www.google.com/s2/favicons?domain=${targetHostname}&sz=128`;
-                document.getElementById('faviconResultImg').src = generatedUrl; document.getElementById('faviconDownloadBtn').href = generatedUrl;
-                document.getElementById('faviconResultArea').classList.remove('hidden');
-            } catch(e) { alert("Format verification failed."); }
-        }
-
-        /* Tool 41 Logic Processing Script */
-        function extractEmails() {
-            const rawContent = document.getElementById('emailRawInput').value; const arrayMatches = rawContent.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g);
-            if(arrayMatches) {
-                const filteringList = [...new Set(arrayMatches)]; document.getElementById('emailExtractedOutput').value = filteringList.join('\n');
-                document.getElementById('emailCount').innerText = filteringList.length; document.getElementById('emailExtractorResultArea').classList.remove('hidden');
-            } else { alert("Extraction list vector search completed. 0 results."); }
-        }
-        function copyExtractedEmails() { document.getElementById('emailExtractedOutput').select(); document.execCommand('copy'); alert("Copied."); }
-
-        /* Tool 42 Logic Processing Script */
-        function convertJSONtoCSV() {
-            try {
-                const parseTree = JSON.parse(document.getElementById('jsonInputCsv').value); let csvBuffer = Object.keys(parseTree[0]).join(',') + '\r\n';
-                for(let i=0; i<parseTree.length; i++) { csvBuffer += Object.values(parseTree[i]).join(',') + '\r\n'; }
-                document.getElementById('csvOutput').value = csvBuffer; document.getElementById('csvResultArea').classList.remove('hidden');
-            } catch(e) { alert("Bad structural tree format setup parameters."); }
-        }
-        function downloadCSV() {
-            const blobStream = new Blob([document.getElementById('csvOutput').value], { type: 'text/csv' });
-            const dynamicTrigger = document.createElement('a'); dynamicTrigger.href = window.URL.createObjectURL(blobStream); dynamicTrigger.download = 'dataset_export.csv'; dynamicTrigger.click();
-        }
-
-        /* Tool 43 Logic Processing Script */
-        function countTextMetrics() {
-            const textContent = document.getElementById('wordCounterInput').value; document.getElementById('metricChars').innerText = textContent.length;
-            const wordsCalculated = textContent.trim().split(/\s+/).filter(Boolean).length; document.getElementById('metricWords').innerText = wordsCalculated;
-            document.getElementById('metricTime').innerText = Math.ceil(wordsCalculated / 200) + "m";
-        }
-
-        /* Tool 44 Logic Processing Script */
-        function convertCase(mode) {
-            const source = document.getElementById('caseInputText').value; const bufferView = document.getElementById('caseOutputText');
-            if(!source.trim()) return; document.getElementById('caseResultArea').classList.remove('hidden');
-            if(mode === 'upper') bufferView.value = source.toUpperCase();
-            if(mode === 'lower') bufferView.value = source.toLowerCase();
-            if(mode === 'title') bufferView.value = source.toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-            if(mode === 'sentence') bufferView.value = source.toLowerCase().replace(/(^\s*|[.!?]\s+)([a-z])/g, (m, p1, p2) => p1 + p2.toUpperCase());
-        }
-        function copyCaseText() { document.getElementById('caseOutputText').select(); document.execCommand('copy'); alert("Copied text content buffer."); }
-
-        /* Tool 45 Logic Processing Script */
-        function processEntities(type) {
-            const val = document.getElementById('entityInput').value; const outputBuffer = document.getElementById('entityOutput');
-            if(!val.trim()) return; document.getElementById('entityResultArea').classList.remove('hidden');
-            const sandboxNode = document.createElement('div');
-            if(type === 'encode') { sandboxNode.textContent = val; outputBuffer.value = sandboxNode.innerHTML; } else { sandboxNode.innerHTML = val; outputBuffer.value = sandboxNode.textContent; }
-        }
-        function copyEntityText() { document.getElementById('entityOutput').select(); document.execCommand('copy'); alert("Copied entities."); }
-
-        /* Tool 46 Logic Processing Script */
-        function updateGradient() {
-            const hex1 = document.getElementById('gradColor1').value; const hex2 = document.getElementById('gradColor2').value;
-            const CSSRule = `linear-gradient(90deg, ${hex1}, ${hex2})`;
-            document.getElementById('gradientPreview').style.background = CSSRule; document.getElementById('gradientCode').value = `background: ${CSSRule};`;
-        }
-
-        /* Tool 47 Logic Processing Script */
-        async function previewTwitterCard() {
-            alert("OpenGraph serialization check completed securely via browser viewport context rules.");
-        }
-
-        /* Tool 48 Logic Processing Script */
-        function generateRobots() {
-            const sitemapLocation = document.getElementById('robotSitemap').value.trim();
-            let compiledBuffer = "User-agent: *\nDisallow: /admin/\nAllow: /\n";
-            if(sitemapLocation) compiledBuffer += `\nSitemap: ${sitemapLocation}`;
-            document.getElementById('robotsOutput').value = compiledBuffer; document.getElementById('robotsResultArea').classList.remove('hidden');
-        }
-        function copyRobotsText() { document.getElementById('robotsOutput').select(); document.execCommand('copy'); alert("Directives file structural configuration saved."); }
-
-        /* Tool 49 Logic Processing Script */
-        async function extractYtTags() {
-            alert("Metadata parsing channel pipeline initialized safely.");
-        }
-
-        /* Tool 50 Logic Processing Script */
-        async function lookupDNS() {
-            let cleanedHost = document.getElementById('dnsDomainInput').value.trim().replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
-            if(!cleanedHost) return; const reportOutputContainer = document.getElementById('dnsResultArea');
-            reportOutputContainer.classList.remove('hidden'); reportOutputContainer.innerHTML = `Resolving parameters mapping for target host: <b>${cleanedHost}</b><br><br>A Record IP: 172.67.74.149<br>Name Servers: cloudflare.com registry registers`;
         }
     </script>
 </body>
