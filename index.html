@@ -35,7 +35,7 @@
 </head>
 <body class="bg-zinc-50 text-zinc-900 min-h-screen flex flex-col antialiased text-base">
 
-    <header class="w-full bg-white border-b border-zinc-200 sticky top-0 z-50 px-4 md:px-8 py-5 flex justify-between items-center max-w-7xl mx-auto">
+    <header id="tanzaiAppHeader" class="w-full bg-white border-b border-zinc-200 sticky top-0 z-50 px-4 md:px-8 py-5 flex justify-between items-center max-w-7xl mx-auto">
         <div class="flex flex-col">
             <h1 class="text-2xl font-bold tracking-tight text-zinc-900">Tanzai Tools</h1>
             <span class="text-xs font-bold uppercase tracking-widest text-zinc-400 mt-0.5">Mega Utility Infrastructure (50+ Live)</span>
@@ -55,7 +55,7 @@
 
     <main class="w-full max-w-7xl mx-auto flex-1 p-4 md:p-8 grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8">
         
-        <aside class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[400px] lg:h-[calc(100vh-180px)] relative shadow-sm overflow-hidden flex flex-col justify-between">
+        <aside class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[500px] lg:h-[calc(100vh-180px)] relative shadow-sm overflow-hidden flex flex-col justify-between">
             
             <div class="pb-2 border-b border-zinc-100 bg-white z-10 shrink-0">
                 <label class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest px-2">Available Suites</label>
@@ -72,11 +72,11 @@
                 
                 <button onclick="showTool('legacy-panel')" data-name="legacy placeholders components operational suite" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-400 hover:bg-zinc-100 border border-transparent transition-all duration-200">08-25. Legacy Core Panels</button>
 
-                <button onclick="showTool('pdf-text-tool')" data-name="pdf to text converter extract plain words content document parsing script" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">26. PDF to Text Converter</button>
-                <button onclick="showTool('img-pdf-tool')" data-name="images to pdf tool merge jpg png photos document builder" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">27. Images to PDF Tool</button>
-                <button onclick="showTool('pdf-lock-tool')" data-name="pdf password protector secure files lock encrypt privacy protection" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">28. PDF Password Protector</button>
-                <button onclick="showTool('word-pdf-tool')" data-name="word to pdf logic doc docx formatting dynamic converters office text" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">29. Word to PDF Logic</button>
-                <button onclick="showTool('pdf-merge-tool')" data-name="enterprise pdf merger combine files bind split stack storage" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">30. Enterprise PDF Merger</button>
+                <button onclick="showTool('pdf-text-tool')" data-name="pdf to text converter extract plain words content document parsing script" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">26. PDF to Text Converter</button>
+                <button onclick="showTool('img-pdf-tool')" data-name="images to pdf tool merge jpg png photos document builder" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">27. Images to PDF Tool</button>
+                <button onclick="showTool('pdf-lock-tool')" data-name="pdf password protector secure files lock encrypt privacy protection" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">28. PDF Password Protector</button>
+                <button onclick="showTool('word-pdf-tool')" data-name="word to pdf logic doc docx formatting dynamic converters office text" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">29. Word to PDF Logic</button>
+                <button onclick="showTool('pdf-merge-tool')" data-name="enterprise pdf merger combine files bind split stack storage" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">30. Enterprise PDF Merger</button>
                 <button onclick="showTool('ai-prompt-tool')" data-name="ai image prompt engine midjourney dall-e stable diffusion prompt crafting" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">31. AI Image Prompt Engine</button>
                 <button onclick="showTool('seo-analyzer-tool')" data-name="website seo auditor rank tracking check link tags optimization on-page h1 meta" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">32. Website SEO Auditor</button>
                 <button onclick="showTool('resume-tool')" data-name="quick cv resume builder maker templates ats-friendly hiring employment bio" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">33. Quick CV/Resume Builder</button>
@@ -105,7 +105,7 @@
             </div>
         </aside>
 
-        <section id="mainWorkspaceSection" class="col-span-1 lg:col-span-3 bg-white border border-zinc-200 rounded-3xl p-6 md:p-10 shadow-sm h-fit min-h-[550px]">
+        <section class="col-span-1 lg:col-span-3 bg-white border border-zinc-200 rounded-3xl p-6 md:p-10 shadow-sm h-fit min-h-[550px]">
             
             <div id="default-placeholder" class="flex flex-col items-center justify-center text-center py-24 gap-4">
                 <div class="text-zinc-300 font-mono tracking-widest text-5xl font-bold">50+</div>
@@ -612,22 +612,11 @@
                     try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(err) {}
                 });
 
-                // Core Adaptive Viewport Target Scroll Router Matrix
-                if(window.innerWidth < 1024) {
-                    // Mobile Optimization: Content areas par screen view position update karein bina top reset kiye
-                    targetWorkspace.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    // Desktop view optimization context anchors
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
+                // Perfect Viewport Scroll Routing Matrix (Always scroll cleanly to absolute top framework on desktop and mobile)
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             } else if(toolId === 'legacy-panel') {
-                const legacyBlock = document.getElementById('legacy-panel');
-                legacyBlock.classList.remove('hidden');
-                if(window.innerWidth < 1024) {
-                    legacyBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
+                document.getElementById('legacy-panel').classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
 
             const currentTrigger = window.event?.currentTarget;
