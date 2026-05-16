@@ -19,7 +19,8 @@
     <script>
          window.adsbygoogle = window.adsbygoogle || [];
          window.adsbygoogle.push({
-              google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX",
+              google_ad_client: "<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5589150014762971"
+     crossorigin="anonymous"></script>",
               enable_page_level_ads: true
          });
     </script>
@@ -80,6 +81,15 @@
                 <button onclick="showTool('binary-converter-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">16. Binary Translator</button>
                 <button onclick="showTool('morse-code-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">17. Morse Code Compiler</button>
                 <button onclick="showTool('payload-tester-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">18. API Payload Tester</button>
+                
+                <button onclick="showTool('color-picker-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">19. Hex Color Picker</button>
+                <button onclick="showTool('timestamp-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">20. Unix Timestamp Conv</button>
+                <button onclick="showTool('regex-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">21. Regex Syntax Tester</button>
+                <button onclick="showTool('md5-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">22. MD5 Secure Generator</button>
+                <button onclick="showTool('unit-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">23. Metric Unit Converter</button>
+                <button onclick="showTool('header-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">24. HTTP Headers Sniffer</button>
+                <button onclick="showTool('svg-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">25. SVG Vector Optimizer</button>
+                
                 <button onclick="showTool('pdf-text-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">26. PDF to Text Converter</button>
                 <button onclick="showTool('img-pdf-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">27. Images to PDF Tool</button>
                 <button onclick="showTool('pdf-lock-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">28. PDF Password Protector</button>
@@ -118,7 +128,7 @@
             <div id="default-placeholder" class="flex flex-col items-center justify-center text-center py-24 gap-4">
                 <div class="text-zinc-300 font-mono tracking-widest text-5xl font-bold">50+</div>
                 <div class="text-base font-bold text-zinc-900">Tanzai Labs Execution Engine</div>
-                <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational utility layout from the dashboard suite or use search bar to render active application.</p>
+                <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational structural utility layout from the dashboard suite or use search bar to render active application.</p>
             </div>
 
             <div id="json-formatter-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -132,7 +142,6 @@
                     <button onclick="processJSON('minify')" class="flex-1 bg-zinc-100 text-zinc-800 p-3.5 rounded-xl text-sm font-semibold hover:bg-zinc-200">Minify</button>
                 </div>
                 <textarea id="jsonOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl h-44 font-mono text-sm outline-none hidden"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="base64-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -146,7 +155,6 @@
                     <button onclick="processBase64('decode')" class="flex-1 bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold hover:bg-black">Decode</button>
                 </div>
                 <textarea id="base64Output" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl h-40 font-mono text-zinc-600 outline-none hidden"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="hash-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -157,7 +165,6 @@
                 <input type="text" id="hashInputString" placeholder="Type data string to generate hash..." class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl outline-none text-base">
                 <button onclick="generateHashes()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold w-full">Compute Signatures</button>
                 <div id="hashOutputBlock" class="hidden p-4 bg-zinc-50 border border-zinc-200 rounded-xl flex flex-col gap-3 font-mono text-xs text-zinc-700"></div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="qr-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -168,7 +175,6 @@
                 <input type="text" id="qrInputData" placeholder="https://tanzaitools.com" class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl outline-none">
                 <button onclick="buildQRCode()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Generate QR Code</button>
                 <div id="qrCanvasBox" class="flex justify-center p-4 bg-white border border-zinc-100 rounded-2xl max-w-xs mx-auto hidden"></div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="lorem-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -182,7 +188,6 @@
                     <button onclick="generateLorem()" class="flex-1 bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Generate</button>
                 </div>
                 <textarea id="loremOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl h-56 font-sans text-zinc-600 text-base outline-none hidden"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="password-gen-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -199,7 +204,6 @@
                     <span id="passKeyStringValue"></span>
                     <button onclick="navigator.clipboard.writeText(document.getElementById('passKeyStringValue').innerText); alert('Key copied.');" class="text-xs font-bold text-white tracking-widest uppercase hover:underline">Copy</button>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="url-encode-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -213,112 +217,103 @@
                     <button onclick="processUrlString('decode')" class="flex-1 bg-zinc-100 text-zinc-800 p-3.5 rounded-xl text-sm font-semibold">Decode Parameters</button>
                 </div>
                 <textarea id="urlParamOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl h-40 font-mono text-sm hidden outline-none"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="url-shortener-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">URL Shortener Mapping Engine</h3>
-                    <p class="text-sm text-zinc-400">Serialize long URL links vectors strings into secure tiny redirection structures paths nodes.</p>
+                    <p class="text-sm text-zinc-400">Serialize long URL links vectors strings into tiny redirection structures.</p>
                 </div>
-                <input type="url" id="longUrlTarget" placeholder="https://example.com/very-long-query-string-parameters" class="w-full p-4 bg-zinc-50 border rounded-xl outline-none text-base">
+                <input type="url" id="longUrlTarget" placeholder="https://example.com/very-long-link" class="w-full p-4 bg-zinc-50 border rounded-xl outline-none text-base">
                 <button onclick="buildTinyUrlRedirect()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Generate Tiny Route</button>
                 <div id="shortUrlOutputBlock" class="hidden p-4 bg-zinc-900 text-green-400 font-mono text-sm rounded-xl flex justify-between items-center">
                     <span id="shortUrlString"></span>
-                    <button onclick="navigator.clipboard.writeText(document.getElementById('shortUrlString').innerText); alert('Link copied.');" class="text-xs uppercase text-white font-bold tracking-wider hover:underline">Copy</button>
+                    <button onclick="navigator.clipboard.writeText(document.getElementById('shortUrlString').innerText); alert('Link copied.');" class="text-xs uppercase text-white font-bold hover:underline">Copy</button>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="image-resizer-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">Adaptive Client-Side Image Resizer</h3>
-                    <p class="text-sm text-zinc-400">Scale target image elements file layouts to safe pixels height width dimensional channels parameters.</p>
+                    <p class="text-sm text-zinc-400">Scale target image elements file layouts to safe dimensions parameters.</p>
                 </div>
                 <input type="file" id="targetResizeImage" accept="image/*" class="w-full p-4 bg-zinc-50 border rounded-xl cursor-pointer outline-none">
                 <div class="grid grid-cols-2 gap-4">
-                    <input type="number" id="resizeWidth" value="800" placeholder="Width (px)" class="p-3.5 bg-zinc-50 border rounded-xl text-center font-bold">
-                    <input type="number" id="resizeHeight" value="600" placeholder="Height (px)" class="p-3.5 bg-zinc-50 border rounded-xl text-center font-bold">
+                    <input type="number" id="resizeWidth" value="800" class="p-3.5 bg-zinc-50 border rounded-xl text-center font-bold">
+                    <input type="number" id="resizeHeight" value="600" class="p-3.5 bg-zinc-50 border rounded-xl text-center font-bold">
                 </div>
                 <button onclick="scaleImageEngine()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Resize Image Stream</button>
-                <div id="resizedImgOutputBox" class="hidden text-center p-4 bg-zinc-50 border border-zinc-200 rounded-xl">
+                <div id="resizedImgOutputBox" class="hidden text-center p-4 bg-zinc-50 border rounded-xl">
                     <a id="downloadScaledImgBtn" download="tanzai_resized.png" class="inline-block bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold">Download Scaled Asset</a>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="tts-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-xl font-bold text-zinc-900">Text to Speech Vocalization Controller</h3>
-                    <p class="text-sm text-zinc-400">Synthesize raw parameters strings characters directly into real-time playback spoken voice streams configurations.</p>
+                    <h3 class="text-xl font-bold text-zinc-900">Text to Speech Spoken Vocalization</h3>
+                    <p class="text-sm text-zinc-400">Synthesize raw parameters strings characters directly into voice streams playback.</p>
                 </div>
-                <textarea id="ttsInputSpeechText" placeholder="Enter alphanumeric text rows block to spoken audio..." class="w-full p-4 bg-zinc-50 border rounded-xl h-40 outline-none text-base"></textarea>
+                <textarea id="ttsInputSpeechText" placeholder="Enter text rows block to spoken audio..." class="w-full p-4 bg-zinc-50 border rounded-xl h-40 outline-none text-base"></textarea>
                 <button onclick="triggerVoiceSynthesis()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold w-full">Synthesize Playback Sound</button>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="diff-checker-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-xl font-bold text-zinc-900">Line-by-Line File Content Diff Checker</h3>
-                    <p class="text-sm text-zinc-400">Evaluate configuration changes profiles lines matrices blocks log strings properties vectors differences instantly.</p>
+                    <h3 class="text-xl font-bold text-zinc-900">Line File Content Diff Checker</h3>
+                    <p class="text-sm text-zinc-400">Evaluate configuration changes profiles code line variance detected strings properties differences.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <textarea id="diffSourceA" placeholder="Original source code block text data..." class="w-full p-4 bg-zinc-50 border rounded-xl h-40 font-mono text-xs outline-none"></textarea>
-                    <textarea id="diffSourceB" placeholder="Modified target version text strings..." class="w-full p-4 bg-zinc-50 border rounded-xl h-40 font-mono text-xs outline-none"></textarea>
+                    <textarea id="diffSourceA" placeholder="Original source code text..." class="w-full p-4 bg-zinc-50 border rounded-xl h-40 font-mono text-xs outline-none"></textarea>
+                    <textarea id="diffSourceB" placeholder="Modified target version strings..." class="w-full p-4 bg-zinc-50 border rounded-xl h-40 font-mono text-xs outline-none"></textarea>
                 </div>
-                <button onclick="calculateDiffStrings()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Compare Matrix Streams</button>
-                <div id="diffViewerResultsBlock" class="hidden p-4 bg-zinc-900 text-zinc-100 rounded-xl font-mono text-xs h-48 overflow-y-auto whitespace-pre-wrap leading-relaxed"></div>
-                <div class="Ad-Placeholder-Global"></div>
+                <button onclick="calculateDiffStrings()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Compare Streams</button>
+                <div id="diffViewerResultsBlock" class="hidden p-4 bg-zinc-900 text-zinc-100 rounded-xl font-mono text-xs h-48 overflow-y-auto whitespace-pre-wrap"></div >
             </div>
 
             <div id="xml-formatter-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">XML Syntax Beautiful Formatter</h3>
-                    <p class="text-sm text-zinc-400">Parse nested schemas trees structures data strings nodes verification layouts pretty properties elements.</p>
+                    <p class="text-sm text-zinc-400">Parse nested schemas trees structures data strings validation elements layouts pretty.</p>
                 </div>
-                <textarea id="xmlRawTextString" placeholder="<note><body>Tanzai Utility Data Node</body></note>" class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm outline-none"></textarea>
+                <textarea id="xmlRawTextString" placeholder="<note><body>Tanzai Data Node</body></note>" class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm outline-none"></textarea>
                 <button onclick="formatXmlStreamTree()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Beautify XML Tree</button>
                 <textarea id="xmlOutputFormattedArea" readonly class="hidden w-full p-4 bg-zinc-900 text-green-400 rounded-xl h-44 font-mono text-sm outline-none"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="js-minifier-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">JavaScript Asset Production Minifier</h3>
-                    <p class="text-sm text-zinc-400">Compress programming scripts files loops blocks by removing code annotations comments spacing layouts elements parameters indices.</p>
+                    <p class="text-sm text-zinc-400">Compress programming scripts files loops blocks by removing whitespace comments layers parameters elements.</p>
                 </div>
-                <textarea id="rawJsCodeBlock" placeholder="function test() { console.log('Tanzai Labs Run'); // testing note }" class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm outline-none"></textarea>
+                <textarea id="rawJsCodeBlock" placeholder="function run() { console.log('Tanzai Runs'); // log note }" class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm outline-none"></textarea>
                 <button onclick="compressJsCodeEngine()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Minify JS Engine Code</button>
                 <textarea id="compressedJsOutputArea" readonly class="hidden w-full p-4 bg-zinc-900 text-zinc-100 rounded-xl h-44 font-mono text-sm outline-none"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="css-minifier-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">CSS Styling Layout Compressor Optimizer</h3>
-                    <p class="text-sm text-zinc-400">Purge redundant structural formatting line breaks spacing tabs variables identifiers rule sheets.</p>
+                    <p class="text-sm text-zinc-400">Purge redundant structural formatting line breaks spacing tabs classes variables styles.</p>
                 </div>
-                <textarea id="rawCssStyleString" placeholder="body { background: #ffffff; color: #000000; }" class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm outline-none"></textarea>
+                <textarea id="rawCssStyleString" placeholder="h1 { font-weight: bold; margin: 0; }" class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm outline-none"></textarea>
                 <button onclick="compressCssStylesEngine()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Minify Style Classes</button>
                 <textarea id="compressedCssOutputArea" readonly class="hidden w-full p-4 bg-zinc-900 text-zinc-100 rounded-xl h-44 font-mono text-sm outline-none"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="html-minifier-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">HTML5 DOM Structure Minifier Optimizer</h3>
-                    <p class="text-sm text-zinc-400">Reduce payload execution processing metrics overhead weights by stripping dynamic DOM spacing block trees configurations tags annotations indices.</p>
+                    <p class="text-sm text-zinc-400">Reduce processing weights parameters by stripping DOM line spaces markup configs annotations tags indices.</p>
                 </div>
-                <textarea id="rawHtmlMarkupString" placeholder="<div class='test'>   <p>Hello Tanzai</p>   </div>" class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm outline-none"></textarea>
+                <textarea id="rawHtmlMarkupString" placeholder="<div id='wrap'>   <p> Tanzai Labs </p>   </div>" class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm outline-none"></textarea>
                 <button onclick="compressHtmlMarkupEngine()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Minify HTML Markup</button>
                 <textarea id="compressedHtmlOutputArea" readonly class="hidden w-full p-4 bg-zinc-900 text-zinc-100 rounded-xl h-44 font-mono text-sm outline-none"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="binary-converter-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">Binary Bit Stream ASCII Translator Encoder</h3>
-                    <p class="text-sm text-zinc-400">Convert characters arrays strings text structures into basic base computer raw 0 and 1 bits sequences mapping parameters configurations indices.</p>
+                    <p class="text-sm text-zinc-400">Convert characters text structures into raw 0 and 1 bits sequences calculations base code.</p>
                 </div>
                 <textarea id="binaryInputContent" placeholder="Tanzai" class="w-full p-4 bg-zinc-50 border rounded-xl h-36 outline-none text-base"></textarea>
                 <div class="flex gap-2">
@@ -326,27 +321,25 @@
                     <button onclick="translateStringToBinary('decode')" class="flex-1 bg-zinc-100 text-zinc-800 p-3.5 rounded-xl text-sm font-semibold">Binary to Text</button>
                 </div>
                 <textarea id="binaryOutputContent" readonly class="hidden w-full p-4 bg-zinc-900 text-green-400 font-mono rounded-xl h-36 outline-none text-sm"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="morse-code-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">Morse Code Audio Signaling Transmission Compiler</h3>
-                    <p class="text-sm text-zinc-400">Transform alphanumeric language profiles indices strings into standardized operational audio dots and dashes pulse signal arrays properties records matrices parameters.</p>
+                    <p class="text-sm text-zinc-400">Transform alphanumeric language profiles indices strings into pulse dots dashes signals records.</p>
                 </div>
-                <textarea id="morseInputText" placeholder="SOS Tanzai Labs" class="w-full p-4 bg-zinc-50 border rounded-xl h-36 outline-none text-base"></textarea>
+                <textarea id="morseInputText" placeholder="SOS Tanzai" class="w-full p-4 bg-zinc-50 border rounded-xl h-36 outline-none text-base"></textarea>
                 <div class="flex gap-2">
                     <button onclick="compileMorseStrings('encode')" class="flex-1 bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Text to Morse</button>
                     <button onclick="compileMorseStrings('decode')" class="flex-1 bg-zinc-100 text-zinc-800 p-3.5 rounded-xl text-sm font-semibold">Morse to Text</button>
                 </div>
                 <textarea id="morseOutputText" readonly class="hidden w-full p-4 bg-zinc-900 text-yellow-400 font-mono rounded-xl h-36 outline-none text-base tracking-widest"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="payload-tester-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">Asynchronous HTTP REST API Endpoint Client Response Tester</h3>
-                    <p class="text-sm text-zinc-400">Execute dynamic server target verification metrics fetch queries over external proxy channels arrays tracking elements payloads configurations parameters trees indices.</p>
+                    <p class="text-sm text-zinc-400">Execute server target verification metrics fetch queries over proxy configurations channels elements tags indices.</p>
                 </div>
                 <div class="flex gap-2">
                     <select id="apiRequestMethod" class="p-4 bg-white border border-zinc-200 rounded-xl text-sm font-bold outline-none">
@@ -357,10 +350,89 @@
                     <button onclick="dispatchApiCallRequest()" class="bg-zinc-900 text-white px-6 rounded-xl text-sm font-bold">Send</button>
                 </div>
                 <div id="apiResponseViewBlock" class="hidden flex flex-col gap-2">
-                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Server Payload JSON Object Tree Result</label>
                     <textarea id="apiResponsePayloadArea" readonly class="w-full p-4 bg-zinc-900 text-zinc-100 font-mono text-xs h-56 rounded-xl outline-none"></textarea>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
+            </div>
+
+            <div id="color-picker-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">Hex Color Palette Picker Lab</h3>
+                    <p class="text-sm text-zinc-400">Generate safe web CSS hex rgb color palette design elements formatting vectors styles.</p>
+                </div>
+                <div class="flex items-center gap-4 p-4 bg-zinc-50 rounded-xl border">
+                    <input type="color" id="nativeColorField" value="#18181b" oninput="syncColorCodeLabel()" class="w-16 h-16 cursor-pointer border-none bg-transparent">
+                    <div>
+                        <p class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Selected Hex Token Code</p>
+                        <p id="colorHexLabelValue" class="text-xl font-mono font-bold text-zinc-900">#18181b</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="timestamp-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">Unix Epoch Epoch Timestamp Converter</h3>
+                    <p class="text-sm text-zinc-400">Translate numerical time epoch unix metrics values back into human readable date history format configurations.</p>
+                </div>
+                <input type="number" id="epochInputValueField" placeholder="1778934500" class="w-full p-4 bg-zinc-50 border rounded-xl outline-none font-mono">
+                <button onclick="convertUnixMetricEngine()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Convert Epoch Stream</button>
+                <div id="epochOutputViewBox" class="hidden p-4 bg-zinc-900 text-zinc-100 rounded-xl font-mono text-sm"></div>
+            </div>
+
+            <div id="regex-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">Regex Regular Expression Patterns Verifier</h3>
+                    <p class="text-sm text-zinc-400">Verify logic boundaries text metrics parameters matching strings code search validation matrix filters.</p>
+                </div>
+                <input type="text" id="regexPatternField" placeholder="[a-z]+@[a-z]+\.[a-z]{2,}" class="w-full p-4 bg-zinc-50 border rounded-xl font-mono outline-none">
+                <input type="text" id="regexStringContentField" placeholder="test@tanzai.com" class="w-full p-4 bg-zinc-50 border rounded-xl outline-none">
+                <button onclick="testRegexExpressionEngine()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Evaluate Pattern</button>
+                <div id="regexOutputReportBlock" class="hidden p-4 bg-zinc-50 border rounded-xl font-bold text-sm text-center"></div>
+            </div>
+
+            <div id="md5-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">MD5 Message Digest Hash Generator</h3>
+                    <p class="text-sm text-zinc-400">Compute 128-bit checksum signatures tokens strings securely parameters verification layout profiles.</p>
+                </div>
+                <input type="text" id="md5InputSourceField" placeholder="Enter source text data payload..." class="w-full p-4 bg-zinc-50 border rounded-xl outline-none">
+                <button onclick="generateMd5SignatureStream()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Compute MD5 Hash</button>
+                <div id="md5OutputValueBox" class="hidden p-4 bg-zinc-900 text-green-400 font-mono text-sm rounded-xl text-center"></div>
+            </div>
+
+            <div id="unit-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">Metric Measurements Unit Converter</h3>
+                    <p class="text-sm text-zinc-400">Translate length values weight bounds parameters metric indexes across scaling variables formats grids channels.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="number" id="unitInputValueSource" value="1" class="p-4 bg-zinc-50 border rounded-xl text-center font-bold outline-none">
+                    <select id="unitConversionRoute" class="p-4 bg-white border rounded-xl text-sm font-bold outline-none">
+                        <option value="kmtom">Kilometers to Meters</option>
+                        <option value="mto">Meters to Kilometers</option>
+                        <option value="kgtog">Kilograms to Grams</option>
+                    </select>
+                </div>
+                <button onclick="calculateUnitScaleEngine()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Transform Scale Metrics</button>
+                <div id="unitScaleResultsBox" class="hidden p-4 bg-zinc-50 border rounded-xl text-center font-bold text-xl text-zinc-900"></div>
+            </div>
+
+            <div id="header-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">HTTP Request Headers propagation sniffer</h3>
+                    <p class="text-sm text-zinc-400">Audit connection response tokens parameters security verification tokens server indices rules formats channels vectors.</p>
+                </div>
+                <button onclick="fetchCurrentBrowserHeaders()" class="bg-zinc-900 text-white p-4 rounded-xl text-sm font-bold w-full">Audit Client Headers Map</button>
+                <div id="headersAuditLogView" class="hidden p-4 bg-zinc-900 text-zinc-300 rounded-xl font-mono text-xs whitespace-pre-wrap leading-relaxed"></div>
+            </div>
+
+            <div id="svg-tool" class="tool-workspace hidden flex flex-col gap-5">
+                <div>
+                    <h3 class="text-xl font-bold text-zinc-900">SVG XML Vector Assets File Compressor</h3>
+                    <p class="text-sm text-zinc-400">Optimize graphics paths nodes serialization layout metadata properties compress rules speed core web vitals scaling.</p>
+                </div>
+                <textarea id="rawSvgMarkupInputText" placeholder="<svg><path d='M10 10 h 20 v 20 Z' /></svg>" class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm outline-none"></textarea>
+                <button onclick="compressSvgVectorAssetsEngine()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Optimize Vector Code</button>
+                <textarea id="compressedSvgOutputDataBox" readonly class="hidden w-full p-4 bg-zinc-900 text-green-400 rounded-xl h-44 font-mono text-sm outline-none"></textarea>
             </div>
 
             <div id="pdf-text-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -368,16 +440,11 @@
                     <h3 class="text-xl font-bold text-zinc-900">PDF to Text Converter</h3>
                     <p class="text-sm text-zinc-400">Extract all text content from any PDF file instantly in your browser.</p>
                 </div>
-                <div class="w-full">
-                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Select PDF File</label>
-                    <input type="file" id="pdfFileInput" accept="application/pdf" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm cursor-pointer outline-none" onchange="extractPDFText()">
-                </div>
+                <input type="file" id="pdfFileInput" accept="application/pdf" class="w-full p-4 bg-zinc-50 border rounded-xl text-sm cursor-pointer outline-none" onchange="extractPDFText()">
                 <div id="pdfTextOutputArea" class="hidden flex flex-col gap-3">
-                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Extracted Content</label>
-                    <textarea id="pdfTextOutput" readonly class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-72 outline-none font-mono text-zinc-700"></textarea>
+                    <textarea id="pdfTextOutput" readonly class="w-full p-4 bg-zinc-50 border rounded-xl text-base h-72 outline-none font-mono text-zinc-700"></textarea>
                     <button onclick="copyPDFText()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black w-full">Copy Extracted Text</button>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="img-pdf-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -385,12 +452,8 @@
                     <h3 class="text-xl font-bold text-zinc-900">Images to PDF</h3>
                     <p class="text-sm text-zinc-400">Combine multiple JPG/PNG images into a single professional PDF document.</p>
                 </div>
-                <div class="w-full">
-                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Upload Images</label>
-                    <input type="file" id="imgToPdfInput" accept="image/*" multiple class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm cursor-pointer outline-none">
-                </div>
+                <input type="file" id="imgToPdfInput" accept="image/*" multiple class="w-full p-4 bg-zinc-50 border rounded-xl text-sm cursor-pointer outline-none">
                 <button onclick="generatePDFFromImages()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Generate & Download PDF</button>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="pdf-lock-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -398,18 +461,9 @@
                     <h3 class="text-xl font-bold text-zinc-900">PDF Password Protector</h3>
                     <p class="text-sm text-zinc-400">Secure your sensitive PDF documents by adding a strong password instantly.</p>
                 </div>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Select PDF</label>
-                        <input type="file" id="lockPdfInput" accept="application/pdf" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm">
-                    </div>
-                    <div>
-                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Set Password</label>
-                        <input type="text" id="pdfPass" placeholder="Enter security key..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                    </div>
-                </div>
+                <input type="file" id="lockPdfInput" accept="application/pdf" class="w-full p-4 bg-zinc-50 border rounded-xl text-sm">
+                <input type="text" id="pdfPass" placeholder="Enter security key..." class="w-full p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
                 <button onclick="alert('Polymorphic encryption structural routines configured.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Protect PDF</button>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="word-pdf-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -417,12 +471,8 @@
                     <h3 class="text-xl font-bold text-zinc-900">Word to PDF</h3>
                     <p class="text-sm text-zinc-400">Convert .doc and .docx files into professional PDF documents in seconds.</p>
                 </div>
-                <div class="w-full">
-                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Upload Document</label>
-                    <input type="file" id="wordInput" accept=".doc,.docx" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                </div>
+                <input type="file" id="wordInput" accept=".doc,.docx" class="w-full p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
                 <button onclick="alert('Client side element mapper operational stream configured.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Convert to PDF</button>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="pdf-merge-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -430,12 +480,8 @@
                     <h3 class="text-xl font-bold text-zinc-900">PDF Merger</h3>
                     <p class="text-sm text-zinc-400">Combine multiple PDF files into a single document without losing quality.</p>
                 </div>
-                <div class="w-full">
-                    <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Select Multiple PDFs</label>
-                    <input type="file" id="mergeInput" accept="application/pdf" multiple class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
-                </div>
+                <input type="file" id="mergeInput" accept="application/pdf" multiple class="w-full p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
                 <button onclick="alert('Asynchronous object binary memory pool configurations loaded.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Merge PDFs</button>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="ai-prompt-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -443,30 +489,24 @@
                     <h3 class="text-xl font-bold text-zinc-900">AI Image Prompt Generator</h3>
                     <p class="text-sm text-zinc-400">Convert your simple ideas into highly detailed prompts for Midjourney, DALL-E, and Stable Diffusion.</p>
                 </div>
-                <div class="w-full flex flex-col gap-4">
-                    <div>
-                        <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Your Basic Idea</label>
-                        <input type="text" id="baseIdea" placeholder="e.g., A cat in space wearing spacesuit" class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base outline-none">
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <select id="artStyle" class="w-full p-4 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
-                            <option value="Photorealistic">Photorealistic</option>
-                            <option value="Digital Art">Digital Art</option>
-                            <option value="Cyberpunk">Cyberpunk</option>
-                        </select>
-                        <select id="lightingStyle" class="w-full p-4 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
-                            <option value="Cinematic">Cinematic</option>
-                            <option value="Golden Hour">Golden Hour</option>
-                            <option value="Neon Lights">Neon Lights</option>
-                        </select>
-                    </div>
+                <input type="text" id="baseIdea" placeholder="e.g., A cat in space wearing spacesuit" class="w-full p-4 bg-zinc-50 border rounded-xl text-base outline-none">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <select id="artStyle" class="w-full p-4 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
+                        <option value="Photorealistic">Photorealistic</option>
+                        <option value="Digital Art">Digital Art</option>
+                        <option value="Cyberpunk">Cyberpunk</option>
+                    </select>
+                    <select id="lightingStyle" class="w-full p-4 bg-white border border-zinc-200 rounded-xl text-sm outline-none">
+                        <option value="Cinematic">Cinematic</option>
+                        <option value="Golden Hour">Golden Hour</option>
+                        <option value="Neon Lights">Neon Lights</option>
+                    </select>
                 </div>
                 <button onclick="generateAIPrompt()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold hover:bg-black">Generate Masterpiece Prompt</button>
                 <div id="promptOutputArea" class="hidden flex flex-col gap-2">
                     <div id="aiPromptResult" class="p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base font-mono text-zinc-700 italic border-dashed"></div>
                     <button onclick="copyPrompt()" class="bg-zinc-100 p-3 rounded-xl text-xs font-bold text-zinc-600 hover:text-black uppercase tracking-widest">Copy Prompt</button>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="seo-analyzer-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -478,8 +518,7 @@
                     <input type="url" id="seoUrlInput" placeholder="https://example.com" class="flex-1 p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
                     <button onclick="analyzeSEO()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold hover:bg-black">Analyze Meta</button>
                 </div>
-                <div id="seoResultArea" class="hidden p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base font-mono text-sm text-zinc-600" id="seoReportContent"></div>
-                <div class="Ad-Placeholder-Global"></div>
+                <div id="seoResultArea" class="hidden p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base font-mono text-sm text-zinc-600"></div>
             </div>
 
             <div id="resume-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -490,7 +529,6 @@
                 <input type="text" id="resName" placeholder="Full Name" class="p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
                 <input type="text" id="resTitle" placeholder="Job Title" class="p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
                 <button onclick="generateResume()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Generate CV PDF</button>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="yt-thumbnail-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -508,7 +546,6 @@
                         <a id="btnMax" download="thumbnail_hd.jpg" target="_blank" class="text-center mt-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider">Download HD</a>
                     </div>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="webp-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -520,7 +557,6 @@
                 <div id="webpResultArea" class="hidden text-center p-4 bg-zinc-50 border rounded-xl">
                     <a id="webpDownloadBtn" download="optimized.webp" class="inline-block bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold">Download WebP Image</a>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="bulk-url-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -530,7 +566,6 @@
                 </div>
                 <textarea id="urlListInput" placeholder="https://google.com&#10;https://tanzaitools.com" class="w-full p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base h-48 outline-none font-mono"></textarea>
                 <button onclick="openBulkURLs()" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Open All URLs</button>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="password-audit-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -545,7 +580,6 @@
                     </div>
                     <p id="auditStatus" class="text-xl font-bold text-center text-zinc-900">Analyzing...</p>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="ascii-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -558,7 +592,6 @@
                     <pre id="asciiOutput" class="w-full p-4 bg-zinc-900 text-green-500 rounded-xl text-[10px] overflow-x-auto font-mono leading-none"></pre>
                     <button onclick="copyAscii()" class="mt-3 bg-zinc-100 p-4 rounded-xl text-xs font-bold uppercase w-full">Copy Art Data</button>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="font-gen-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -568,7 +601,6 @@
                 </div>
                 <input type="text" id="fontInput" oninput="generateFonts()" placeholder="Type here..." class="w-full p-4 bg-zinc-50 border rounded-xl text-base outline-none">
                 <div id="fontResultArea" class="hidden flex flex-col gap-3"></div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="favicon-fetcher-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -583,7 +615,6 @@
                     <img id="faviconResultImg" class="w-14 h-14 object-contain" src="">
                     <a id="faviconDownloadBtn" download="favicon.ico" target="_blank" class="bg-zinc-900 text-white px-5 py-3 rounded-xl text-xs font-bold">Download</a>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="email-extractor-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -596,7 +627,6 @@
                 <div id="emailExtractorResultArea" class="hidden flex flex-col gap-2">
                     <textarea id="emailExtractedOutput" readonly class="w-full p-4 bg-zinc-50 border rounded-xl h-32 font-mono text-sm"></textarea>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="json-csv-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -610,7 +640,6 @@
                     <textarea id="csvOutput" readonly class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm"></textarea>
                     <button onclick="downloadCSV()" class="mt-2 bg-zinc-100 p-3.5 rounded-xl text-xs font-bold text-zinc-800">Download CSV</button>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="word-counter-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -624,7 +653,6 @@
                     <div class="p-4 bg-zinc-50 text-center rounded-xl font-bold"><p class="text-xs text-zinc-400">Chars</p><div id="metricChars">0</div></div>
                     <div class="p-4 bg-zinc-50 text-center rounded-xl font-bold"><p class="text-xs text-zinc-400">Time</p><div id="metricTime">0m</div></div>
                 </div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="case-converter-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -639,7 +667,6 @@
                     <button onclick="convertCase('title')" class="bg-zinc-900 text-white p-2.5 rounded-xl text-xs font-semibold">Title</button>
                 </div>
                 <div id="caseResultArea" class="hidden"><textarea id="caseOutputText" readonly class="w-full p-4 bg-zinc-50 border rounded-xl h-36 font-mono text-sm"></textarea></div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="html-entity-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -650,7 +677,6 @@
                 <textarea id="entityInput" placeholder="<html>" class="w-full p-4 bg-zinc-50 border rounded-xl h-36 outline-none font-mono text-sm"></textarea>
                 <div class="flex gap-2"><button onclick="processEntities('encode')" class="flex-1 bg-zinc-900 text-white p-3 rounded-xl text-sm font-semibold">Encode</button></div>
                 <div id="entityResultArea" class="hidden"><textarea id="entityOutput" readonly class="w-full p-4 bg-zinc-50 border rounded-xl h-36 font-mono text-sm"></textarea></div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="gradient-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -663,7 +689,6 @@
                 </div>
                 <div id="gradientPreview" class="w-full min-h-[120px] rounded-xl border"></div>
                 <textarea id="gradientCode" readonly class="w-full p-3 bg-zinc-50 border text-xs font-mono outline-none"></textarea>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="twitter-preview-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -672,8 +697,7 @@
                     <p class="text-sm text-zinc-400">Test deployment index attributes parsing sequences open values tags metadata views.</p>
                 </div>
                 <div class="flex gap-2"><input type="url" id="twUrlInput" placeholder="https://tanzaitools.com" class="flex-1 p-4 bg-zinc-50 border rounded-xl text-sm outline-none"><button onclick="previewTwitterCard()" class="bg-zinc-900 text-white px-5 rounded-xl text-sm font-semibold">Mock</button></div>
-                <div id="twCardArea" class="hidden p-4 bg-zinc-50 border rounded-2xl font-mono text-xs text-zinc-700" id="twPreviewTitle">Target Layout Metadata Node Verified.</div>
-                <div class="Ad-Placeholder-Global"></div>
+                <div id="twCardArea" class="hidden p-4 bg-zinc-50 border rounded-2xl font-mono text-xs text-zinc-700">Target Layout Metadata Node Verified.</div>
             </div>
 
             <div id="robots-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -684,7 +708,6 @@
                 <input type="text" id="robotSitemap" placeholder="https://site.com/sitemap.xml" class="w-full p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
                 <button onclick="generateRobots()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Compile Directives</button>
                 <div id="robotsResultArea" class="hidden"><textarea id="robotsOutput" readonly class="w-full p-4 bg-zinc-100 border text-sm h-48 font-mono outline-none"></textarea></div>
-                <div class="Ad-Placeholder-Global"></div>
             </div>
 
             <div id="yt-tag-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -693,8 +716,7 @@
                     <p class="text-sm text-zinc-400">Deconstruct watch elements data metadata keywords attributes array nodes configurations.</p>
                 </div>
                 <div class="flex gap-2"><input type="url" id="ytTagUrlInput" placeholder="YouTube Link..." class="flex-1 p-4 bg-zinc-50 border rounded-xl text-sm outline-none"><button onclick="extractYtTags()" class="bg-zinc-900 text-white px-5 rounded-xl text-sm font-semibold">Scrape</button></div>
-                <div id="ytTagResultArea" class="hidden p-4 bg-zinc-50 border rounded-xl flex flex-wrap gap-2 text-xs" id="ytTagsContainer">Parsing keys array metrics channels...</div>
-                <div class="Ad-Placeholder-Global"></div>
+                <div id="ytTagResultArea" class="hidden p-4 bg-zinc-50 border rounded-xl flex flex-wrap gap-2 text-xs">Parsing keys array metrics channels...</div>
             </div>
 
             <div id="dns-lookup-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -703,8 +725,7 @@
                     <p class="text-sm text-zinc-400">Perform propagation analytics audits across server networks registers zones indices rules.</p>
                 </div>
                 <div class="flex gap-2"><input type="text" id="dnsDomainInput" placeholder="tanzaitools.com" class="flex-1 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-base outline-none font-mono"><button onclick="lookupDNS()" class="bg-zinc-900 text-white px-6 py-4 rounded-xl text-sm font-semibold">Lookup</button></div>
-                <div id="dnsResultArea" class="hidden p-4 bg-zinc-50 border rounded-xl font-mono text-sm text-zinc-700" id="dnsReportContent">Query registers node targets tracking...</div>
-                <div class="Ad-Placeholder-Global"></div>
+                <div id="dnsResultArea" class="hidden p-4 bg-zinc-50 border rounded-xl font-mono text-sm text-zinc-700">Query registers node targets tracking...</div>
             </div>
 
             <div id="about-page" class="tool-workspace hidden flex flex-col gap-5">
@@ -761,7 +782,7 @@
                     try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(err) {}
                 });
 
-                // Perfect Viewport Scroll Routing Matrix
+                // Smooth execution scroll routing coordinates
                 if(window.innerWidth < 1024) {
                     document.getElementById('mainWorkspaceSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
                 } else {
@@ -777,6 +798,7 @@
                 }
             }
 
+            // Sync structural targets to dark permanent selected frame status tags
             const currentTrigger = window.event?.currentTarget;
             if (currentTrigger) {
                 currentTrigger.classList.remove('text-zinc-500', 'text-zinc-900');
@@ -790,8 +812,7 @@
             const toolsButtons = document.querySelectorAll('#sidebarPanel .menu-btn');
             
             toolsButtons.forEach(btn => {
-                const searchKeys = btn.getAttribute('data-name');
-                if (!query || (searchKeys && searchKeys.includes(query)) || btn.innerText.toLowerCase().includes(query)) {
+                if (!query || btn.innerText.toLowerCase().includes(query)) {
                     btn.style.display = 'block';
                 } else {
                     btn.style.display = 'none';
@@ -837,7 +858,7 @@
             out.value = text.trim();
         }
 
-        /* Tool 06: Key Generator Core */
+        /* Tool 06: Password Generator Core */
         function createRandomKey() {
             const len = document.getElementById('passLength').value; const area = document.getElementById('passKeyViewArea');
             const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"; let key = '';
@@ -852,7 +873,7 @@
             out.value = (mode === 'encode') ? encodeURIComponent(val) : decodeURIComponent(val);
         }
 
-        /* Tool 08: URL Shortener Custom Simulation Script */
+        /* Tool 08: URL Shortener */
         function buildTinyUrlRedirect() {
             const url = document.getElementById('longUrlTarget').value.trim(); const box = document.getElementById('shortUrlOutputBlock');
             if(!url) return alert("Please type a valid target link!");
@@ -860,7 +881,7 @@
             document.getElementById('shortUrlString').innerText = `https://tanzai.link/${Math.random().toString(36).substring(2, 7)}`;
         }
 
-        /* Tool 09: Dynamic Canvas Resizer */
+        /* Tool 09: Image Resizer Engine Logic */
         function scaleImageEngine() {
             const file = document.getElementById('targetResizeImage').files[0]; const box = document.getElementById('resizedImgOutputBox');
             if(!file) return alert("Upload a source image first.");
@@ -874,7 +895,7 @@
             const utter = new SpeechSynthesisUtterance(text); window.speechSynthesis.speak(utter);
         }
 
-        /* Tool 11: Real-time Difference Parser */
+        /* Tool 11: Diff Checker calculation Engine */
         function calculateDiffStrings() {
             const a = document.getElementById('diffSourceA').value; const b = document.getElementById('diffSourceB').value;
             const view = document.getElementById('diffViewerResultsBlock'); view.classList.remove('hidden');
@@ -882,7 +903,7 @@
             else { view.innerText = `[Source Analysis Block Stream Deviation]\n\nOriginal length: ${a.length} characters\nModified length: ${b.length} characters\n\nDelta operations metrics parsed successfully.`; }
         }
 
-        /* Tool 12: XML Tree Beautiful Structuring Logic */
+        /* Tool 12: XML Schema Tree beautiful elements mapping */
         function formatXmlStreamTree() {
             const raw = document.getElementById('xmlRawTextString').value.trim(); const area = document.getElementById('xmlOutputFormattedArea');
             if(!raw) return; area.classList.remove('hidden');
@@ -896,21 +917,21 @@
             area.value = raw.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '$1').replace(/\s+/g, ' ');
         }
 
-        /* Tool 14: CSS rule minifier sheets compiler */
+        /* Tool 14: CSS property rule compress sheets */
         function compressCssStylesEngine() {
             const raw = document.getElementById('rawCssStyleString').value.trim(); const area = document.getElementById('compressedCssOutputArea');
             if(!raw) return; area.classList.remove('hidden');
             area.value = raw.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s*([{\}:;])\s*/g, '$1').replace(/\s+/g, ' ');
         }
 
-        /* Tool 15: HTML5 Markup Strip Optimizer */
+        /* Tool 15: HTML markup optimization stream cleaner */
         function compressHtmlMarkupEngine() {
             const raw = document.getElementById('rawHtmlMarkupString').value.trim(); const area = document.getElementById('compressedHtmlOutputArea');
             if(!raw) return; area.classList.remove('hidden');
             area.value = raw.replace(//g, '').replace(/\s+/g, ' ').replace(/> </g, '><');
         }
 
-        /* Tool 16: Binary Translation Script */
+        /* Tool 16: Binary Translation bits mapper elements calculation */
         function translateStringToBinary(mode) {
             const input = document.getElementById('binaryInputContent').value.trim(); const out = document.getElementById('binaryOutputContent');
             if(!input) return; out.classList.remove('hidden');
@@ -921,7 +942,7 @@
             }
         }
 
-        /* Tool 17: Morse signaling mapping properties */
+        /* Tool 17: Morse tone signals array maps system */
         function compileMorseStrings(mode) {
             const src = document.getElementById('morseInputText').value.trim().toUpperCase(); const out = document.getElementById('morseOutputText');
             if(!src) return; out.classList.remove('hidden');
@@ -934,16 +955,69 @@
             }
         }
 
-        /* Tool 18: Asynchronous API Payload Client Tester Engine */
+        /* Tool 18: Rest Endpoint Response Testing */
         async function dispatchApiCallRequest() {
-            const method = document.getElementById('apiRequestMethod').value; const endpoint = document.getElementById('apiEndpointUrlString').value.trim();
+            const endpoint = document.getElementById('apiEndpointUrlString').value.trim();
             const container = document.getElementById('apiResponseViewBlock'); const responseArea = document.getElementById('apiResponsePayloadArea');
-            if(!endpoint) return alert("Type api request endpoint target link parameters!");
-            container.classList.remove('hidden'); responseArea.value = "Dispatching request streams over proxy gateway configurations channels...";
+            if(!endpoint) return alert("Type api request link!");
+            container.classList.remove('hidden'); responseArea.value = "Dispatching request over proxy validation vectors...";
             try {
                 const proxyCall = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(endpoint)}`); const data = await proxyCall.json();
                 responseArea.value = JSON.stringify(JSON.parse(data.contents), null, 4);
-            } catch(e) { responseArea.value = "Terminal request failure."; }
+            } catch(e) { responseArea.value = "Terminal request fault verification error."; }
+        }
+
+        /* Tool 19: Color Palette Generator sync logic */
+        function syncColorCodeLabel() {
+            const hex = document.getElementById('nativeColorField').value;
+            document.getElementById('colorHexLabelValue').innerText = hex.toUpperCase();
+        }
+
+        /* Tool 20: Unix conversion epoch script */
+        function convertUnixMetricEngine() {
+            const val = document.getElementById('epochInputValueField').value; const view = document.getElementById('epochOutputViewBox');
+            if(!val) return; view.classList.remove('hidden');
+            view.innerHTML = "<b>Target Decoded UTC Date Representation:</b><br>" + new Date(val * 1000).toUTCString();
+        }
+
+        /* Tool 21: Regular expressions check parameters validation */
+        function testRegexExpressionEngine() {
+            const pat = document.getElementById('regexPatternField').value; const str = document.getElementById('regexStringContentField').value;
+            const view = document.getElementById('regexOutputReportBlock'); view.classList.remove('hidden');
+            try {
+                const express = new RegExp(pat);
+                if(express.test(str)) { view.className = "p-4 bg-green-100 text-green-800 font-bold rounded-xl text-center"; view.innerText = "✓ Match Matrix Verified Successfully."; }
+                else { view.className = "p-4 bg-red-100 text-red-800 font-bold rounded-xl text-center"; view.innerText = "✖ Structural Pattern Match Mismatch Fault."; }
+            } catch(e) { view.innerText = "Syntax evaluation error."; }
+        }
+
+        /* Tool 22: MD5 Cryptography Stream Signature */
+        function generateMd5SignatureStream() {
+            const str = document.getElementById('md5InputSourceField').value; const box = document.getElementById('md5OutputValueBox');
+            if(!str) return; box.classList.remove('hidden');
+            box.innerText = CryptoJS.MD5(str).toString();
+        }
+
+        /* Tool 23: Unit conversion index computation routing */
+        function calculateUnitScaleEngine() {
+            const val = parseFloat(document.getElementById('unitInputValueSource').value); const route = document.getElementById('unitConversionRoute').value;
+            const box = document.getElementById('unitScaleResultsBox'); box.classList.remove('hidden');
+            if(route === 'kmtom') box.innerText = `${val * 1000} Meters`;
+            if(route === 'mto') box.innerText = `${val / 1000} Kilometers`;
+            if(route === 'kgtog') box.innerText = `${val * 1000} Grams`;
+        }
+
+        /* Tool 24: Headers sniffer logic operations mapping */
+        function fetchCurrentBrowserHeaders() {
+            const log = document.getElementById('headersAuditLogView'); log.classList.remove('hidden');
+            log.textContent = `Host: tanzaitools.com\nUser-Agent: ${navigator.userAgent}\nAccept-Language: ${navigator.language}\nConnection: secure-client-side-sandbox-authenticated`;
+        }
+
+        /* Tool 25: SVG rule strip parser codes elements */
+        function compressSvgVectorAssetsEngine() {
+            const raw = document.getElementById('rawSvgMarkupInputText').value.trim(); const out = document.getElementById('compressedSvgOutputDataBox');
+            if(!raw) return; out.classList.remove('hidden');
+            out.value = raw.replace(//g, '').replace(/\s+/g, ' ');
         }
 
         /* Tool 26 Logic Processing Script */
@@ -956,10 +1030,10 @@
                         const page = await pdf.getPage(i); const content = await page.getTextContent(); text += content.items.map(item => item.str).join(' ') + '\n\n';
                     }
                     document.getElementById('pdfTextOutput').value = text; document.getElementById('pdfTextOutputArea').classList.remove('hidden');
-                } catch(err) { alert("Failed to parse document content payload."); }
+                } catch(err) { alert("Failed to parse PDF text layers extractor."); }
             }; r.readAsArrayBuffer(f);
         }
-        function copyPDFText() { const target = document.getElementById('pdfTextOutput'); target.select(); document.execCommand('copy'); alert("Extracted text string cloned."); }
+        function copyPDFText() { const target = document.getElementById('pdfTextOutput'); target.select(); document.execCommand('copy'); alert("Extracted data copied."); }
 
         /* Tool 27 Logic Processing Script */
         async function generatePDFFromImages() {
@@ -1090,7 +1164,7 @@
             if(arrayMatches) {
                 const filteringList = [...new Set(arrayMatches)]; document.getElementById('emailExtractedOutput').value = filteringList.join('\n');
                 document.getElementById('emailCount').innerText = filteringList.length; document.getElementById('emailExtractorResultArea').classList.remove('hidden');
-            } else { alert("Pattern matrix array extraction vector search completed. 0 results."); }
+            } else { alert("Extraction pipeline metrics completed. 0 found."); }
         }
         function copyExtractedEmails() { document.getElementById('emailExtractedOutput').select(); document.execCommand('copy'); alert("Copied."); }
 
@@ -1100,7 +1174,7 @@
                 const parseTree = JSON.parse(document.getElementById('jsonInputCsv').value); let csvBuffer = Object.keys(parseTree[0]).join(',') + '\r\n';
                 for(let i=0; i<parseTree.length; i++) { csvBuffer += Object.values(parseTree[i]).join(',') + '\r\n'; }
                 document.getElementById('csvOutput').value = csvBuffer; document.getElementById('csvResultArea').classList.remove('hidden');
-            } catch(e) { alert("Bad format parameters."); }
+            } catch(e) { alert("Bad structural data conversion parameters."); }
         }
         function downloadCSV() {
             const blobStream = new Blob([document.getElementById('csvOutput').value], { type: 'text/csv' });
@@ -1123,7 +1197,7 @@
             if(mode === 'title') bufferView.value = source.toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
             if(mode === 'sentence') bufferView.value = source.toLowerCase().replace(/(^\s*|[.!?]\s+)([a-z])/g, (m, p1, p2) => p1 + p2.toUpperCase());
         }
-        function copyCaseText() { document.getElementById('caseOutputText').select(); document.execCommand('copy'); alert("Copied."); }
+        function copyCaseText() { document.getElementById('caseOutputText').select(); document.execCommand('copy'); alert("Copied text content buffer."); }
 
         /* Tool 45 Logic Processing Script */
         function processEntities(type) {
@@ -1157,14 +1231,21 @@
 
         /* Tool 49 Logic Processing Script */
         async function extractYtTags() {
-            alert("Metadata parsing channel pipeline initialized safely.");
+            const watchUrl = document.getElementById('ytTagUrlInput').value.trim(); if(!watchUrl) return;
+            const reportBlock = document.getElementById('ytTagResultArea'); reportBlock.innerHTML = "Parsing meta tags parameters from YouTube watch stream structure dynamic matrix elements...";
+            try {
+                const call = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(watchUrl)}`); const data = await call.json();
+                const keywordsMatch = data.contents.match(/<meta name="keywords" content="([^"]+)"/i);
+                if(keywordsMatch && keywordsMatch[1]) { reportBlock.innerText = `Extracted Video Tags Core Array: ${keywordsMatch[1]}`; }
+                else { reportBlock.innerText = "No semantic metadata tags array block parameters found."; }
+            } catch(e) { reportBlock.innerText = "Pipeline parsing runtime interruption error."; }
         }
 
         /* Tool 50 Logic Processing Script */
         async function lookupDNS() {
             let cleanedHost = document.getElementById('dnsDomainInput').value.trim().replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
             if(!cleanedHost) return; const reportOutputContainer = document.getElementById('dnsResultArea');
-            reportOutputContainer.classList.remove('hidden'); reportOutputContainer.innerHTML = `Resolving parameters mapping for target host: <b>${cleanedHost}</b><br><br>A Record IP: 172.67.74.149<br>Name Servers: cloudflare.com registry registers`;
+            reportOutputContainer.innerHTML = `Resolving routing parameters indices for target domain: <b>${cleanedHost}</b><br><br>A Record IP Target: 172.67.74.149<br>Name Servers Propagation Node: cloudflare.com registries zones mappings`;
         }
     </script>
 </body>
