@@ -1,4 +1,13 @@
+# User-Agent control for Tanzai Tools Platform Infrastructure
 User-agent: *
-Allow: /
 
+# Allow everything to ensure Google bot reads all 50+ tools dynamically loaded via Client Scripts
+Allow: /
+Allow: /index.html
+
+# Prevent crawling of temporary setup files or internal developer testing folders if any
+Disallow: /config/
+Disallow: /testing/
+
+# Link your automated XML Sitemap to accelerate the 50 tools indexing speed
 Sitemap: https://tanzaitools.com/sitemap.xml
