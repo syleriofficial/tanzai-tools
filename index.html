@@ -17,7 +17,8 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
     <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
+         window.adsbygoogle = window.adsbygoogle || [];
+         window.adsbygoogle.push({
               google_ad_client: "<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5589150014762971"
      crossorigin="anonymous"></script>",
               enable_page_level_ads: true
@@ -35,7 +36,7 @@
 </head>
 <body class="bg-zinc-50 text-zinc-900 min-h-screen flex flex-col antialiased text-base">
 
-    <header id="tanzaiAppHeader" class="w-full bg-white border-b border-zinc-200 sticky top-0 z-50 px-4 md:px-8 py-5 flex justify-between items-center max-w-7xl mx-auto">
+    <header id="tanzaiAppHeader" class="w-full bg-white border-b border-zinc-200 px-4 md:px-8 py-5 flex justify-between items-center max-w-7xl mx-auto">
         <div class="flex flex-col">
             <h1 class="text-2xl font-bold tracking-tight text-zinc-900">Tanzai Tools</h1>
             <span class="text-xs font-bold uppercase tracking-widest text-zinc-400 mt-0.5">Mega Utility Infrastructure (50+ Live)</span>
@@ -55,7 +56,7 @@
 
     <main class="w-full max-w-7xl mx-auto flex-1 p-4 md:p-8 grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8">
         
-        <aside class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[500px] lg:h-[calc(100vh-180px)] relative shadow-sm overflow-hidden flex flex-col justify-between">
+        <aside class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[420px] lg:h-[calc(100vh-180px)] relative shadow-sm overflow-hidden flex flex-col justify-between">
             
             <div class="pb-2 border-b border-zinc-100 bg-white z-10 shrink-0">
                 <label class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest px-2">Available Suites</label>
@@ -72,12 +73,11 @@
                 
                 <button onclick="showTool('legacy-panel')" data-name="legacy placeholders components operational suite" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-400 hover:bg-zinc-100 border border-transparent transition-all duration-200">08-25. Legacy Core Panels</button>
 
-                <button onclick="showTool('pdf-text-tool')" data-name="pdf to text converter extract plain words content document parsing script" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">26. PDF to Text Converter</button>
-                <button onclick="showTool('img-pdf-tool')" data-name="images to pdf tool merge jpg png photos document builder" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">27. Images to PDF Tool</button>
-                <button onclick="showTool('pdf-lock-tool')" data-name="pdf password protector secure files lock encrypt privacy protection" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">28. PDF Password Protector</button>
-                <button onclick="showTool('word-pdf-tool')" data-name="word to pdf logic doc docx formatting dynamic converters office text" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">29. Word to PDF Logic</button>
-                <button onclick="showTool('pdf-merge-tool')" data-name="enterprise pdf merger combine files bind split stack storage" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-100 border border-transparent transition-all duration-200">30. Enterprise PDF Merger</button>
-                <button onclick="showTool('ai-prompt-tool')" data-name="ai image prompt engine midjourney dall-e stable diffusion prompt crafting" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">31. AI Image Prompt Engine</button>
+                <button onclick="showTool('pdf-text-tool')" data-name="pdf to text converter extract plain words content document parsing script" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">26. PDF to Text Converter</button>
+                <button onclick="showTool('img-pdf-tool')" data-name="images to pdf tool merge jpg png photos document builder" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">27. Images to PDF Tool</button>
+                <button onclick="showTool('pdf-lock-tool')" data-name="pdf password protector secure files lock encrypt privacy protection" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">28. PDF Password Protector</button>
+                <button onclick="showTool('word-pdf-tool')" data-name="word to pdf logic doc docx formatting dynamic converters office text" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">29. Word to PDF Logic</button>
+                <button onclick="showTool('pdf-merge-tool')" data-name="enterprise pdf merger combine files bind split stack storage" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">30. Enterprise PDF Merger</button>
                 <button onclick="showTool('seo-analyzer-tool')" data-name="website seo auditor rank tracking check link tags optimization on-page h1 meta" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">32. Website SEO Auditor</button>
                 <button onclick="showTool('resume-tool')" data-name="quick cv resume builder maker templates ats-friendly hiring employment bio" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">33. Quick CV/Resume Builder</button>
                 <button onclick="showTool('yt-thumbnail-tool')" data-name="yt thumbnail scraper youtube media cover images 4k hd downloads" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">34. YT Thumbnail Scraper</button>
@@ -93,24 +93,24 @@
                 <button onclick="showTool('case-converter-tool')" data-name="dynamic case converter upper lower text modifications" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">44. Case Converter</button>
                 <button onclick="showTool('html-entity-tool')" data-name="html safe entity escaper decode safe codes markup" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">45. HTML Entities</button>
                 <button onclick="showTool('gradient-tool')" data-name="linear css gradient lab visual background coloring palettes" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">46. CSS Gradient</button>
-                <button onclick="showTool('twitter-preview-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">47. Twitter Preview</button>
-                <button onclick="showTool('robots-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">48. Robots.txt Gen</button>
-                <button onclick="showTool('yt-tag-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">49. YT Tag Extractor</button>
+                <button onclick="showTool('twitter-preview-tool')" data-name="twitter x metadata mockup preview seo optimization cards" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">47. Twitter Preview</button>
+                <button onclick="showTool('robots-tool')" data-name="crawler robots.txt engine seo indexing allow directions bot" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">48. Robots.txt Gen</button>
+                <button onclick="showTool('yt-tag-tool')" data-name="youtube tag extractor search rankings optimization keywords video tags" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">49. YT Tag Extractor</button>
                 <button onclick="showTool('dns-lookup-tool')" data-name="dns records ip audit servers propagation dynamic records lookup mx ns nameservers" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium hover:bg-zinc-100 border border-transparent transition-all duration-200">50. DNS & IP Audit</button>
             </div>
 
-            <div class="absolute bottom-0 left-0 right-0 p-4 pt-3 border-t border-zinc-100 flex flex-col gap-1 bg-white z-20 shrink-0">
+            <div class="pt-3 border-t border-zinc-100 flex flex-col gap-1 bg-white shrink-0 z-20">
                 <button onclick="showTool('about-page')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-semibold uppercase text-zinc-500 hover:bg-zinc-100 transition-all duration-200">ℹ️ About Us</button>
                 <button onclick="showTool('privacy-page')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-semibold uppercase text-zinc-500 hover:bg-zinc-100 transition-all duration-200">🔒 Privacy Policy</button>
             </div>
         </aside>
 
-        <section class="col-span-1 lg:col-span-3 bg-white border border-zinc-200 rounded-3xl p-6 md:p-10 shadow-sm h-fit min-h-[550px]">
+        <section id="mainWorkspaceSection" class="col-span-1 lg:col-span-3 bg-white border border-zinc-200 rounded-3xl p-6 md:p-10 shadow-sm h-fit min-h-[550px]">
             
             <div id="default-placeholder" class="flex flex-col items-center justify-center text-center py-24 gap-4">
                 <div class="text-zinc-300 font-mono tracking-widest text-5xl font-bold">50+</div>
                 <div class="text-base font-bold text-zinc-900">Tanzai Labs Execution Engine</div>
-                <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational utility layout from the suite or use search bar to render active application.</p>
+                <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational utility layout from the dashboard suite or use search bar to render active application.</p>
             </div>
 
             <div id="legacy-panel" class="tool-workspace hidden flex flex-col gap-4 text-center py-20">
@@ -322,7 +322,7 @@
 
             <div id="seo-analyzer-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-xl font-bold text-zinc-900">Website SEO Analyzer</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Website SEO Auditor</h3>
                     <p class="text-sm text-zinc-400">Analyze any webpage's Meta Tags, Title, and Structure for better Search Engine ranking.</p>
                 </div>
                 <div class="flex gap-2">
@@ -560,7 +560,7 @@
 
             <div id="about-page" class="tool-workspace hidden flex flex-col gap-5">
                 <h3 class="text-2xl font-bold text-zinc-900">About Tanzai Tools</h3>
-                <p class="text-base text-zinc-600">Premium free operational utility network managed by <strong>Tanzai Labs</strong>. Our core mission is delivering high-speed applications natively in the user browser environment without mandatory registration filters.</p>
+                <p class="text-base text-zinc-600">Premium free utility network managed by <strong>Tanzai Labs</strong>. Our mission is delivering high-speed applications natively in the user browser environment without mandatory registration filters.</p>
             </div>
 
             <div id="privacy-page" class="tool-workspace hidden flex flex-col gap-5">
@@ -612,11 +612,22 @@
                     try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(err) {}
                 });
 
-                // Perfect Viewport Scroll Routing Matrix (Always scroll cleanly to absolute top framework on desktop and mobile)
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                // Perfect Viewport Scroll Routing Matrix
+                if(window.innerWidth < 1024) {
+                    // Mobile Adaptive Rule: Viewport slides straight down to exactly fit the workspace container grid box content element 
+                    document.getElementById('mainWorkspaceSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    // Desktop view tracking index anchor
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
             } else if(toolId === 'legacy-panel') {
-                document.getElementById('legacy-panel').classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                const legacyElement = document.getElementById('legacy-panel');
+                legacyElement.classList.remove('hidden');
+                if(window.innerWidth < 1024) {
+                    document.getElementById('mainWorkspaceSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
             }
 
             const currentTrigger = window.event?.currentTarget;
@@ -647,7 +658,7 @@
             try {
                 const parsed = JSON.parse(raw); out.classList.remove('hidden');
                 out.value = (mode === 'format') ? JSON.stringify(parsed, null, 4) : JSON.stringify(parsed);
-            } catch(e) { alert("Invalid structural JSON notation config payload."); }
+            } catch(e) { alert("Invalid JSON format payload structure matrix."); }
         }
 
         /* Tool 02: Base64 Logic */
@@ -664,14 +675,14 @@
             block.innerHTML = `<p><b>MD5:</b> ${CryptoJS.MD5(str)}</p><p><b>SHA256:</b> ${CryptoJS.SHA256(str)}</p>`;
         }
 
-        /* Tool 04: QR Operations Matrix */
+        /* Tool 04: QR Code Render Logic */
         function buildQRCode() {
             const data = document.getElementById('qrInputData').value; const canvas = document.getElementById('qrCanvasBox');
             if(!data) return; canvas.classList.remove('hidden'); canvas.innerHTML = '';
             new QRCode(canvas, { text: data, width: 180, height: 180 });
         }
 
-        /* Tool 05: Dummy Placeholder Script */
+        /* Tool 05: Lorem Ipsum Generative Suite */
         function generateLorem() {
             const count = document.getElementById('loremCount').value; const out = document.getElementById('loremOutput');
             out.classList.remove('hidden'); let text = '';
@@ -679,7 +690,7 @@
             out.value = text.trim();
         }
 
-        /* Tool 06: Key Generator Core */
+        /* Tool 06: Password Generator Core */
         function createRandomKey() {
             const len = document.getElementById('passLength').value; const area = document.getElementById('passKeyViewArea');
             const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"; let key = '';
@@ -687,7 +698,7 @@
             document.getElementById('passKeyStringValue').innerText = key; area.classList.remove('hidden');
         }
 
-        /* Tool 07: URL encoding framework */
+        /* Tool 07: URL Parameters Sanitization Engine */
         function processUrlString(mode) {
             const val = document.getElementById('urlParamInput').value; const out = document.getElementById('urlParamOutput');
             if(!val) return; out.classList.remove('hidden');
@@ -707,7 +718,7 @@
                 } catch(err) { alert("Failed to parse document content payload."); }
             }; r.readAsArrayBuffer(f);
         }
-        function copyPDFText() { const target = document.getElementById('pdfTextOutput'); target.select(); document.execCommand('copy'); alert("Extracted string matrix cloned."); }
+        function copyPDFText() { const target = document.getElementById('pdfTextOutput'); target.select(); document.execCommand('copy'); alert("Extracted text string cloned."); }
 
         /* Tool 27 Logic Processing Script */
         async function generatePDFFromImages() {
@@ -838,7 +849,7 @@
             if(arrayMatches) {
                 const filteringList = [...new Set(arrayMatches)]; document.getElementById('emailExtractedOutput').value = filteringList.join('\n');
                 document.getElementById('emailCount').innerText = filteringList.length; document.getElementById('emailExtractorResultArea').classList.remove('hidden');
-            } else { alert("Pattern matrix array extraction vector search completed. 0 results."); }
+            } else { alert("Extraction list vector search completed. 0 results."); }
         }
         function copyExtractedEmails() { document.getElementById('emailExtractedOutput').select(); document.execCommand('copy'); alert("Copied."); }
 
