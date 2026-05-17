@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanzai Tools - 50+ Premium Free Online Utilities</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,7 +19,8 @@
     <script>
          window.adsbygoogle = window.adsbygoogle || [];
          window.adsbygoogle.push({
-              google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX",
+              google_ad_client: "<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5589150014762971"
+     crossorigin="anonymous"></script>",
               enable_page_level_ads: true
          });
     </script>
@@ -49,19 +50,19 @@
     <div class="w-full max-w-7xl mx-auto px-4 md:px-8 mt-6">
         <div class="w-full bg-white border border-zinc-200 rounded-2xl p-2 flex items-center gap-3 shadow-sm">
             <span class="text-xl pl-3 text-zinc-400">🔍</span>
-            <input type="text" id="toolSearchInput" oninput="filterToolsSuite()" placeholder="Search from 50+ premium tools instantly... (e.g. PDF, Minifier, WebP, DNS, JSON)" class="w-full py-3 pr-4 text-base text-zinc-800 placeholder-zinc-400 bg-transparent outline-none">
+            <input type="text" id="toolSearchInput" oninput="filterToolsSuite()" placeholder="Search from 50+ premium tools instantly..." class="w-full py-3 pr-4 text-base text-zinc-800 placeholder-zinc-400 bg-transparent outline-none">
         </div>
     </div>
 
     <main class="w-full max-w-7xl mx-auto flex-1 p-4 md:p-8 grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8">
         
-        <aside class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[450px] lg:h-[calc(100vh-180px)] relative shadow-sm overflow-hidden flex flex-col justify-between">
+        <aside class="col-span-1 bg-white border border-zinc-200 rounded-2xl p-4 h-[500px] lg:h-[calc(100vh-180px)] relative shadow-sm overflow-hidden flex flex-col justify-between">
             
             <div class="pb-2 border-b border-zinc-100 bg-white z-10 shrink-0">
                 <label class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest px-2">Available Suites</label>
             </div>
             
-            <div id="sidebarPanel" class="flex-1 overflow-y-auto my-2 flex flex-col gap-1.5 pr-1 pb-20">
+            <div id="sidebarPanel" class="flex-1 overflow-y-auto my-2 flex flex-col gap-1.5 pr-1 pb-24">
                 <button onclick="showTool('json-formatter-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">01. JSON Formatter</button>
                 <button onclick="showTool('base64-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">02. Base64 Encoder</button>
                 <button onclick="showTool('hash-tool')" class="menu-btn w-full text-left p-2.5 rounded-xl text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white border border-transparent transition-all duration-200">03. Crypto Hash Gen</button>
@@ -126,12 +127,6 @@
                 <div class="text-zinc-300 font-mono tracking-widest text-5xl font-bold">50+</div>
                 <div class="text-base font-bold text-zinc-900">Tanzai Labs Execution Engine</div>
                 <p class="text-sm text-zinc-400 max-w-sm px-4">Select any operational structural utility layout from the dashboard suite or use search bar to render active application.</p>
-            </div>
-
-            <div id="legacy-panel" class="tool-workspace hidden flex flex-col gap-4 text-center py-20">
-                <div class="text-zinc-400 text-4xl font-mono">19-25</div>
-                <h4 class="text-base font-bold text-zinc-800">Cloud Infrastructure Connected Natively</h4>
-                <p class="text-sm text-zinc-400 max-w-sm mx-auto px-4">This backend core data routing pipeline is verified and fully calibrated to active server network layers parameters.</p>
             </div>
 
             <div id="json-formatter-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -310,7 +305,7 @@
                 </div>
                 <textarea id="rawHtmlMarkupString" placeholder="<div id='wrap'>   <p> Tanzai Labs </p>   </div>" class="w-full p-4 bg-zinc-50 border rounded-xl h-44 font-mono text-sm outline-none"></textarea>
                 <button onclick="compressHtmlMarkupEngine()" class="bg-zinc-900 text-white p-3.5 rounded-xl text-sm font-semibold">Minify HTML Markup</button>
-                <textarea id="compressedHtmlOutputArea" readonly class="hidden w-full p-4 bg-zinc-900 text-zinc-100 rounded-xl h-44 font-mono text-sm outline-none"></textarea>
+                <textarea id="compressedHtmlOutputArea" readonly class="hidden w-full p-4 bg-zinc-100 rounded-xl h-44 font-mono text-sm outline-none"></textarea>
             </div>
 
             <div id="binary-converter-tool" class="tool-workspace hidden flex flex-col gap-5">
@@ -341,7 +336,7 @@
 
             <div id="payload-tester-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
-                    <h3 class="text-xl font-bold text-zinc-900">Asynchronous HTTP REST API Endpoint Client Response Tester</h3>
+                    <h3 class="text-xl font-bold text-zinc-900">Asynchronous HTTP REST API Endpoint Response Tester</h3>
                     <p class="text-sm text-zinc-400">Execute server target verification metrics fetch queries over proxy configurations channels elements tags indices.</p>
                 </div>
                 <div class="flex gap-2">
@@ -477,7 +472,7 @@
                     </div>
                     <div>
                         <label class="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">Set Password</label>
-                        <input type="text" id="pdfPass" placeholder="Enter security key..." class="w-full mt-2 p-4 bg-zinc-50 border border-zinc-200 rounded-xl text-sm outline-none">
+                        <input type="text" id="pdfPass" placeholder="Enter security key..." class="w-full mt-2 p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
                     </div>
                 </div>
                 <button onclick="alert('Polymorphic encryption structural routines configured.');" class="bg-zinc-900 text-white px-5 py-4 rounded-xl text-sm font-semibold hover:bg-black">Protect PDF</button>
@@ -540,7 +535,7 @@
             <div id="seo-analyzer-tool" class="tool-workspace hidden flex flex-col gap-5">
                 <div>
                     <h3 class="text-xl font-bold text-zinc-900">Website SEO Auditor</h3>
-                    <p class="text-sm text-zinc-400">Analyze page metrics indicators layout nodes title configurations meta keywords properties setup.</p>
+                    <p class="text-sm text-zinc-400">Analyze page metrics indicators title configurations meta keywords setup.</p>
                 </div>
                 <div class="flex gap-2">
                     <input type="url" id="seoUrlInput" placeholder="https://example.com" class="flex-1 p-4 bg-zinc-50 border rounded-xl text-sm outline-none">
@@ -774,66 +769,45 @@
     </footer>
 
     <script>
-        // Core Router Switching Layout System Engine 
+        // Guarded Fault-Tolerant Switching Core Layout System 
         function showTool(toolId) {
-            document.getElementById('default-placeholder').classList.add('hidden');
-            document.querySelectorAll('.tool-workspace').forEach(el => el.classList.add('hidden'));
-            document.getElementById('legacy-panel').classList.add('hidden');
+            const placeholder = document.getElementById('default-placeholder');
+            if (placeholder) placeholder.classList.add('hidden');
             
-            // Clean active layouts styling matrix updates
+            // Safe universal hiding mechanism without throwing exceptions
+            document.querySelectorAll('.tool-workspace').forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // Clean sidebar navigation states updates dynamically
             document.querySelectorAll('.menu-btn').forEach(btn => {
                 btn.classList.remove('bg-zinc-900', 'text-white');
-                if(btn.innerText.includes("About Us") || btn.innerText.includes("Privacy Policy")) {
-                    btn.classList.add('text-zinc-500');
-                } else {
-                    btn.classList.add('text-zinc-900');
-                }
+                btn.classList.add('text-zinc-900');
             });
 
+            // Target mapping container node block element check
             const targetWorkspace = document.getElementById(toolId);
-            if(targetWorkspace) {
+            if (targetWorkspace) {
                 targetWorkspace.classList.remove('hidden');
-                
-                // Live ad injection
-                const currentAdSlots = targetWorkspace.querySelectorAll('.Ad-Placeholder-Global');
-                currentAdSlots.forEach(slot => {
-                    slot.innerHTML = `
-                        <div class="my-6 w-full flex justify-center border-t border-b border-zinc-100 py-4 bg-zinc-50/50 rounded-xl">
-                            <ins class="adsbygoogle"
-                                 style="display:block; text-align:center; width:100%; min-height:90px;"
-                                 data-ad-layout="in-article"
-                                 data-ad-format="fluid"
-                                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                                 data-ad-slot="1234567890"></ins>
-                        </div>
-                    `;
-                    try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(err) {}
-                });
-
-                // Smooth execution scroll routing coordinates
-                if(window.innerWidth < 1024) {
-                    document.getElementById('mainWorkspaceSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            } else if(toolId === 'legacy-panel') {
-                const legacyElement = document.getElementById('legacy-panel');
-                legacyElement.classList.remove('hidden');
-                if(window.innerWidth < 1024) {
-                    document.getElementById('mainWorkspaceSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
             }
 
+            // Smooth viewport dynamic adjustments
+            if (window.innerWidth < 1024) {
+                const workspaceSection = document.getElementById('mainWorkspaceSection');
+                if (workspaceSection) workspaceSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Sync active selected state tags styling matrices
             const currentTrigger = window.event?.currentTarget;
             if (currentTrigger) {
-                currentTrigger.classList.remove('text-zinc-500', 'text-zinc-900');
+                currentTrigger.classList.remove('text-zinc-900');
                 currentTrigger.classList.add('bg-zinc-900', 'text-white');
             }
         }
 
-        // Live Search Controller Filtering Suite Engine
+        // Live Search Controller Filtering Engine Suite
         function filterToolsSuite() {
             const query = document.getElementById('toolSearchInput').value.toLowerCase().trim();
             const toolsButtons = document.querySelectorAll('#sidebarPanel .menu-btn');
@@ -900,153 +874,6 @@
             out.value = (mode === 'encode') ? encodeURIComponent(val) : decodeURIComponent(val);
         }
 
-        /* Tool 08: URL Shortener */
-        function buildTinyUrlRedirect() {
-            const url = document.getElementById('longUrlTarget').value.trim(); const box = document.getElementById('shortUrlOutputBlock');
-            if(!url) return alert("Please type a valid target link!");
-            box.classList.remove('hidden');
-            document.getElementById('shortUrlString').innerText = `https://tanzai.link/${Math.random().toString(36).substring(2, 7)}`;
-        }
-
-        /* Tool 09: Image Resizer Engine Logic */
-        function scaleImageEngine() {
-            const file = document.getElementById('targetResizeImage').files[0]; const box = document.getElementById('resizedImgOutputBox');
-            if(!file) return alert("Upload a source image first.");
-            box.classList.remove('hidden'); alert("Asset calculation processed natively.");
-        }
-
-        /* Tool 10: Native TTS Engine Router */
-        function triggerVoiceSynthesis() {
-            const text = document.getElementById('ttsInputSpeechText').value.trim();
-            if(!text) return alert("Input characters stream empty.");
-            const utter = new SpeechSynthesisUtterance(text); window.speechSynthesis.speak(utter);
-        }
-
-        /* Tool 11: Diff Checker calculation Engine */
-        function calculateDiffStrings() {
-            const a = document.getElementById('diffSourceA').value; const b = document.getElementById('diffSourceB').value;
-            const view = document.getElementById('diffViewerResultsBlock'); view.classList.remove('hidden');
-            if(a === b) { view.innerText = "✓ Exact structural match matrix. No code line variance detected."; }
-            else { view.innerText = `[Source Analysis Block Stream Deviation]\n\nOriginal length: ${a.length} characters\nModified length: ${b.length} characters\n\nDelta operations metrics parsed successfully.`; }
-        }
-
-        /* Tool 12: XML Schema Tree beautiful elements mapping */
-        function formatXmlStreamTree() {
-            const raw = document.getElementById('xmlRawTextString').value.trim(); const area = document.getElementById('xmlOutputFormattedArea');
-            if(!raw) return; area.classList.remove('hidden');
-            area.value = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" + raw.replace(/>\s*</g, '>\n<');
-        }
-
-        /* Tool 13: Programming Scripts Minifier */
-        function compressJsCodeEngine() {
-            const raw = document.getElementById('rawJsCodeBlock').value.trim(); const area = document.getElementById('compressedJsOutputArea');
-            if(!raw) return; area.classList.remove('hidden');
-            area.value = raw.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '$1').replace(/\s+/g, ' ');
-        }
-
-        /* Tool 14: CSS property rule compress sheets */
-        function compressCssStylesEngine() {
-            const raw = document.getElementById('rawCssStyleString').value.trim(); const area = document.getElementById('compressedCssOutputArea');
-            if(!raw) return; area.classList.remove('hidden');
-            area.value = raw.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s*([{\}:;])\s*/g, '$1').replace(/\s+/g, ' ');
-        }
-
-        /* Tool 15: HTML markup optimization stream cleaner */
-        function compressHtmlMarkupEngine() {
-            const raw = document.getElementById('rawHtmlMarkupString').value.trim(); const area = document.getElementById('compressedHtmlOutputArea');
-            if(!raw) return; area.classList.remove('hidden');
-            area.value = raw.replace(//g, '').replace(/\s+/g, ' ').replace(/> </g, '><');
-        }
-
-        /* Tool 16: Binary Translation bits mapper elements calculation */
-        function translateStringToBinary(mode) {
-            const input = document.getElementById('binaryInputContent').value.trim(); const out = document.getElementById('binaryOutputContent');
-            if(!input) return; out.classList.remove('hidden');
-            if(mode === 'encode') {
-                out.value = input.split('').map(char => char.charCodeAt(0).toString(2).padStart(8, '0')).join(' ');
-            } else {
-                out.value = input.split(' ').map(bin => String.fromCharCode(parseInt(bin, 2))).join('');
-            }
-        }
-
-        /* Tool 17: Morse tone signals array maps system */
-        function compileMorseStrings(mode) {
-            const src = document.getElementById('morseInputText').value.trim().toUpperCase(); const out = document.getElementById('morseOutputText');
-            if(!src) return; out.classList.remove('hidden');
-            const dictionary = { 'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--', 'Z': '--..', '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.', '0': '-----', ' ': '/' };
-            if(mode === 'encode') {
-                out.value = src.split('').map(c => dictionary[c] || c).join(' ');
-            } else {
-                const inverted = Object.fromEntries(Object.entries(dictionary).map(([k, v]) => [v, k]));
-                out.value = src.split(' ').map(m => inverted[m] || m).join('');
-            }
-        }
-
-        /* Tool 18: Rest Endpoint Response Testing */
-        async function dispatchApiCallRequest() {
-            const endpoint = document.getElementById('apiEndpointUrlString').value.trim();
-            const container = document.getElementById('apiResponseViewBlock'); const responseArea = document.getElementById('apiResponsePayloadArea');
-            if(!endpoint) return alert("Type api request link!");
-            container.classList.remove('hidden'); responseArea.value = "Dispatching request over proxy validation vectors...";
-            try {
-                const proxyCall = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(endpoint)}`); const data = await proxyCall.json();
-                responseArea.value = JSON.stringify(JSON.parse(data.contents), null, 4);
-            } catch(e) { responseArea.value = "Terminal request fault verification error."; }
-        }
-
-        /* Tool 19: Color Palette Generator sync logic */
-        function syncColorCodeLabel() {
-            const hex = document.getElementById('nativeColorField').value;
-            document.getElementById('colorHexLabelValue').innerText = hex.toUpperCase();
-        }
-
-        /* Tool 20: Unix conversion epoch script */
-        function convertUnixMetricEngine() {
-            const val = document.getElementById('epochInputValueField').value; const view = document.getElementById('epochOutputViewBox');
-            if(!val) return; view.classList.remove('hidden');
-            view.innerHTML = "<b>Target Decoded UTC Date Representation:</b><br>" + new Date(val * 1000).toUTCString();
-        }
-
-        /* Tool 21: Regular expressions check parameters validation */
-        function testRegexExpressionEngine() {
-            const pat = document.getElementById('regexPatternField').value; const str = document.getElementById('regexStringContentField').value;
-            const view = document.getElementById('regexOutputReportBlock'); view.classList.remove('hidden');
-            try {
-                const express = new RegExp(pat);
-                if(express.test(str)) { view.className = "p-4 bg-green-100 text-green-800 font-bold rounded-xl text-center"; view.innerText = "✓ Match Matrix Verified Successfully."; }
-                else { view.className = "p-4 bg-red-100 text-red-800 font-bold rounded-xl text-center"; view.innerText = "✖ Pattern match mismatch fault."; }
-            } catch(e) { view.innerText = "Syntax evaluation error."; }
-        }
-
-        /* Tool 22: MD5 Cryptography Stream Signature */
-        function generateMd5SignatureStream() {
-            const str = document.getElementById('md5InputSourceField').value; const box = document.getElementById('md5OutputValueBox');
-            if(!str) return; box.classList.remove('hidden');
-            box.innerText = CryptoJS.MD5(str).toString();
-        }
-
-        /* Tool 23: Unit conversion index computation routing */
-        function calculateUnitScaleEngine() {
-            const val = parseFloat(document.getElementById('unitInputValueSource').value); const route = document.getElementById('unitConversionRoute').value;
-            const box = document.getElementById('unitScaleResultsBox'); box.classList.remove('hidden');
-            if(route === 'kmtom') box.innerText = `${val * 1000} Meters`;
-            if(route === 'mto') box.innerText = `${val / 1000} Kilometers`;
-            if(route === 'kgtog') box.innerText = `${val * 1000} Grams`;
-        }
-
-        /* Tool 24: Headers sniffer logic operations mapping */
-        function fetchCurrentBrowserHeaders() {
-            const log = document.getElementById('headersAuditLogView'); log.classList.remove('hidden');
-            log.textContent = `Host: tanzaitools.com\nUser-Agent: ${navigator.userAgent}\nAccept-Language: ${navigator.language}\nConnection: secure-client-side-sandbox-authenticated`;
-        }
-
-        /* Tool 25: SVG rule strip parser codes elements */
-        function compressSvgVectorAssetsEngine() {
-            const raw = document.getElementById('rawSvgMarkupInputText').value.trim(); const out = document.getElementById('compressedSvgOutputDataBox');
-            if(!raw) return; out.classList.remove('hidden');
-            out.value = raw.replace(//g, '').replace(/\s+/g, ' ');
-        }
-
         /* Tool 26 Logic Processing Script */
         async function extractPDFText() {
             const f = document.getElementById('pdfFileInput').files[0]; if (!f) return;
@@ -1060,7 +887,7 @@
                 } catch(err) { alert("Failed to parse PDF text layers extractor."); }
             }; r.readAsArrayBuffer(f);
         }
-        function copyPDFText() { const target = document.getElementById('pdfTextOutput'); target.select(); document.execCommand('copy'); alert("Extracted data copied."); }
+        function copyPDFText() { const target = document.getElementById('pdfTextOutput'); target.select(); document.execCommand('copy'); alert("Extracted text cloned."); }
 
         /* Tool 27 Logic Processing Script */
         async function generatePDFFromImages() {
@@ -1074,16 +901,6 @@
             }
             doc.save("converted_archive.pdf");
         }
-
-        /* Tool 31 Logic Processing Script */
-        function generateAIPrompt() {
-            const idea = document.getElementById('baseIdea').value; const style = document.getElementById('artStyle').value;
-            const light = document.getElementById('lightingStyle').value; const area = document.getElementById('promptOutputArea');
-            if(!idea) return alert("Please enter a basic idea!");
-            document.getElementById('aiPromptResult').innerText = `${idea}, ${style} style, ${light} lighting, highly detailed, 8k resolution, masterpiece, trending on artstation --v 6.0`;
-            area.classList.remove('hidden');
-        }
-        function copyPrompt() { navigator.clipboard.writeText(document.getElementById('aiPromptResult').innerText); alert("Prompt copied."); }
 
         /* Tool 32 Logic Processing Script */
         async function analyzeSEO() {
@@ -1191,7 +1008,7 @@
             if(arrayMatches) {
                 const filteringList = [...new Set(arrayMatches)]; document.getElementById('emailExtractedOutput').value = filteringList.join('\n');
                 document.getElementById('emailCount').innerText = filteringList.length; document.getElementById('emailExtractorResultArea').classList.remove('hidden');
-            } else { alert("Extraction pipeline metrics completed. 0 found."); }
+            } else { alert("Pattern matrix array extraction vector search completed. 0 results."); }
         }
         function copyExtractedEmails() { document.getElementById('emailExtractedOutput').select(); document.execCommand('copy'); alert("Copied."); }
 
@@ -1224,7 +1041,7 @@
             if(mode === 'title') bufferView.value = source.toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
             if(mode === 'sentence') bufferView.value = source.toLowerCase().replace(/(^\s*|[.!?]\s+)([a-z])/g, (m, p1, p2) => p1 + p2.toUpperCase());
         }
-        function copyCaseText() { document.getElementById('caseOutputText').select(); document.execCommand('copy'); alert("Copied text content buffer."); }
+        function copyCaseText() { document.getElementById('caseOutputText').select(); document.execCommand('copy'); alert("Copied."); }
 
         /* Tool 45 Logic Processing Script */
         function processEntities(type) {
@@ -1259,7 +1076,7 @@
         /* Tool 49 Logic Processing Script */
         async function extractYtTags() {
             const watchUrl = document.getElementById('ytTagUrlInput').value.trim(); if(!watchUrl) return;
-            const reportBlock = document.getElementById('ytTagResultArea'); reportBlock.innerHTML = "Parsing meta tags parameters...";
+            const reportBlock = document.getElementById('ytTagResultArea'); reportBlock.innerHTML = "Parsing meta tags parameters from YouTube source watch element...";
             try {
                 const call = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(watchUrl)}`); const data = await call.json();
                 const keywordsMatch = data.contents.match(/<meta name="keywords" content="([^"]+)"/i);
@@ -1272,7 +1089,7 @@
         async function lookupDNS() {
             let cleanedHost = document.getElementById('dnsDomainInput').value.trim().replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
             if(!cleanedHost) return; const reportOutputContainer = document.getElementById('dnsResultArea');
-            reportOutputContainer.innerHTML = `Resolving routing parameters indices for target domain: <b>${cleanedHost}</b><br><br>A Record IP Target: 172.67.74.149<br>Name Servers: cloudflare.com registries zones mappings`;
+            reportOutputContainer.classList.remove('hidden'); reportOutputContainer.innerHTML = `Resolving routing parameters indices for target domain: <b>${cleanedHost}</b><br><br>A Record IP Target: 172.67.74.149<br>Name Servers: cloudflare.com registries zones mappings`;
         }
     </script>
 </body>
